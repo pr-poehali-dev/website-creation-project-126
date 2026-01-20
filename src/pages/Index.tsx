@@ -29,7 +29,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
             <div className="space-y-1">
-              <h1 className="text-xl md:text-3xl font-black text-white uppercase tracking-tight">ПЛЮХбург</h1>
+              <h1 className="text-xl md:text-3xl font-black text-white tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
               <p className="text-xs md:text-sm text-gray-400">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
             <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-sm md:text-base font-bold">
