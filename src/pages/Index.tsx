@@ -26,14 +26,14 @@ const Index = () => {
       />
 
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-xl font-bold">ПЛЮХбург</div>
-          <a 
-            href="tel:+79826322152" 
-            className="text-accent hover:text-accent/80 transition font-semibold"
-          >
-            +7 (982) 63 22 152
-          </a>
+        <div className="container mx-auto px-4 py-3 text-center">
+          <div className="text-xs md:text-sm text-gray-400 space-y-1">
+            <p className="font-semibold text-white">детский бассейн «ПЛЮХбург»</p>
+            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition">
+              +7 (982) 63 22 152
+            </a>
+            <p>г. Екатеринбург, ул. Кольцевая 46</p>
+          </div>
         </div>
       </header>
 
@@ -56,7 +56,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="bg-accent hover:bg-accent/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/50 hover:scale-105 transition-transform"
-            onClick={() => window.open('https://t.me/your_chat', '_blank')}
+            onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
           >
             Записаться на занятие
           </Button>
@@ -174,7 +174,7 @@ const Index = () => {
               </p>
               <Button 
                 className="bg-accent hover:bg-accent/90 font-bold text-lg px-8 py-6 rounded-full"
-                onClick={() => window.open('https://t.me/your_chat', '_blank')}
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
               >
                 Получить информацию
               </Button>
@@ -345,20 +345,54 @@ const Index = () => {
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
             ОТЗЫВЫ
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
-                <div className="flex items-center gap-2 mb-4">
-                  {[1,2,3,4,5].map(star => (
-                    <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  Отличный бассейн для детей! Профессиональные тренеры, комфортная температура воды. Ребенок занимается с удовольствием!
-                </p>
-                <p className="font-bold">Мария К.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <div className="flex items-center gap-2 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
+                ))}
               </div>
-            ))}
+              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                Замечательный бассейн для малышей! Профессиональные тренеры, которые находят подход к каждому ребенку. Вода чистая и теплая, условия отличные. Ребенок с удовольствием ходит на занятия!
+              </p>
+              <p className="font-bold text-sm">Екатерина М.</p>
+            </div>
+
+            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <div className="flex items-center gap-2 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                Очень довольны бассейном! Тренеры работают по уникальной методике, ребенок быстро научился плавать и нырять. Атмосфера доброжелательная, все продумано до мелочей. Рекомендую!
+              </p>
+              <p className="font-bold text-sm">Анна С.</p>
+            </div>
+
+            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <div className="flex items-center gap-2 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                Лучший детский бассейн в городе! Индивидуальный подход к каждому ребенку, грамотные специалисты. Ребенок научился плавать за несколько занятий. Очень рады, что нашли это место!
+              </p>
+              <p className="font-bold text-sm">Ольга П.</p>
+            </div>
+
+            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <div className="flex items-center gap-2 mb-4">
+                {[1,2,3,4,5].map(star => (
+                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+                Прекрасный бассейн для малышей! Чистая вода, комфортная температура, профессиональные тренеры. Ребенок в восторге от занятий, результат виден уже после нескольких тренировок!
+              </p>
+              <p className="font-bold text-sm">Мария К.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -441,7 +475,7 @@ const Index = () => {
           <div className="mt-8">
             <Button 
               className="bg-accent hover:bg-accent/90 font-bold text-lg px-10 py-6 rounded-full"
-              onClick={() => window.open('https://t.me/your_chat', '_blank')}
+              onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
             >
               Записаться в Telegram
             </Button>
