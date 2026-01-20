@@ -1,149 +1,179 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const Index = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 text-center">
-          <div className="text-sm text-gray-600 space-y-1">
-            <p className="font-semibold text-primary">детский бассейн «ПЛЮХбург»</p>
-            <a href="tel:+79826322152" className="hover:text-primary transition">
-              +7 (982) 63 22 152
-            </a>
-            <p>г. Екатеринбург, ул. Кольцевая 46</p>
-          </div>
+    <div className="min-h-screen bg-black text-white">
+      <div 
+        className="fixed top-0 left-0 h-1 bg-accent z-[100] transition-all duration-300"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="text-xl font-bold">ПЛЮХбург</div>
+          <a 
+            href="tel:+79826322152" 
+            className="text-accent hover:text-accent/80 transition font-semibold"
+          >
+            +7 (982) 63 22 152
+          </a>
         </div>
       </header>
 
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-blue-50 to-accent/10">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in leading-tight">
-            ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ<br />И ПОЛУЧИТЕ{" "}
-            <span className="text-accent">-60%</span><br />НА ПЕРВОЕ ЗАНЯТИЕ
+      <section className="relative h-[600px] md:h-[890px] flex items-center justify-center overflow-hidden mt-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)',
+            filter: 'brightness(0.4)'
+          }}
+        />
+        
+        <div className="relative z-20 text-center px-4 max-w-5xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight">
+            ЗАПИШИТЕ РЕБЕНКА<br />НА ПЛАВАНИЕ И ПОЛУЧИТЕ<br />
+            <span className="text-accent">-60% НА ПЕРВОЕ ЗАНЯТИЕ</span>
           </h1>
           
           <Button 
             size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 mb-8 animate-slide-up"
+            className="bg-accent hover:bg-accent/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/50 hover:scale-105 transition-transform"
             onClick={() => window.open('https://t.me/your_chat', '_blank')}
           >
             Записаться на занятие
           </Button>
+        </div>
+      </section>
 
-          <div className="max-w-3xl mx-auto text-left space-y-3 text-gray-700">
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p><strong className="text-accent">-10% на абонемент</strong></p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p>персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p>исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p>авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p>используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={20} />
-              <p>опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg"><span className="text-accent font-bold text-2xl">-10%</span> на абонемент</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8">
+      <section className="py-20 bg-zinc-950">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
             ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
-          <p className="text-lg text-gray-600 mb-8">Посмотрите видео о нашем бассейне</p>
           
-          <div className="max-w-4xl mx-auto mb-12 aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-            <Icon name="Play" size={64} className="text-primary" />
+          <p className="text-center text-xl mb-12 text-gray-400">Посмотрите видео о нашем бассейне</p>
+          
+          <div className="max-w-5xl mx-auto mb-20">
+            <div className="relative aspect-video bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-white/10">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-lg shadow-accent/50">
+                  <Icon name="Play" size={32} className="text-white ml-1" />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon name="Users" className="text-primary" size={32} />
-                  <h3 className="text-2xl font-bold text-gray-900">КОМПЛЕКСНЫЙ ПОДХОД</h3>
-                </div>
-                <p className="text-gray-700">
-                  Мы работаем в связке с родителями, обучая ребенка не только плаванию, но и помогая ему развиваться личностно, во время осваивая двигательные навыки.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-accent">КОМПЛЕКСНЫЙ ПОДХОД</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Мы работаем в связке с родителями, обучая ребенка не только плаванию, но и помогая ему развиваться личностно, во время осваивая двигательные навыки.
+              </p>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon name="Award" className="text-accent" size={32} />
-                  <h3 className="text-2xl font-bold text-gray-900">ТРЕНЕРСКИЙ СОСТАВ</h3>
-                </div>
-                <p className="text-gray-700">
-                  Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-accent">ТРЕНЕРСКИЙ СОСТАВ</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение».
+              </p>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon name="Heart" className="text-accent" size={32} />
-                  <h3 className="text-2xl font-bold text-gray-900">АТМОСФЕРА</h3>
-                </div>
-                <p className="text-gray-700">
-                  Смех, улыбки и радость - каждое занятие. Наши половцы ходят к нам годами.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-accent">АТМОСФЕРА</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Смех, улыбки и радость - каждое занятие. Наши половцы ходят к нам годами.
+              </p>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-lg transition">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Icon name="Target" className="text-primary" size={32} />
-                  <h3 className="text-2xl font-bold text-gray-900">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
-                </div>
-                <p className="text-gray-700">
-                  Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-accent">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-blue-50">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
-              <p className="text-gray-700">к самым маленьким мы выезжаем на дом. а вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.</p>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                к самым маленьким мы выезжаем на дом. а вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
-              <p className="text-gray-700">ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.</p>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
+              </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
-              <p className="text-gray-700 mb-4">мы работаем с 9:00 до 20:00 каждый день. узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.</p>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                мы работаем с 9:00 до 20:00 каждый день. узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
+              </p>
               <Button 
-                className="bg-primary hover:bg-primary/90"
+                className="bg-accent hover:bg-accent/90 font-bold text-lg px-8 py-6 rounded-full"
                 onClick={() => window.open('https://t.me/your_chat', '_blank')}
               >
                 Получить информацию
@@ -153,272 +183,271 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-zinc-950">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight">
             СТОИМОСТЬ ЗАНЯТИЙ
           </h2>
-          <p className="text-center text-xl text-accent font-semibold mb-12">
+          <p className="text-center text-2xl text-accent font-bold mb-16">
             запишитесь на первую пробную тренировку -60%
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="border-2 border-accent hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-accent mb-2">Пробное занятие</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">850 ₽</p>
-                <p className="text-sm text-gray-500 line-through mb-4">вместо 2200 рублей</p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>консультация</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>диагностика</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>занятие</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>построение плана дальнейшего тренировочного процесса</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="bg-gradient-to-br from-accent/20 to-accent/5 p-8 rounded-xl border-2 border-accent hover:scale-105 transition-transform">
+              <h3 className="text-3xl font-bold uppercase mb-3 text-accent">Пробное занятие</h3>
+              <p className="text-5xl font-black mb-2">850 ₽</p>
+              <p className="text-sm text-gray-400 line-through mb-6">вместо 2200 рублей</p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>консультация</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>диагностика</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>занятие</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>построение плана дальнейшего тренировочного процесса</span>
+                </li>
+              </ul>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">4 занятия</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">7 600 ₽</p>
-                <p className="text-sm text-gray-500 mb-4">со скидкой 6840 рублей*</p>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>10% скидка многодетным, инвалидам</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>персональная работа с тренером</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>индивидуальный подход</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>срок действия 30 дней</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3">4 занятия</h3>
+              <p className="text-5xl font-black mb-2">7 600 ₽</p>
+              <p className="text-sm text-gray-400 mb-6">со скидкой 6840 рублей*</p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>10% скидка многодетным, инвалидам</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>срок действия 30 дней</span>
+                </li>
+              </ul>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">8 занятий</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">13 590 ₽*</p>
-                <p className="text-sm text-gray-500 mb-4">со скидкой 10%</p>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>персональная работа с тренером</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>индивидуальный подход</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>регулярные тренировки 2 раза в неделю</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>срок действия абонемента 35 дней</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3">8 занятий</h3>
+              <p className="text-5xl font-black mb-2">13 590 ₽*</p>
+              <p className="text-sm text-gray-400 mb-6">со скидкой 10%</p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>регулярные тренировки 2 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>срок действия абонемента 35 дней</span>
+                </li>
+              </ul>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">24 занятия</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">37 200 ₽*</p>
-                <p className="text-sm text-gray-500 mb-4">со скидкой 10%</p>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>персональная работа с тренером</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>индивидуальный подход</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>регулярные тренировки 2-3 раза в неделю</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>срок действия абонемента 90 дней</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3">24 занятия</h3>
+              <p className="text-5xl font-black mb-2">37 200 ₽*</p>
+              <p className="text-sm text-gray-400 mb-6">со скидкой 10%</p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>срок действия абонемента 90 дней</span>
+                </li>
+              </ul>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Семейный 16 занятий</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">25 650 ₽*</p>
-                <p className="text-sm text-gray-500 mb-4">для 2+ детей</p>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>для семей с 2 и более детьми</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>каждый ребенок плавает со своим тренером</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>экономия времени. 2 ребенка плавают одновременно</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>срок действия абонемента 35 дней</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-3">Семейный 16</h3>
+              <p className="text-5xl font-black mb-2">25 650 ₽*</p>
+              <p className="text-sm text-gray-400 mb-6">для 2+ детей</p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>каждый ребенок плавает со своим тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>экономия времени. 2 ребенка плавают одновременно</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>срок действия 35 дней</span>
+                </li>
+              </ul>
+            </div>
 
-            <Card className="border-2 border-primary/20 hover:shadow-xl transition">
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Семейный 24 занятия</h3>
-                <p className="text-3xl font-bold text-gray-900 mb-2">36 000 ₽*</p>
-                <p className="text-sm text-gray-500 mb-4">для 2+ детей</p>
-                <ul className="space-y-2 text-gray-700 text-sm">
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>для семей с 2 и более детьми</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>каждый ребенок плавает со своим тренером</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>регулярные тренировки 2-3 раза в неделю</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" className="text-primary mt-1" size={16} />
-                    <span>срок действия абонемента 60 дней</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-3">Семейный 24</h3>
+              <p className="text-5xl font-black mb-2">36 000 ₽*</p>
+              <p className="text-sm text-gray-400 mb-6">для 2+ детей</p>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>каждый ребенок плавает со своим тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
+                  <span>срок действия 60 дней</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-blue-50">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
             ОТЗЫВЫ
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[1, 2, 3].map((i) => (
-              <Card key={i} className="hover:shadow-lg transition">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <Icon name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                    <Icon name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                    <Icon name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                    <Icon name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                    <Icon name="Star" className="text-yellow-400 fill-yellow-400" size={20} />
-                  </div>
-                  <p className="text-gray-700 mb-3">
-                    Отличный бассейн для детей! Профессиональные тренеры, комфортная температура воды. Ребенок занимается с удовольствием!
-                  </p>
-                  <p className="font-semibold text-gray-900">Мария К.</p>
-                </CardContent>
-              </Card>
+              <div key={i} className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+                <div className="flex items-center gap-2 mb-4">
+                  {[1,2,3,4,5].map(star => (
+                    <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Отличный бассейн для детей! Профессиональные тренеры, комфортная температура воды. Ребенок занимается с удовольствием!
+                </p>
+                <p className="font-bold">Мария К.</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-zinc-950">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-12 tracking-tight">
             КАК НАС НАЙТИ
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="aspect-video bg-gray-200 rounded-lg mb-6 flex items-center justify-center">
-              <Icon name="MapPin" size={64} className="text-primary" />
+          <div className="max-w-5xl mx-auto">
+            <div className="aspect-video bg-zinc-900 rounded-xl mb-8 flex items-center justify-center border border-white/10">
+              <Icon name="MapPin" size={64} className="text-accent" />
             </div>
-            <p className="text-center text-lg text-gray-700 mb-8">
+            <p className="text-center text-xl text-gray-300 mb-8">
               г. Екатеринбург, ул. Кольцевая 46
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-primary/10 to-accent/10">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-12 tracking-tight">
               Форма обратной связи
             </h2>
-            <Card>
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Ваше имя
-                    </label>
-                    <Input placeholder="Введите ваше имя" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Телефон
-                    </label>
-                    <Input type="tel" placeholder="+7 (___) ___-__-__" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Сообщение
-                    </label>
-                    <Textarea placeholder="Ваш вопрос или пожелание" rows={4} />
-                  </div>
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90" size="lg">
-                    Отправить заявку
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="bg-zinc-900 p-10 rounded-xl border border-white/10">
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                    Ваше имя
+                  </label>
+                  <Input 
+                    placeholder="Введите ваше имя" 
+                    className="bg-black border-white/20 text-white h-14 text-lg"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                    Телефон
+                  </label>
+                  <Input 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__" 
+                    className="bg-black border-white/20 text-white h-14 text-lg"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                    Сообщение
+                  </label>
+                  <Textarea 
+                    placeholder="Ваш вопрос или пожелание" 
+                    rows={5}
+                    className="bg-black border-white/20 text-white text-lg"
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-accent hover:bg-accent/90 font-bold text-xl py-7 rounded-full"
+                >
+                  Отправить заявку
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-black border-t border-white/10 py-12">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">детский бассейн «ПЛЮХбург»</h3>
-          <p className="mb-2">г. Екатеринбург, ул. Кольцевая 46</p>
-          <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-lg font-semibold mb-6 inline-block">
+          <h3 className="text-3xl font-bold mb-4">детский бассейн «ПЛЮХбург»</h3>
+          <p className="text-gray-400 mb-2">г. Екатеринбург, ул. Кольцевая 46</p>
+          <a 
+            href="tel:+79826322152" 
+            className="text-accent hover:text-accent/80 transition text-xl font-bold mb-8 inline-block"
+          >
             +7 (982) 63 22 152
           </a>
           <div className="mt-8">
             <Button 
-              className="bg-accent hover:bg-accent/90 mb-4"
+              className="bg-accent hover:bg-accent/90 font-bold text-lg px-10 py-6 rounded-full"
               onClick={() => window.open('https://t.me/your_chat', '_blank')}
             >
               Записаться в Telegram
             </Button>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-700">
-            <a href="#" className="text-sm text-gray-400 hover:text-white transition">
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <a href="#" className="text-sm text-gray-500 hover:text-white transition">
               Политика конфиденциальности
             </a>
           </div>
