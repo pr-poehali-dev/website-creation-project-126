@@ -28,11 +28,10 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
         <div className="container mx-auto px-4 py-3 text-center">
           <div className="text-xs md:text-sm text-gray-400 space-y-1">
-            <p className="font-semibold text-white">детский бассейн «ПЛЮХбург»</p>
-            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition">
+            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition block">
               +7 (982) 63 22 152
             </a>
-            <p>г. Екатеринбург, ул. Кольцевая 46</p>
+            <p className="font-semibold text-white">Детский бассейн «ПЛЮХбург»</p>
           </div>
         </div>
       </header>
