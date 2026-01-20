@@ -26,13 +26,13 @@ const Index = () => {
       />
 
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
-            <div className="text-xs md:text-sm text-gray-400 space-y-1">
-              <p className="font-semibold text-white">Детский бассейн «ПЛЮХбург»</p>
-              <p>г. Екатеринбург, ул. Кольцевая 46</p>
+            <div className="space-y-1">
+              <h1 className="text-xl md:text-3xl font-black text-white uppercase tracking-tight">ПЛЮХбург</h1>
+              <p className="text-xs md:text-sm text-gray-400">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
-            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-xs md:text-sm font-semibold">
+            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-sm md:text-base font-bold">
               +7 (982) 63 22 152
             </a>
           </div>
