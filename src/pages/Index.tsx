@@ -75,29 +75,29 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg"><span className="text-accent font-bold text-2xl">-10%</span> на абонемент</p>
+                  <p className="text-gray-700 text-lg"><span className="text-primary font-bold text-2xl">-10%</span> на абонемент</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                  <p className="text-gray-700 text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+                  <p className="text-gray-700 text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                  <p className="text-gray-700 text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+                  <p className="text-gray-700 text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+                  <p className="text-gray-700 text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-white p-8 rounded-3xl border-2 border-cyan-100 hover:border-primary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
                 <Icon name="Users" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">КОМПЛЕКСНЫЙ ПОДХОД</h3>
@@ -138,10 +138,10 @@ const Index = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
                 <Icon name="Award" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-secondary">ТРЕНЕРСКИЙ СОСТАВ</h3>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНЕРСКИЙ СОСТАВ</h3>
               <p className="text-gray-700 leading-relaxed">
                 Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы. Алина лично стажирует каждого тренера в команду, чтобы маленькие половцы получали самое лучшее от занятий в бассейне.
               </p>
@@ -151,7 +151,7 @@ const Index = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl border-2 border-sky-100 hover:border-primary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-cyan-400 rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
                 <Icon name="Smile" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">АТМОСФЕРА</h3>
@@ -161,10 +161,10 @@ const Index = () => {
             </div>
 
             <div className="bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-blue-400 rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
                 <Icon name="Target" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-secondary">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
               <p className="text-gray-700 leading-relaxed">
                 Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
               </p>
