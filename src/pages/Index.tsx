@@ -19,20 +19,20 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <div 
-        className="fixed top-0 left-0 h-1 bg-accent z-[100] transition-all duration-300"
+        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 z-[100] transition-all duration-300"
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/95 border-b border-cyan-100 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
             <div className="space-y-1">
-              <h1 className="text-xl md:text-3xl font-black text-white tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
-              <p className="text-xs md:text-sm text-gray-400">г. Екатеринбург, ул. Кольцевая 46</p>
+              <h1 className="text-xl md:text-3xl font-black text-primary tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
+              <p className="text-xs md:text-sm text-gray-600">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
-            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-sm md:text-base font-bold">
+            <a href="tel:+79826322152" className="text-primary hover:text-primary/80 transition text-sm md:text-base font-bold"
               +7 (982) 63 22 152
             </a>
           </div>
@@ -40,14 +40,18 @@ const Index = () => {
       </header>
 
       <section className="relative h-[600px] md:h-[890px] flex items-center justify-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-blue-50 to-sky-100 z-10" />
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)',
-            filter: 'brightness(0.4)'
+            backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)'
           }}
         />
+        <svg className="absolute bottom-0 left-0 w-full h-32 text-white z-10" preserveAspectRatio="none" viewBox="0 0 1200 120">
+          <path d="M0,60 C300,90 600,30 900,60 C1050,75 1125,90 1200,60 L1200,120 L0,120 Z" fill="currentColor" opacity="0.3"/>
+          <path d="M0,80 C300,50 600,110 900,80 C1050,65 1125,50 1200,80 L1200,120 L0,120 Z" fill="currentColor" opacity="0.5"/>
+          <path d="M0,100 C300,70 600,130 900,100 C1050,85 1125,70 1200,100 L1200,120 L0,120 Z" fill="currentColor"/>
+        </svg>
         
         <div className="relative z-20 text-center px-4 max-w-5xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight">
