@@ -176,23 +176,23 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
-              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
+            <div className="bg-primary p-8 rounded-xl border border-white/20">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-white">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
+              <p className="text-white text-lg leading-relaxed">
                 к самым маленьким мы выезжаем на дом. а вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
               </p>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
-              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
+            <div className="bg-primary p-8 rounded-xl border border-white/20">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
+              <p className="text-white text-lg leading-relaxed">
                 ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
               </p>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
-              <h3 className="text-3xl font-bold uppercase mb-4 text-accent">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <div className="bg-primary p-8 rounded-xl border border-white/20">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
+              <p className="text-white text-lg leading-relaxed mb-6">
                 мы работаем с 9:00 до 20:00 каждый день. узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
               <Button 
@@ -240,11 +240,11 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3">4 занятия</h3>
-              <p className="text-5xl font-black mb-2">7 600 ₽</p>
-              <p className="text-sm text-gray-400 mb-6">со скидкой 6840 рублей*</p>
-              <ul className="space-y-3 text-gray-300 text-sm">
+            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3 text-white">4 занятия</h3>
+              <p className="text-5xl font-black mb-2 text-white">7 600 ₽</p>
+              <p className="text-sm text-white/70 mb-6">со скидкой 6840 рублей*</p>
+              <ul className="space-y-3 text-white text-sm">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>10% скидка многодетным, инвалидам</span>
@@ -264,11 +264,11 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3">8 занятий</h3>
-              <p className="text-5xl font-black mb-2">13 590 ₽*</p>
-              <p className="text-sm text-gray-400 mb-6">со скидкой 10%</p>
-              <ul className="space-y-3 text-gray-300 text-sm">
+            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3 text-white">8 занятий</h3>
+              <p className="text-5xl font-black mb-2 text-white">13 590 ₽*</p>
+              <p className="text-sm text-white/70 mb-6">со скидкой 10%</p>
+              <ul className="space-y-3 text-white text-sm">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>персональная работа с тренером</span>
@@ -288,11 +288,11 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3">24 занятия</h3>
-              <p className="text-5xl font-black mb-2">37 200 ₽*</p>
-              <p className="text-sm text-gray-400 mb-6">со скидкой 10%</p>
-              <ul className="space-y-3 text-gray-300 text-sm">
+            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-3xl font-bold uppercase mb-3 text-white">24 занятия</h3>
+              <p className="text-5xl font-black mb-2 text-white">37 200 ₽*</p>
+              <p className="text-sm text-white/70 mb-6">со скидкой 10%</p>
+              <ul className="space-y-3 text-white text-sm">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>персональная работа с тренером</span>
@@ -312,11 +312,11 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-2xl font-bold uppercase mb-3">Семейный 16</h3>
-              <p className="text-5xl font-black mb-2">25 650 ₽*</p>
-              <p className="text-sm text-gray-400 mb-6">для 2+ детей</p>
-              <ul className="space-y-3 text-gray-300 text-sm">
+            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-3 text-white">Семейный 16</h3>
+              <p className="text-5xl font-black mb-2 text-white">25 650 ₽*</p>
+              <p className="text-sm text-white/70 mb-6">для 2+ детей</p>
+              <ul className="space-y-3 text-white text-sm">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>для семей с 2 и более детьми</span>
@@ -336,11 +336,11 @@ const Index = () => {
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-2xl font-bold uppercase mb-3">Семейный 24</h3>
-              <p className="text-5xl font-black mb-2">36 000 ₽*</p>
-              <p className="text-sm text-gray-400 mb-6">для 2+ детей</p>
-              <ul className="space-y-3 text-gray-300 text-sm">
+            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
+              <h3 className="text-2xl font-bold uppercase mb-3 text-white">Семейный 24</h3>
+              <p className="text-5xl font-black mb-2 text-white">36 000 ₽*</p>
+              <p className="text-sm text-white/70 mb-6">для 2+ детей</p>
+              <ul className="space-y-3 text-white text-sm">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>для семей с 2 и более детьми</span>
@@ -369,52 +369,52 @@ const Index = () => {
             ОТЗЫВЫ
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[1,2,3,4,5].map(star => (
                   <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+              <p className="text-white mb-4 leading-relaxed text-sm">
                 Это одно из самых лучших мест, где одновременно занимаются физическим и умственным развитием ребенка! У меня двое деток, с Плюхом мы уже три года вместе! Индивидуальный подход, методика "осознанное погружение" покорило моё сердце! Всем мамочки, кто в поисках, от души рекомендую! Ваши занятия в бассейне будут весёлыми и без слёз! На Кольцевой, 46 очень комфортно малышам и мамочкам! Фен, кофе, стульчики для кормления - мой рай!
               </p>
-              <p className="font-bold text-sm">Marinella555</p>
+              <p className="font-bold text-sm text-white">Marinella555</p>
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[1,2,3,4,5].map(star => (
                   <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+              <p className="text-white mb-4 leading-relaxed text-sm">
                 Мы с детками уже 6 месяцев точно ходим в этот замечательный центр раннего плавания. Все очень очень нравится. Тренера работают, очень радуют своим подходом, знаниями, любовью к деткам. Методика осознанного погружения. Плавный подход, никто не заставляет ребёнка через силу или не хочу что то делать. Всё идёт плавно постепенно и с любовью. В бассейне вода чистая, все моется и меняется регулярно. Запаха хлора нет.
               </p>
-              <p className="font-bold text-sm">sofya_kondraeva</p>
+              <p className="font-bold text-sm text-white">sofya_kondraeva</p>
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[1,2,3,4,5].map(star => (
                   <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+              <p className="text-white mb-4 leading-relaxed text-sm">
                 Плюхбург - это то место куда мой сын бежит с радостью. С Плюхбургом мы уже три года. Сын занимается с тренером Евгением, про таких людей говорят "человек на своём месте"! Подход к каждому ребенку индивидуальный. Мой ребенок уже свободно плавает (раньше мыли голову, ребенок плакал, был страх воды). В Плюхбург приходим как домой, все уютно, комфортно и очень душевно. Кстати за чистотой воды они тщательно следят!
               </p>
-              <p className="font-bold text-sm">Vera Antsiferova</p>
+              <p className="font-bold text-sm text-white">Vera Antsiferova</p>
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-2 mb-4">
                 {[1,2,3,4,5].map(star => (
                   <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
                 ))}
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+              <p className="text-white mb-4 leading-relaxed text-sm">
                 Это любовь! Ребенка спасли от страха воды, который появился в другом бассейне. Индивидуальный подход к каждому ребенку. Тренер подстраивает занятие, исходя из настроения малыша. Интересно и увлекательно проходит каждая тренировка. Искренне любим это место. Отдельная любовь к тренеру Владу! Да все крутые!
               </p>
-              <p className="font-bold text-sm">Дарья</p>
+              <p className="font-bold text-sm text-white">Дарья</p>
             </div>
           </div>
         </div>
@@ -426,10 +426,10 @@ const Index = () => {
             КАК НАС НАЙТИ
           </h2>
           <div className="max-w-5xl mx-auto">
-            <div className="aspect-video bg-zinc-900 rounded-xl mb-8 flex items-center justify-center border border-white/10">
+            <div className="aspect-video bg-primary rounded-xl mb-8 flex items-center justify-center border border-white/20">
               <Icon name="MapPin" size={64} className="text-accent" />
             </div>
-            <p className="text-center text-xl text-gray-300 mb-8">
+            <p className="text-center text-xl text-gray-700 mb-8">
               г. Екатеринбург, ул. Кольцевая 46
             </p>
           </div>
@@ -442,35 +442,35 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-12 tracking-tight">
               Форма обратной связи
             </h2>
-            <div className="bg-zinc-900 p-10 rounded-xl border border-white/10">
+            <div className="bg-primary p-10 rounded-xl border border-white/20">
               <form className="space-y-6">
                 <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                  <label className="block text-sm font-bold uppercase mb-3 text-white">
                     Ваше имя
                   </label>
                   <Input 
                     placeholder="Введите ваше имя" 
-                    className="bg-black border-white/20 text-white h-14 text-lg"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-14 text-lg"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                  <label className="block text-sm font-bold uppercase mb-3 text-white">
                     Телефон
                   </label>
                   <Input 
                     type="tel" 
                     placeholder="+7 (___) ___-__-__" 
-                    className="bg-black border-white/20 text-white h-14 text-lg"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-14 text-lg"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-gray-400">
+                  <label className="block text-sm font-bold uppercase mb-3 text-white">
                     Сообщение
                   </label>
                   <Textarea 
                     placeholder="Ваш вопрос или пожелание" 
                     rows={5}
-                    className="bg-black border-white/20 text-white text-lg"
+                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 text-lg"
                   />
                 </div>
                 <Button 
@@ -485,10 +485,10 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-black border-t border-white/10 py-12">
+      <footer className="bg-primary border-t border-white/20 py-12">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold mb-4">детский бассейн «ПЛЮХбург»</h3>
-          <p className="text-gray-400 mb-2">г. Екатеринбург, ул. Кольцевая 46</p>
+          <h3 className="text-3xl font-bold mb-4 text-white">детский бассейн «ПЛЮХбург»</h3>
+          <p className="text-white/80 mb-2">г. Екатеринбург, ул. Кольцевая 46</p>
           <a 
             href="tel:+79826322152" 
             className="text-accent hover:text-accent/80 transition text-xl font-bold mb-8 inline-block"
@@ -504,7 +504,7 @@ const Index = () => {
             </Button>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10">
-            <a href="#" className="text-sm text-gray-500 hover:text-white transition">
+            <a href="#" className="text-sm text-white/60 hover:text-white transition">
               Политика конфиденциальности
             </a>
           </div>
