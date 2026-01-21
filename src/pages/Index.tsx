@@ -32,7 +32,7 @@ const Index = () => {
               <h1 className="text-xl md:text-3xl font-black text-primary tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
               <p className="text-xs md:text-sm text-gray-600">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
-            <a href="tel:+79826322152" className="text-primary hover:text-primary/80 transition text-sm md:text-base font-bold"
+            <a href="tel:+79826322152" className="text-primary hover:text-primary/80 transition text-sm md:text-base font-bold">
               +7 (982) 63 22 152
             </a>
           </div>
