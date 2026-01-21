@@ -19,18 +19,18 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <div 
         className="fixed top-0 left-0 h-1 bg-accent z-[100] transition-all duration-300"
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/80 border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/95 border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
             <div className="space-y-1">
-              <h1 className="text-xl md:text-3xl font-black text-white tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
-              <p className="text-xs md:text-sm text-gray-400">г. Екатеринбург, ул. Кольцевая 46</p>
+              <h1 className="text-xl md:text-3xl font-black text-black tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
+              <p className="text-xs md:text-sm text-gray-600">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
             <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-sm md:text-base font-bold">
               +7 (982) 63 22 152
@@ -57,7 +57,7 @@ const Index = () => {
           
           <Button 
             size="lg" 
-            className="bg-accent hover:bg-accent/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/50 hover:scale-105 transition-transform"
+            className="bg-accent hover:bg-accent/90 text-black font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/50 hover:scale-105 transition-transform"
             onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
           >
             Записаться на занятие
@@ -65,7 +65,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -102,7 +102,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-950">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
             ПОЧЕМУ ВЫБИРАЮТ НАС?
@@ -121,33 +121,33 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:border-accent transition-all shadow-sm">
               <h3 className="text-2xl font-bold uppercase mb-4 text-accent">КОМПЛЕКСНЫЙ ПОДХОД</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Мы работаем в связке с родителями, обучая ребенка не только плаванию, но и помогая ему развиваться личностно, во время осваивая двигательные навыки.
               </p>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:border-accent transition-all shadow-sm">
               <h3 className="text-2xl font-bold uppercase mb-4 text-accent">ТРЕНЕРСКИЙ СОСТАВ</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы. Алина лично стажирует каждого тренера в команду, чтобы маленькие половцы получали самое лучшее от занятий в бассейне.
               </p>
-              <p className="text-gray-300 leading-relaxed mt-4">
+              <p className="text-gray-700 leading-relaxed mt-4">
                 Наши тренеры - это тренеры с которыми ваш ребенок будет сравнивать всех последующих, потому что мы задаем высокую планку. Наши тренеры - наставники, любящие и уважающие детей.
               </p>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:border-accent transition-all shadow-sm">
               <h3 className="text-2xl font-bold uppercase mb-4 text-accent">АТМОСФЕРА</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Смех, улыбки и радость - каждое занятие. Наши половцы ходят к нам годами.
               </p>
             </div>
 
-            <div className="bg-zinc-900 p-8 rounded-xl border border-white/10 hover:border-accent/50 transition-all">
+            <div className="bg-white p-8 rounded-xl border-2 border-gray-200 hover:border-accent transition-all shadow-sm">
               <h3 className="text-2xl font-bold uppercase mb-4 text-accent">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
               </p>
             </div>
@@ -155,7 +155,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="bg-zinc-900 p-8 rounded-xl border border-white/10">
@@ -188,7 +188,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-950">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight">
             СТОИМОСТЬ ЗАНЯТИЙ
@@ -345,7 +345,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
             ОТЗЫВЫ
@@ -402,7 +402,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-950">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-12 tracking-tight">
             КАК НАС НАЙТИ
@@ -418,7 +418,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-12 tracking-tight">
