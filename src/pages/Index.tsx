@@ -40,27 +40,23 @@ const Index = () => {
       </header>
 
       <section className="relative h-[600px] md:h-[890px] flex items-center justify-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 via-sky-50 to-purple-100" />
+        <div className="absolute inset-0 bg-primary" />
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-15"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)'
           }}
         />
-        <svg className="absolute bottom-0 left-0 w-full h-32 text-white/80" preserveAspectRatio="none" viewBox="0 0 1200 120">
-          <path d="M0,60 Q300,100 600,60 T1200,60 L1200,120 L0,120 Z" fill="currentColor" opacity="0.5"/>
-          <path d="M0,80 Q300,50 600,80 T1200,80 L1200,120 L0,120 Z" fill="currentColor"/>
-        </svg>
         
         <div className="relative z-20 text-center px-4 max-w-5xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight text-gray-800">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight text-white">
             ЗАПИШИТЕ РЕБЕНКА<br />НА ПЛАВАНИЕ И ПОЛУЧИТЕ<br />
-            <span className="bg-accent text-gray-800 px-6 py-3 rounded-3xl inline-block shadow-xl">-60% НА ПЕРВОЕ ЗАНЯТИЕ</span>
+            <span className="bg-accent text-primary px-6 py-3 rounded-3xl inline-block shadow-xl">-60% НА ПЕРВОЕ ЗАНЯТИЕ</span>
           </h1>
           
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-primary/30 hover:scale-105 transition-all"
+            className="bg-accent hover:bg-accent/90 text-primary font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/30 hover:scale-105 transition-all"
             onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
           >
             Записаться на занятие
@@ -105,11 +101,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-cyan-50 via-purple-50 to-sky-50 relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <svg className="absolute top-0 left-0 w-full h-20 transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1200 120">
-            <path d="M0,60 Q300,100 600,60 T1200,60 L1200,0 L0,0 Z" fill="white"/>
-          </svg>
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-primary">
             ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
@@ -117,55 +110,55 @@ const Index = () => {
           <p className="text-center text-xl mb-12 text-gray-600">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
-            <div className="relative aspect-video bg-gradient-to-br from-cyan-100 to-purple-100 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative aspect-video bg-primary rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-xl shadow-primary/40">
-                  <Icon name="Play" size={32} className="text-white ml-1" />
+                <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-xl shadow-accent/40">
+                  <Icon name="Play" size={32} className="text-primary ml-1" />
                 </div>
               </div>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl border-2 border-cyan-100 hover:border-primary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
-                <Icon name="Users" className="text-white" size={32} />
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
+                <Icon name="Users" className="text-primary" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">КОМПЛЕКСНЫЙ ПОДХОД</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">КОМПЛЕКСНЫЙ ПОДХОД</h3>
+              <p className="text-white leading-relaxed">
                 Мы работаем в связке с родителями, обучая ребенка не только плаванию, но и помогая ему развиваться личностно, во время осваивая двигательные навыки.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
-                <Icon name="Award" className="text-white" size={32} />
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
+                <Icon name="Award" className="text-primary" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНЕРСКИЙ СОСТАВ</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">ТРЕНЕРСКИЙ СОСТАВ</h3>
+              <p className="text-white leading-relaxed">
                 Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы. Алина лично стажирует каждого тренера в команду, чтобы маленькие половцы получали самое лучшее от занятий в бассейне.
               </p>
-              <p className="text-gray-700 leading-relaxed mt-4">
+              <p className="text-white leading-relaxed mt-4">
                 Наши тренеры - это тренеры с которыми ваш ребенок будет сравнивать всех последующих, потому что мы задаем высокую планку. Наши тренеры - наставники, любящие и уважающие детей.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-sky-100 hover:border-primary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
-                <Icon name="Smile" className="text-white" size={32} />
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
+                <Icon name="Smile" className="text-primary" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">АТМОСФЕРА</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">АТМОСФЕРА</h3>
+              <p className="text-white leading-relaxed">
                 Смех, улыбки и радость - каждое занятие. Наши половцы ходят к нам годами.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-purple-100 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
-                <Icon name="Target" className="text-white" size={32} />
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
+                <Icon name="Target" className="text-primary" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
+              <p className="text-white leading-relaxed">
                 Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
               </p>
             </div>
@@ -206,21 +199,21 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-cyan-50 via-purple-50 to-sky-50 relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-primary">
             СТОИМОСТЬ ЗАНЯТИЙ
           </h2>
-          <p className="text-center text-2xl text-accent font-bold mb-16">
+          <p className="text-center text-2xl text-primary font-bold mb-16">
             запишитесь на первую пробную тренировку -60%
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-gradient-to-br from-accent/20 to-accent/5 p-8 rounded-xl border-2 border-accent hover:scale-105 transition-transform">
-              <h3 className="text-3xl font-bold uppercase mb-3 text-accent">Пробное занятие</h3>
-              <p className="text-5xl font-black mb-2">850 ₽</p>
-              <p className="text-sm text-gray-400 line-through mb-6">вместо 2200 рублей</p>
-              <ul className="space-y-3 text-gray-300">
+            <div className="bg-secondary p-8 rounded-xl border-2 border-accent hover:scale-105 transition-transform">
+              <h3 className="text-3xl font-bold uppercase mb-3 text-white">Пробное занятие</h3>
+              <p className="text-5xl font-black mb-2 text-accent">850 ₽</p>
+              <p className="text-sm text-white/70 line-through mb-6">вместо 2200 рублей</p>
+              <ul className="space-y-3 text-white">
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
                   <span>консультация</span>
@@ -420,7 +413,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-cyan-50 via-purple-50 to-sky-50 relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-12 tracking-tight">
             КАК НАС НАЙТИ
@@ -429,7 +422,7 @@ const Index = () => {
             <div className="aspect-video bg-primary rounded-xl mb-8 flex items-center justify-center border border-white/20">
               <Icon name="MapPin" size={64} className="text-accent" />
             </div>
-            <p className="text-center text-xl text-gray-700 mb-8">
+            <p className="text-center text-xl text-primary mb-8">
               г. Екатеринбург, ул. Кольцевая 46
             </p>
           </div>
