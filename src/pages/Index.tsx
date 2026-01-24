@@ -51,7 +51,9 @@ const Index = () => {
         <div className="relative z-20 text-center px-4 max-w-5xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight text-white">
             ЗАПИШИТЕ РЕБЕНКА<br />НА ПЛАВАНИЕ И ПОЛУЧИТЕ<br />
-            <span className="bg-accent text-primary px-6 py-3 rounded-3xl inline-block shadow-xl">-60% НА ПЕРВОЕ ЗАНЯТИЕ</span>
+            <span className="bg-white text-primary px-6 py-3 rounded-3xl inline-block shadow-2xl">
+              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-transparent bg-clip-text font-black animate-pulse">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+            </span>
           </h1>
           
           <Button 
