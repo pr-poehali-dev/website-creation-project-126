@@ -19,20 +19,20 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <div 
-        className="fixed top-0 left-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary z-[100] transition-all duration-300 shadow-lg"
+        className="fixed top-0 left-0 h-1.5 bg-accent z-[100] transition-all duration-300 shadow-lg"
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/90 border-b border-primary/20 shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/90 border-b border-accent/30 shadow-md">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
             <div className="space-y-1">
-              <h1 className="text-xl md:text-3xl font-black text-primary tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
-              <p className="text-xs md:text-sm text-gray-600">г. Екатеринбург, ул. Кольцевая 46</p>
+              <h1 className="text-xl md:text-3xl font-black text-white tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
+              <p className="text-xs md:text-sm text-gray-300">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
-            <a href="tel:+79826322152" className="text-accent hover:text-accent/80 transition text-sm md:text-base font-bold">
+            <a href="tel:+79826322152" className="text-accent hover:text-white transition text-sm md:text-base font-bold">
               +7 (982) 63 22 152
             </a>
           </div>
@@ -40,9 +40,9 @@ const Index = () => {
       </header>
 
       <section className="relative h-[600px] md:h-[890px] flex items-center justify-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-primary" />
+        <div className="absolute inset-0 bg-black" />
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)'
           }}
@@ -51,51 +51,54 @@ const Index = () => {
         <div className="relative z-20 text-center px-4 max-w-5xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight text-white">
             ЗАПИШИТЕ РЕБЕНКА<br />НА ПЛАВАНИЕ И ПОЛУЧИТЕ<br />
-            <span className="bg-white text-primary px-6 py-3 rounded-3xl inline-block shadow-2xl">
-              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-transparent bg-clip-text font-black animate-pulse">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+            <span className="bg-white text-black px-6 py-3 rounded-3xl inline-block shadow-2xl">
+              <span className="text-accent font-black animate-pulse">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </span>
           </h1>
           
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-primary font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/30 hover:scale-105 transition-all"
-            onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
-          >
-            Записаться на занятие
-          </Button>
+          <div className="relative inline-block">
+            <div className="absolute -inset-2 bg-accent/20 rounded-full blur-xl animate-ripple" />
+            <Button 
+              size="lg" 
+              className="relative bg-accent hover:bg-accent/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-accent/50 animate-water-wave transition-all"
+              onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+            >
+              Записаться на занятие
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg"><span className="text-primary font-bold text-2xl">-10%</span> на абонемент</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg"><span className="text-accent font-bold text-2xl">-10%</span> на абонемент</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-700 text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
                 </div>
               </div>
             </div>
@@ -103,19 +106,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-black relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-primary">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
             ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
           
-          <p className="text-center text-xl mb-12 text-gray-600">Посмотрите видео о нашем бассейне</p>
+          <p className="text-center text-xl mb-12 text-gray-400">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
-            <div className="relative aspect-video bg-primary rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl border border-accent/20">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-xl shadow-accent/40">
-                  <Icon name="Play" size={32} className="text-primary ml-1" />
+                  <Icon name="Play" size={32} className="text-white ml-1" />
                 </div>
               </div>
             </div>
@@ -124,7 +127,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
               <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
-                <Icon name="Users" className="text-primary" size={32} />
+                <Icon name="Users" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-white">КОМПЛЕКСНЫЙ ПОДХОД</h3>
               <p className="text-white leading-relaxed">
@@ -134,7 +137,7 @@ const Index = () => {
 
             <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
               <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
-                <Icon name="Award" className="text-primary" size={32} />
+                <Icon name="Award" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-white">ТРЕНЕРСКИЙ СОСТАВ</h3>
               <p className="text-white leading-relaxed">
@@ -147,7 +150,7 @@ const Index = () => {
 
             <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
               <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
-                <Icon name="Smile" className="text-primary" size={32} />
+                <Icon name="Smile" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-white">АТМОСФЕРА</h3>
               <p className="text-white leading-relaxed">
@@ -157,7 +160,7 @@ const Index = () => {
 
             <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl">
               <div className="w-16 h-16 bg-accent rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
-                <Icon name="Target" className="text-primary" size={32} />
+                <Icon name="Target" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-white">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
               <p className="text-white leading-relaxed">
@@ -168,30 +171,30 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
-            <div className="bg-primary p-8 rounded-xl border border-white/20">
+            <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
               <p className="text-white text-lg leading-relaxed">
                 к самым маленьким мы выезжаем на дом. а вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
               </p>
             </div>
 
-            <div className="bg-primary p-8 rounded-xl border border-white/20">
+            <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
               <p className="text-white text-lg leading-relaxed">
                 ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
               </p>
             </div>
 
-            <div className="bg-primary p-8 rounded-xl border border-white/20">
+            <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
               <p className="text-white text-lg leading-relaxed mb-6">
                 мы работаем с 9:00 до 20:00 каждый день. узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
               <Button 
-                className="bg-accent hover:bg-accent/90 font-bold text-lg px-8 py-6 rounded-full"
+                className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6 rounded-full"
                 onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
               >
                 Получить информацию
@@ -201,307 +204,151 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-black relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-primary">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
             СТОИМОСТЬ ЗАНЯТИЙ
           </h2>
-          <p className="text-center text-2xl text-primary font-bold mb-16">
-            запишитесь на первую пробную тренировку -60%
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-secondary p-8 rounded-xl border-2 border-accent hover:scale-105 transition-transform">
-              <h3 className="text-3xl font-bold uppercase mb-3 text-white">Пробное занятие</h3>
-              <p className="text-5xl font-black mb-2 text-accent">850 ₽</p>
-              <p className="text-sm text-white/70 line-through mb-6">вместо 2200 рублей</p>
-              <ul className="space-y-3 text-white">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>консультация</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>диагностика</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>занятие</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>построение плана дальнейшего тренировочного процесса</span>
-                </li>
-              </ul>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Пробное занятие</h3>
+              <p className="text-5xl font-black text-accent mb-4 relative z-10">1200₽</p>
+              <p className="text-gray-300 mb-6 relative z-10">Первое знакомство с бассейном и тренером</p>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
             </div>
 
-            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3 text-white">4 занятия</h3>
-              <p className="text-5xl font-black mb-2 text-white">7 600 ₽</p>
-              <p className="text-sm text-white/70 mb-6">со скидкой 6840 рублей*</p>
-              <ul className="space-y-3 text-white text-sm">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>10% скидка многодетным, инвалидам</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>персональная работа с тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>срок действия 30 дней</span>
-                </li>
-              </ul>
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-accent/50 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden transform scale-105">
+              <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold z-20">
+                Хит
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Абонемент 8 занятий</h3>
+              <p className="text-5xl font-black text-accent mb-4 relative z-10">8000₽</p>
+              <p className="text-gray-300 mb-6 relative z-10">1000₽ за занятие. Действует 30 дней</p>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
             </div>
 
-            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3 text-white">8 занятий</h3>
-              <p className="text-5xl font-black mb-2 text-white">13 590 ₽*</p>
-              <p className="text-sm text-white/70 mb-6">со скидкой 10%</p>
-              <ul className="space-y-3 text-white text-sm">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>персональная работа с тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>регулярные тренировки 2 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>срок действия абонемента 35 дней</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-3xl font-bold uppercase mb-3 text-white">24 занятия</h3>
-              <p className="text-5xl font-black mb-2 text-white">37 200 ₽*</p>
-              <p className="text-sm text-white/70 mb-6">со скидкой 10%</p>
-              <ul className="space-y-3 text-white text-sm">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>персональная работа с тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>регулярные тренировки 2-3 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>срок действия абонемента 90 дней</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-2xl font-bold uppercase mb-3 text-white">Семейный 16</h3>
-              <p className="text-5xl font-black mb-2 text-white">25 650 ₽*</p>
-              <p className="text-sm text-white/70 mb-6">для 2+ детей</p>
-              <ul className="space-y-3 text-white text-sm">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>для семей с 2 и более детьми</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>каждый ребенок плавает со своим тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>экономия времени. 2 ребенка плавают одновременно</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>срок действия 35 дней</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-primary p-8 rounded-xl border border-white/20 hover:border-accent/50 hover:scale-105 transition-all">
-              <h3 className="text-2xl font-bold uppercase mb-3 text-white">Семейный 24</h3>
-              <p className="text-5xl font-black mb-2 text-white">36 000 ₽*</p>
-              <p className="text-sm text-white/70 mb-6">для 2+ детей</p>
-              <ul className="space-y-3 text-white text-sm">
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>для семей с 2 и более детьми</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>каждый ребенок плавает со своим тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>регулярные тренировки 2-3 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2" />
-                  <span>срок действия 60 дней</span>
-                </li>
-              </ul>
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Абонемент 12 занятий</h3>
+              <p className="text-5xl font-black text-accent mb-4 relative z-10">11400₽</p>
+              <p className="text-gray-300 mb-6 relative z-10">950₽ за занятие. Действует 45 дней</p>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
-            ОТЗЫВЫ
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
+            СВЯЖИТЕСЬ С НАМИ
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[1,2,3,4,5].map(star => (
-                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
-                ))}
+          
+          <div className="max-w-2xl mx-auto">
+            <form className="space-y-6">
+              <div>
+                <Input 
+                  placeholder="Ваше имя" 
+                  className="bg-secondary border-accent/20 text-white placeholder:text-gray-400 h-14 text-lg rounded-2xl"
+                />
               </div>
-              <p className="text-white mb-4 leading-relaxed text-sm">
-                Это одно из самых лучших мест, где одновременно занимаются физическим и умственным развитием ребенка! У меня двое деток, с Плюхом мы уже три года вместе! Индивидуальный подход, методика "осознанное погружение" покорило моё сердце! Всем мамочки, кто в поисках, от души рекомендую! Ваши занятия в бассейне будут весёлыми и без слёз! На Кольцевой, 46 очень комфортно малышам и мамочкам! Фен, кофе, стульчики для кормления - мой рай!
-              </p>
-              <p className="font-bold text-sm text-white">Marinella555</p>
-            </div>
-
-            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[1,2,3,4,5].map(star => (
-                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
-                ))}
+              <div>
+                <Input 
+                  type="tel" 
+                  placeholder="Телефон" 
+                  className="bg-secondary border-accent/20 text-white placeholder:text-gray-400 h-14 text-lg rounded-2xl"
+                />
               </div>
-              <p className="text-white mb-4 leading-relaxed text-sm">
-                Мы с детками уже 6 месяцев точно ходим в этот замечательный центр раннего плавания. Все очень очень нравится. Тренера работают, очень радуют своим подходом, знаниями, любовью к деткам. Методика осознанного погружения. Плавный подход, никто не заставляет ребёнка через силу или не хочу что то делать. Всё идёт плавно постепенно и с любовью. В бассейне вода чистая, все моется и меняется регулярно. Запаха хлора нет.
-              </p>
-              <p className="font-bold text-sm text-white">sofya_kondraeva</p>
-            </div>
-
-            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[1,2,3,4,5].map(star => (
-                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
-                ))}
+              <div>
+                <Textarea 
+                  placeholder="Ваше сообщение" 
+                  rows={5} 
+                  className="bg-secondary border-accent/20 text-white placeholder:text-gray-400 text-lg rounded-2xl"
+                />
               </div>
-              <p className="text-white mb-4 leading-relaxed text-sm">
-                Плюхбург - это то место куда мой сын бежит с радостью. С Плюхбургом мы уже три года. Сын занимается с тренером Евгением, про таких людей говорят "человек на своём месте"! Подход к каждому ребенку индивидуальный. Мой ребенок уже свободно плавает (раньше мыли голову, ребенок плакал, был страх воды). В Плюхбург приходим как домой, все уютно, комфортно и очень душевно. Кстати за чистотой воды они тщательно следят!
-              </p>
-              <p className="font-bold text-sm text-white">Vera Antsiferova</p>
-            </div>
-
-            <div className="bg-primary p-6 rounded-xl border border-white/20 hover:border-accent/50 transition-all">
-              <div className="flex items-center gap-2 mb-4">
-                {[1,2,3,4,5].map(star => (
-                  <Icon key={star} name="Star" className="text-accent fill-accent" size={18} />
-                ))}
-              </div>
-              <p className="text-white mb-4 leading-relaxed text-sm">
-                Это любовь! Ребенка спасли от страха воды, который появился в другом бассейне. Индивидуальный подход к каждому ребенку. Тренер подстраивает занятие, исходя из настроения малыша. Интересно и увлекательно проходит каждая тренировка. Искренне любим это место. Отдельная любовь к тренеру Владу! Да все крутые!
-              </p>
-              <p className="font-bold text-sm text-white">Дарья</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-12 tracking-tight">
-            КАК НАС НАЙТИ
-          </h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="aspect-video bg-primary rounded-xl mb-8 flex items-center justify-center border border-white/20">
-              <Icon name="MapPin" size={64} className="text-accent" />
-            </div>
-            <p className="text-center text-xl text-primary mb-8">
-              г. Екатеринбург, ул. Кольцевая 46
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-12 tracking-tight">
-              Форма обратной связи
-            </h2>
-            <div className="bg-primary p-10 rounded-xl border border-white/20">
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-white">
-                    Ваше имя
-                  </label>
-                  <Input 
-                    placeholder="Введите ваше имя" 
-                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-14 text-lg"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-white">
-                    Телефон
-                  </label>
-                  <Input 
-                    type="tel" 
-                    placeholder="+7 (___) ___-__-__" 
-                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 h-14 text-lg"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold uppercase mb-3 text-white">
-                    Сообщение
-                  </label>
-                  <Textarea 
-                    placeholder="Ваш вопрос или пожелание" 
-                    rows={5}
-                    className="bg-white/10 border-white/30 text-white placeholder:text-white/50 text-lg"
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-accent hover:bg-accent/90 font-bold text-xl py-7 rounded-full"
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold text-xl py-7 rounded-full"
+              >
+                Отправить заявку
+              </Button>
+            </form>
+            
+            <div className="mt-12 text-center space-y-4">
+              <p className="text-gray-400">или свяжитесь с нами напрямую:</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:+79826322152" 
+                  className="flex items-center justify-center gap-2 bg-secondary hover:bg-accent/20 text-white px-6 py-4 rounded-full transition-all font-bold"
                 >
-                  Отправить заявку
-                </Button>
-              </form>
+                  <Icon name="Phone" size={20} />
+                  +7 (982) 63 22 152
+                </a>
+                <a 
+                  href="https://t.me/shatalova_alina" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-6 py-4 rounded-full transition-all font-bold"
+                >
+                  <Icon name="MessageCircle" size={20} />
+                  Telegram
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="bg-primary border-t border-white/20 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold mb-4 text-white">детский бассейн «ПЛЮХбург»</h3>
-          <p className="text-white/80 mb-2">г. Екатеринбург, ул. Кольцевая 46</p>
-          <a 
-            href="tel:+79826322152" 
-            className="text-accent hover:text-accent/80 transition text-xl font-bold mb-8 inline-block"
-          >
-            +7 (982) 63 22 152
-          </a>
-          <div className="mt-8">
-            <Button 
-              className="bg-accent hover:bg-accent/90 font-bold text-lg px-10 py-6 rounded-full"
-              onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
-            >
-              Записаться в Telegram
-            </Button>
+      <footer className="bg-secondary py-12 border-t border-accent/20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-black text-white mb-4">ПЛЮХбург</h3>
+              <p className="text-gray-400">
+                Детский бассейн в Екатеринбурге. Обучаем плаванию детей от 2 месяцев до 10 лет.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Контакты</h3>
+              <div className="space-y-2 text-gray-400">
+                <p>г. Екатеринбург, ул. Кольцевая 46</p>
+                <p>+7 (982) 63 22 152</p>
+                <p>Ежедневно с 9:00 до 20:00</p>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Социальные сети</h3>
+              <div className="flex gap-4">
+                <a href="https://t.me/shatalova_alina" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-accent hover:bg-accent/90 rounded-full flex items-center justify-center transition-all">
+                  <Icon name="MessageCircle" size={24} className="text-white" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <a href="#" className="text-sm text-white/60 hover:text-white transition">
-              Политика конфиденциальности
-            </a>
+          
+          <div className="border-t border-accent/20 pt-8 text-center text-gray-400">
+            <p>© 2024 ПЛЮХбург. Все права защищены.</p>
           </div>
         </div>
       </footer>
