@@ -512,7 +512,7 @@ const Index = () => {
               
               <div className="rounded-3xl overflow-hidden border-2 border-white/10 h-[400px] md:h-full">
                 <iframe 
-                  src="https://yandex.ru/map-widget/v1/?ll=60.616074%2C56.825691&mode=search&oid=1191774698&ol=biz&z=17"
+                  src="https://yandex.ru/map-widget/v1/?ll=60.529996%2C56.780339&z=17&pt=60.529996,56.780339,pm2rdm"
                   width="100%" 
                   height="100%" 
                   frameBorder="0"
