@@ -210,28 +210,35 @@ const Index = () => {
             СТОИМОСТЬ ЗАНЯТИЙ
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
-              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Пробное занятие</h3>
-              <p className="text-5xl font-black text-accent mb-4 relative z-10">1200₽</p>
-              <p className="text-gray-300 mb-6 relative z-10">Первое знакомство с бассейном и тренером</p>
-              <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
-                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
-              >
-                Записаться
-              </Button>
-            </div>
-
-            <div className="bg-secondary p-8 rounded-3xl border-2 border-accent/50 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden transform scale-105">
-              <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold z-20">
-                Хит
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-accent hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
+                -61%
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
-              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Абонемент 8 занятий</h3>
-              <p className="text-5xl font-black text-accent mb-4 relative z-10">8000₽</p>
-              <p className="text-gray-300 mb-6 relative z-10">1000₽ за занятие. Действует 30 дней</p>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Пробное занятие</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">850₽</p>
+                <p className="text-gray-400 line-through text-lg">вместо 2200₽</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>консультация</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>диагностика</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>занятие</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>построение плана тренировочного процесса</span>
+                </li>
+              </ul>
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
                 onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
@@ -242,9 +249,149 @@ const Index = () => {
 
             <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
-              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">Абонемент 12 занятий</h3>
-              <p className="text-5xl font-black text-accent mb-4 relative z-10">11400₽</p>
-              <p className="text-gray-300 mb-6 relative z-10">950₽ за занятие. Действует 45 дней</p>
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">4 занятия</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">7 600₽</p>
+                <p className="text-gray-400 text-sm mt-1">10% скидка многодетным: 6 840₽</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>срок действия 30 дней</span>
+                </li>
+              </ul>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">8 занятий</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">13 590₽*</p>
+                <p className="text-gray-400 text-xs mt-1">*со скидкой 10%</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>регулярные тренировки 2 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">24 занятия</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">37 200₽*</p>
+                <p className="text-gray-400 text-xs mt-1">*со скидкой 10%</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>срок действия 90 дней</span>
+                </li>
+              </ul>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
+                Семейный
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">16 занятий</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">25 650₽*</p>
+                <p className="text-gray-400 text-xs mt-1">*со скидкой 10%</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>2 ребенка плавают одновременно</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
+                onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
+              >
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
+                Семейный
+              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -mr-16 -mt-16" />
+              <h3 className="text-2xl font-bold uppercase mb-4 text-white relative z-10">24 занятия</h3>
+              <div className="relative z-10 mb-4">
+                <p className="text-5xl font-black text-accent">36 000₽*</p>
+                <p className="text-gray-400 text-xs mt-1">*со скидкой 10%</p>
+              </div>
+              <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">•</span>
+                  <span>срок действия 60 дней</span>
+                </li>
+              </ul>
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full relative z-10"
                 onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
