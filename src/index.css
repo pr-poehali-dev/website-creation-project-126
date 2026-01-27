@@ -6,25 +6,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 100%;
+    --card: 28 100% 93%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 0 0% 0%;
+    --primary: 174 100% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 28 100% 93%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 20 100% 97%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 12 100% 44%;
+    --accent: 6 100% 69%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -100,7 +100,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Open Sans", sans-serif;
-    background: #000000;
+    background: #fff5ee;
+    color: #333333;
   }
 
   h1,
