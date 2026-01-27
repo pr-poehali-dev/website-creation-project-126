@@ -256,6 +256,68 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-black relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
+            ОТЗЫВЫ
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Marinella555</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                Это одно из самых лучших мест, где одновременно занимаются физическим и умственным развитием ребенка!
+                У меня двое деток, с Плюхом мы уже три года вместе!
+                Индивидуальный подход, методика "осознанное погружение" покорило моё сердце!)))
+                Всем мамочки, кто в поисках, от души рекомендую! Ваши занятия в бассейне будут весёлыми и без слёз!
+                На Кольцевой, 46 очень комфортно малышам и мамочкам! Фен, кофе, стульчики для кормления - мой рай!
+              </p>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">sofya_kondraeva</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                Мы с детками уже 6 месяцев точно ходим в этот замечательный центр раннего плавания. Все очень очень нравится. Тренера работают, очень радуют своим подходом, знаниями, любовью к деткам. Методика осознанного погружения. Плавный подход, никто не заставляет ребёнка через силу или не хочу что то делать. Всё идёт плавно постепенно и с любовью. Наши любимые тренера, с которыми мы занимаемся Никита, Лиза, и конечно же Алина!
+              </p>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Vera Antsiferova</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                Плюхбург - это то место куда мой сын бежит с радостью. С Плюхбургом мы уже три года. Сын занимается с тренером Евгением, про таких людей говорят "человек на своём месте"! Подход к каждому ребенку индивидуальный. Мой ребенок уже свободно плавает (раньше мыли голову, ребенок плакал, был страх воды). В Плюхбург приходим как домой, все уютно, комфортно и очень душевно. От души всем мамочкам рекомендую этот бассейн!
+              </p>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10 hover:border-accent transition-all shadow-lg">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Дарья</h3>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                Это любовь! Ребенка спасли от страха воды, который появился в другом бассейне. Индивидуальный подход к каждому ребенку. Тренер подстраивает занятие, исходя из настроения малыша. Интересно и увлекательно проходит каждая тренировка. Искренне любим это место. Отдельная любовь к тренеру Владу! Да все крутые!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
@@ -347,11 +409,60 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="border-t border-accent/20 pt-8 text-center text-gray-400">
-            <p>© 2024 ПЛЮХбург. Все права защищены.</p>
+          <div className="border-t border-accent/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+              <p className="text-gray-400">© 2024 ПЛЮХбург. Все права защищены.</p>
+              <a href="#privacy" className="text-accent hover:text-white transition">Политика конфиденциальности</a>
+            </div>
           </div>
         </div>
       </footer>
+
+      <div id="privacy" className="hidden">
+        <section className="py-20 bg-black">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 text-white">
+                ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+              </h2>
+              
+              <div className="space-y-6 text-gray-300">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">1. Общие положения</h3>
+                  <p className="leading-relaxed">
+                    Настоящая Политика конфиденциальности персональных данных действует в отношении всей информации, 
+                    которую детский бассейн «ПЛЮХбург» может получить о пользователе во время использования сайта.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">2. Собираемая информация</h3>
+                  <p className="leading-relaxed">
+                    При записи на занятия мы можем запросить следующую информацию: имя, контактный телефон, 
+                    возраст ребенка. Эта информация используется исключительно для организации занятий и связи с вами.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">3. Защита данных</h3>
+                  <p className="leading-relaxed">
+                    Мы принимаем все необходимые меры для защиты ваших персональных данных от несанкционированного 
+                    доступа, изменения, раскрытия или уничтожения.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">4. Контакты</h3>
+                  <p className="leading-relaxed">
+                    По всем вопросам, касающимся обработки персональных данных, вы можете связаться с нами 
+                    по телефону +7 (982) 63 22 152 или через Telegram.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
