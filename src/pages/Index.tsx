@@ -76,29 +76,29 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg"><span className="text-accent font-bold text-2xl">-10%</span> на абонемент</p>
+                  <p className="text-gray-300 text-lg"><span className="text-accent font-bold text-2xl">-10%</span> На абонемент</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                  <p className="text-gray-300 text-lg">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+                  <p className="text-gray-300 text-lg">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                  <p className="text-gray-300 text-lg">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+                  <p className="text-gray-300 text-lg">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+                  <p className="text-gray-300 text-lg">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
                 </div>
               </div>
             </div>
@@ -177,21 +177,21 @@ const Index = () => {
             <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">ДЕТИ КАКОГО ВОЗРАСТА ПЛАВАЮТ У НАС?</h3>
               <p className="text-white text-lg leading-relaxed">
-                к самым маленьким мы выезжаем на дом. а вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
+                К самым маленьким мы выезжаем на дом. А вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
               </p>
             </div>
 
             <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАЗМЕРЫ НАШЕГО БАССЕЙНА</h3>
               <p className="text-white text-lg leading-relaxed">
-                ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
+                Ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33С и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
               </p>
             </div>
 
             <div className="bg-secondary p-8 rounded-xl border border-accent/20">
               <h3 className="text-3xl font-bold uppercase mb-4 text-white">РАСПИСАНИЕ ЗАНЯТИЙ</h3>
               <p className="text-white text-lg leading-relaxed mb-6">
-                мы работаем с 9:00 до 20:00 каждый день. узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
+                Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
               <Button 
                 className="bg-accent hover:bg-accent/90 text-white font-bold text-lg px-8 py-6 rounded-full"
@@ -224,19 +224,19 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>консультация</span>
+                  <span>Консультация</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>диагностика</span>
+                  <span>Диагностика</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>занятие</span>
+                  <span>Занятие</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>построение плана тренировочного процесса</span>
+                  <span>Построение плана тренировочного процесса</span>
                 </li>
               </ul>
               <Button 
@@ -257,15 +257,15 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>персональная работа с тренером</span>
+                  <span>Персональная работа с тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>индивидуальный подход</span>
+                  <span>Индивидуальный подход</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>срок действия 30 дней</span>
+                  <span>Срок действия 30 дней</span>
                 </li>
               </ul>
               <Button 
@@ -286,15 +286,15 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>персональная работа с тренером</span>
+                  <span>Персональная работа с тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>регулярные тренировки 2 раза в неделю</span>
+                  <span>Регулярные тренировки 2 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>срок действия 35 дней</span>
+                  <span>Срок действия 35 дней</span>
                 </li>
               </ul>
               <Button 
@@ -317,15 +317,15 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>персональная работа с тренером</span>
+                  <span>Персональная работа с тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                  <span>Регулярные тренировки 2-3 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>срок действия 90 дней</span>
+                  <span>Срок действия 90 дней</span>
                 </li>
               </ul>
               <Button 
@@ -349,7 +349,7 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>для семей с 2 и более детьми</span>
+                  <span>Для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
@@ -357,7 +357,7 @@ const Index = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>срок действия 35 дней</span>
+                  <span>Срок действия 35 дней</span>
                 </li>
               </ul>
               <Button 
@@ -381,15 +381,15 @@ const Index = () => {
               <ul className="text-gray-300 text-sm space-y-2 mb-6 relative z-10">
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>для семей с 2 и более детьми</span>
+                  <span>Для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>регулярные тренировки 2-3 раза в неделю</span>
+                  <span>Регулярные тренировки 2-3 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>срок действия 60 дней</span>
+                  <span>Срок действия 60 дней</span>
                 </li>
               </ul>
               <Button 
@@ -564,7 +564,7 @@ const Index = () => {
             </form>
             
             <div className="mt-12 text-center space-y-4">
-              <p className="text-gray-400">или свяжитесь с нами напрямую:</p>
+              <p className="text-gray-400">Или свяжитесь с нами напрямую:</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="tel:+79826322152" 
