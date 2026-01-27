@@ -465,6 +465,66 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-black relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
+            КАК НАС НАЙТИ
+          </h2>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="bg-secondary p-8 rounded-3xl border-2 border-white/10">
+                <h3 className="text-2xl font-bold uppercase mb-6 text-white">Наш адрес</h3>
+                <div className="space-y-4 text-gray-300">
+                  <div className="flex items-start gap-3">
+                    <Icon name="MapPin" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-bold text-white">г. Екатеринбург</p>
+                      <p>ул. Кольцевая, 46</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Phone" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <div>
+                      <a href="tel:+79826322152" className="hover:text-accent transition">
+                        +7 (982) 63 22 152
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Clock" size={24} className="text-accent flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-bold text-white">Режим работы:</p>
+                      <p>Ежедневно с 9:00 до 20:00</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8">
+                  <Button 
+                    className="w-full bg-accent hover:bg-accent/90 text-white font-bold rounded-full"
+                    onClick={() => window.open('https://yandex.ru/maps/-/CDdkFZji', '_blank')}
+                  >
+                    Открыть в Яндекс.Картах
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="rounded-3xl overflow-hidden border-2 border-white/10 h-[400px] md:h-full">
+                <iframe 
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e8f8d9c8e8f8d9c8e8f8d9c8e8f8d9c8e8f8d9c&amp;source=constructor"
+                  width="100%" 
+                  height="100%" 
+                  frameBorder="0"
+                  style={{ minHeight: '400px' }}
+                  title="Карта расположения ПЛЮХбург"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white">
@@ -558,7 +618,7 @@ const Index = () => {
           
           <div className="border-t border-accent/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
-              <p className="text-gray-400">© 2024 ПЛЮХбург. Все права защищены.</p>
+              <p className="text-gray-400">© 2026 ПЛЮХбург. Все права защищены.</p>
               <a href="#privacy" className="text-accent hover:text-white transition">Политика конфиденциальности</a>
             </div>
           </div>
