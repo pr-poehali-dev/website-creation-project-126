@@ -21,18 +21,18 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <div 
-        className="fixed top-0 left-0 h-1.5 bg-accent z-[100] transition-all duration-300 shadow-lg"
+        className="fixed top-0 left-0 h-1.5 bg-primary z-[100] transition-all duration-300 shadow-lg"
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-card/95 border-b border-primary/20 shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-card/95 border-b border-primary/30 shadow-md">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-start">
             <div className="space-y-1">
               <h1 className="text-xl md:text-3xl font-black text-primary tracking-tight">Детский бассейн «ПЛЮХбург»</h1>
               <p className="text-xs md:text-sm text-foreground/70">г. Екатеринбург, ул. Кольцевая 46</p>
             </div>
-            <a href="tel:+79826322152" className="text-primary hover:text-secondary transition text-sm md:text-base font-bold">
+            <a href="tel:+79826322152" className="text-primary hover:text-secondary/80 transition text-sm md:text-base font-bold">
               +7 (982) 63 22 152
             </a>
           </div>
@@ -40,7 +40,7 @@ const Index = () => {
       </header>
 
       <section className="relative h-[600px] md:h-[890px] flex items-center justify-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-primary/90" />
+        <div className="absolute inset-0 bg-secondary/90" />
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
@@ -52,15 +52,15 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 leading-tight tracking-tight text-white">
             ЗАПИШИТЕ РЕБЕНКА<br />НА ПЛАВАНИЕ И ПОЛУЧИТЕ<br />
             <span className="bg-white text-foreground px-6 py-3 rounded-3xl inline-block shadow-2xl">
-              <span className="text-accent font-black animate-pulse">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+              <span className="text-primary font-black animate-pulse">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </span>
           </h1>
           
           <div className="relative inline-block">
-            <div className="absolute -inset-2 bg-secondary/20 rounded-full blur-xl animate-ripple" />
+            <div className="absolute -inset-2 bg-primary/20 rounded-full blur-xl animate-ripple" />
             <Button 
               size="lg" 
-              className="relative bg-secondary hover:bg-secondary/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-secondary/50 animate-water-wave transition-all"
+              className="relative bg-primary hover:bg-primary/90 text-white font-bold text-lg md:text-xl px-10 py-7 rounded-full shadow-2xl shadow-primary/50 animate-water-wave transition-all"
               onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
             >
               Записаться на занятие
@@ -69,35 +69,35 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg"><span className="text-accent font-bold text-2xl">-10%</span> На абонемент</p>
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-foreground text-lg"><span className="text-primary font-bold text-2xl">-10%</span> На абонемент</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-foreground text-lg">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-foreground text-lg">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-foreground text-lg">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-foreground text-lg">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-foreground text-lg">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
                 </div>
               </div>
@@ -115,9 +115,9 @@ const Index = () => {
           <p className="text-center text-xl mb-12 text-muted-foreground">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
-            <div className="relative aspect-video bg-card rounded-3xl overflow-hidden shadow-2xl border border-primary/20">
+            <div className="relative aspect-video bg-card rounded-3xl overflow-hidden shadow-2xl border border-primary/30">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-secondary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-xl shadow-secondary/40">
+                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-xl shadow-primary/40">
                   <Icon name="Play" size={32} className="text-white ml-1" />
                 </div>
               </div>
@@ -126,7 +126,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-secondary rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
                 <Icon name="Users" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">КОМПЛЕКСНЫЙ ПОДХОД</h3>
@@ -135,8 +135,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary/30 hover:border-primary transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-secondary rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
                 <Icon name="Award" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНЕРСКИЙ СОСТАВ</h3>
@@ -148,8 +148,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-secondary rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary/30 hover:border-primary transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
                 <Icon name="Smile" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">АТМОСФЕРА</h3>
@@ -158,8 +158,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-secondary transition-all shadow-lg hover:shadow-xl">
-              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary/30 hover:border-primary transition-all shadow-lg hover:shadow-xl">
+              <div className="w-16 h-16 bg-secondary rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
                 <Icon name="Target" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</h3>
@@ -194,7 +194,7 @@ const Index = () => {
                 Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
               <Button 
-                className="bg-secondary hover:bg-secondary/90 text-white font-bold text-lg px-8 py-6 rounded-full"
+                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-6 rounded-full"
                 onClick={() => window.open('https://t.me/shatalova_alina', '_blank')}
               >
                 Получить информацию
@@ -211,7 +211,7 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-            <div className="bg-card p-8 rounded-3xl border-2 border-secondary hover:border-secondary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
                 -61%
               </div>
@@ -247,7 +247,7 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -mr-16 -mt-16" />
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary relative z-10">4 занятия</h3>
               <div className="relative z-10 mb-4">
@@ -276,7 +276,7 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -mr-16 -mt-16" />
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary relative z-10">8 занятий</h3>
               <div className="relative z-10 mb-4">
@@ -307,7 +307,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -mr-16 -mt-16" />
               <h3 className="text-2xl font-bold uppercase mb-4 text-primary relative z-10">24 занятия</h3>
               <div className="relative z-10 mb-4">
@@ -336,7 +336,7 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
                 Семейный
               </div>
@@ -368,7 +368,7 @@ const Index = () => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl border-2 border-primary/20 hover:border-accent transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
+            <div className="bg-card p-8 rounded-3xl border-2 border-primary hover:border-primary transition-all shadow-lg hover:shadow-xl relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold z-20">
                 Семейный
               </div>
@@ -473,26 +473,26 @@ const Index = () => {
           
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="bg-card p-8 rounded-3xl border-2 border-primary/20">
+              <div className="bg-card p-8 rounded-3xl border-2 border-primary/30">
                 <h3 className="text-2xl font-bold uppercase mb-6 text-primary">Наш адрес</h3>
                 <div className="space-y-4 text-foreground">
                   <div className="flex items-start gap-3">
-                    <Icon name="MapPin" size={24} className="text-secondary flex-shrink-0 mt-1" />
+                    <Icon name="MapPin" size={24} className="text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-bold text-primary">г. Екатеринбург</p>
                       <p>ул. Кольцевая, 46</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Icon name="Phone" size={24} className="text-secondary flex-shrink-0 mt-1" />
+                    <Icon name="Phone" size={24} className="text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <a href="tel:+79826322152" className="hover:text-secondary transition">
+                      <a href="tel:+79826322152" className="hover:text-primary transition">
                         +7 (982) 63 22 152
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Icon name="Clock" size={24} className="text-secondary flex-shrink-0 mt-1" />
+                    <Icon name="Clock" size={24} className="text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-bold text-primary">Режим работы:</p>
                       <p>Ежедневно с 9:00 до 20:00</p>
@@ -502,7 +502,7 @@ const Index = () => {
                 
                 <div className="mt-8">
                   <Button 
-                    className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-bold rounded-full"
                     onClick={() => window.open('https://yandex.ru/maps/-/CDdkFZji', '_blank')}
                   >
                     Открыть в Яндекс.Картах
@@ -510,7 +510,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="rounded-3xl overflow-hidden border-2 border-primary/20 h-[400px] md:h-full">
+              <div className="rounded-3xl overflow-hidden border-2 border-primary/30 h-[400px] md:h-full">
                 <iframe 
                   src="https://yandex.ru/map-widget/v1/?ll=60.529996%2C56.780339&z=17&pt=60.529996,56.780339,pm2rdm"
                   width="100%" 
@@ -557,7 +557,7 @@ const Index = () => {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold text-xl py-7 rounded-full"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-xl py-7 rounded-full"
               >
                 Отправить заявку
               </Button>
@@ -568,7 +568,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="tel:+79826322152" 
-                  className="flex items-center justify-center gap-2 bg-background border-2 border-primary hover:bg-primary/10 text-primary px-6 py-4 rounded-full transition-all font-bold"
+                  className="flex items-center justify-center gap-2 bg-card border-2 border-primary hover:bg-primary/10 text-primary px-6 py-4 rounded-full transition-all font-bold"
                 >
                   <Icon name="Phone" size={20} />
                   +7 (982) 63 22 152
@@ -577,7 +577,7 @@ const Index = () => {
                   href="https://t.me/shatalova_alina" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-6 py-4 rounded-full transition-all font-bold"
+                  className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-4 rounded-full transition-all font-bold"
                 >
                   <Icon name="MessageCircle" size={20} />
                   Telegram
@@ -588,7 +588,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary py-12 border-t border-primary/60">
+      <footer className="bg-secondary py-12 border-t border-secondary/60">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -610,7 +610,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold text-white mb-4">Социальные сети</h3>
               <div className="flex gap-4">
-                <a href="https://t.me/shatalova_alina" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-secondary hover:bg-secondary/90 rounded-full flex items-center justify-center transition-all">
+                <a href="https://t.me/shatalova_alina" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-all">
                   <Icon name="MessageCircle" size={24} className="text-white" />
                 </a>
               </div>
@@ -620,23 +620,23 @@ const Index = () => {
           <div className="border-t border-white/30 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
               <p className="text-white/90">© 2026 ПЛЮХбург. Все права защищены.</p>
-              <a href="#privacy" className="text-white hover:text-secondary transition">Политика конфиденциальности</a>
+              <a href="#privacy" className="text-white hover:text-primary transition">Политика конфиденциальности</a>
             </div>
           </div>
         </div>
       </footer>
 
       <div id="privacy" className="hidden">
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 text-white">
+              <h2 className="text-4xl md:text-6xl font-black uppercase mb-8 text-primary">
                 ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
               </h2>
               
-              <div className="space-y-6 text-gray-300">
+              <div className="space-y-6 text-foreground">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">1. Общие положения</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">1. Общие положения</h3>
                   <p className="leading-relaxed">
                     Настоящая Политика конфиденциальности персональных данных действует в отношении всей информации, 
                     которую детский бассейн «ПЛЮХбург» может получить о пользователе во время использования сайта.
@@ -644,7 +644,7 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">2. Собираемая информация</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">2. Собираемая информация</h3>
                   <p className="leading-relaxed">
                     При записи на занятия мы можем запросить следующую информацию: имя, контактный телефон, 
                     возраст ребенка. Эта информация используется исключительно для организации занятий и связи с вами.
@@ -652,7 +652,7 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">3. Защита данных</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">3. Защита данных</h3>
                   <p className="leading-relaxed">
                     Мы принимаем все необходимые меры для защиты ваших персональных данных от несанкционированного 
                     доступа, изменения, раскрытия или уничтожения.
@@ -660,7 +660,7 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">4. Контакты</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-3">4. Контакты</h3>
                   <p className="leading-relaxed">
                     По всем вопросам, касающимся обработки персональных данных, вы можете связаться с нами 
                     по телефону +7 (982) 63 22 152 или через Telegram.
