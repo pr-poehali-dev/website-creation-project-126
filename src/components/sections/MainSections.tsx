@@ -13,7 +13,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?q=80&w=2000)'
+            backgroundImage: 'url(https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=2000)'
           }}
         />
         
