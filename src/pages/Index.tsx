@@ -520,31 +520,55 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="triangle" className="py-20 bg-secondary">
+      <section id="triangle" className="py-20 bg-secondary overflow-hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white">Методика обучения</h2>
           
           <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              <svg className="w-full h-auto max-w-2xl mx-auto mb-12" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M200 50 L350 300 L50 300 Z" stroke="#e03000" strokeWidth="3" fill="none" />
+            <div className="relative py-12">
+              <svg className="w-full h-auto max-w-2xl mx-auto mb-12 animate-fade-in" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#e03000', stopOpacity: 0.6 }} />
+                    <stop offset="50%" style={{ stopColor: '#e03000', stopOpacity: 0.9 }} />
+                    <stop offset="100%" style={{ stopColor: '#ff4500', stopOpacity: 0.7 }} />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <path 
+                  d="M200 50 L350 300 L50 300 Z" 
+                  stroke="url(#triangleGradient)" 
+                  strokeWidth="5" 
+                  fill="rgba(224, 48, 0, 0.05)"
+                  filter="url(#glow)"
+                  className="drop-shadow-2xl"
+                />
+                <circle cx="200" cy="50" r="8" fill="#e03000" className="animate-pulse" />
+                <circle cx="350" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
+                <circle cx="50" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
               </svg>
               
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4">
-                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
-                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Техника</h3>
+              <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-slide-up">
+                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
+                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Техника</h3>
                 </div>
               </div>
               
-              <div className="absolute bottom-0 left-0 md:left-12 -translate-y-4">
-                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
-                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Здоровье</h3>
+              <div className="absolute bottom-4 left-0 md:left-12 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
+                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Здоровье</h3>
                 </div>
               </div>
               
-              <div className="absolute bottom-0 right-0 md:right-12 -translate-y-4">
-                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
-                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Характер</h3>
+              <div className="absolute bottom-4 right-0 md:right-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
+                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Характер</h3>
                 </div>
               </div>
             </div>
