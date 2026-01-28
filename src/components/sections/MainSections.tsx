@@ -39,9 +39,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             <div className="relative">
               {/* Осьминог слева от кнопки с указательной рукой */}
               <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/6ad1e322-275c-4328-87c0-c16c50d79b42.jpg"
                 alt="Осьминог ПЛЮХбург"
-                className="absolute -left-40 -bottom-8 w-24 h-auto object-contain animate-bounce hidden lg:block"
+                className="absolute -left-40 -bottom-8 w-16 h-auto object-contain animate-bounce hidden lg:block"
                 style={{animationDuration: '2s'}}
               />
               
