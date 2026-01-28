@@ -43,6 +43,7 @@ const Index = () => {
               <div>
                 <h1 className="text-2xl font-black text-white uppercase">ПЛЮХбург</h1>
                 <p className="text-xs text-white/70">Детский бассейн</p>
+                <p className="text-[10px] text-white/50 mt-0.5">г. Екатеринбург, ул. Кольцевая 46</p>
               </div>
             </div>
 
@@ -59,9 +60,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('team')} className="text-white hover:text-primary transition text-sm font-semibold uppercase">
                 Тренеры
               </button>
-              <button onClick={() => scrollToSection('triangle')} className="text-white hover:text-primary transition text-sm font-semibold uppercase">
-                Методика
-              </button>
+
               <button onClick={() => scrollToSection('contacts')} className="text-white hover:text-primary transition text-sm font-semibold uppercase">
                 Контакты
               </button>
@@ -466,67 +465,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="triangle" className="py-20 bg-secondary overflow-hidden">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white">Методика обучения</h2>
-          
-          <div className="max-w-5xl mx-auto">
-            <div className="relative py-12">
-              <svg className="w-full h-auto max-w-2xl mx-auto mb-12 animate-fade-in" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#e03000', stopOpacity: 0.6 }} />
-                    <stop offset="50%" style={{ stopColor: '#e03000', stopOpacity: 0.9 }} />
-                    <stop offset="100%" style={{ stopColor: '#ff4500', stopOpacity: 0.7 }} />
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                <path 
-                  d="M200 50 L350 300 L50 300 Z" 
-                  stroke="url(#triangleGradient)" 
-                  strokeWidth="5" 
-                  fill="rgba(224, 48, 0, 0.05)"
-                  filter="url(#glow)"
-                  className="drop-shadow-2xl"
-                />
-                <circle cx="200" cy="50" r="8" fill="#e03000" className="animate-pulse" />
-                <circle cx="350" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
-                <circle cx="50" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
-              </svg>
-              
-              <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-slide-up">
-                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
-                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Техника</h3>
-                </div>
-              </div>
-            </div>
 
-            <div className="text-center mt-12">
-              <div className="w-20 h-20 bg-primary rounded-2xl mx-auto mb-6 flex items-center justify-center rotate-6">
-                <Icon name="Target" size={40} className="text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 uppercase text-white">Техника</h3>
-              <p className="leading-relaxed text-white/90 text-lg max-w-2xl mx-auto">
-                Правильная техника плавания с первых занятий. Постановка дыхания и координации движений.
-              </p>
-            </div>
-
-            <div className="bg-primary p-8 rounded-3xl mt-12">
-              <p className="text-lg leading-relaxed text-center text-white">
-                Наша методика основана на <strong>уважении к личности ребенка</strong>. 
-                Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут, 
-                получая удовольствие от процесса и одновременно развивая важные навыки.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
