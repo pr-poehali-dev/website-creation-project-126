@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -99,7 +99,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Manrope", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     background: #ffffff;
     color: #000000;
   }
@@ -110,10 +110,10 @@
   h4,
   h5,
   h6 {
-    font-family: "Bebas Neue", Arial, sans-serif;
+    font-family: "Anton", Arial, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     line-height: 1.3;
   }
 }
