@@ -62,28 +62,28 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed"><span className="text-primary font-bold">-10%</span> на абонемент</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                <p className="text-white text-sm leading-relaxed">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
+                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-white text-sm leading-relaxed">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
               </div>
             </div>
           </div>
