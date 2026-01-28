@@ -204,7 +204,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <p className="text-xl leading-relaxed text-center mb-8">
                 Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
-              <div className="text-center">
+              <div className="text-left">
                 <a 
                   href="https://t.me/shatalova_alina" 
                   target="_blank" 
