@@ -254,46 +254,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
         </div>
       </section>
 
-      <section id="team" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Наши тренеры</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card p-8 rounded-3xl shadow-lg text-center border-2 border-border">
-              <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Icon name="User" size={64} className="text-muted-foreground" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 uppercase">Алина Шаталова</h3>
-              <p className="text-primary font-semibold mb-4">Основатель, главный тренер</p>
-              <p className="text-sm leading-relaxed">
-                Автор методики «Осознанное погружение». Востребованный спикер в мире грудничкового плавания. Более 8 лет опыта.
-              </p>
-            </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg text-center border-2 border-border">
-              <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Icon name="User" size={64} className="text-muted-foreground" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 uppercase">Павел Шаталов</h3>
-              <p className="text-primary font-semibold mb-4">Со-основатель</p>
-              <p className="text-sm leading-relaxed">
-                Управляющий партнер. Отвечает за развитие сети бассейнов «ПЛЮХбург» по всей России.
-              </p>
-            </div>
-
-            <div className="bg-card p-8 rounded-3xl shadow-lg text-center border-2 border-border">
-              <div className="w-32 h-32 bg-muted rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Icon name="User" size={64} className="text-muted-foreground" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 uppercase">Команда тренеров</h3>
-              <p className="text-primary font-semibold mb-4">Сертифицированные специалисты</p>
-              <p className="text-sm leading-relaxed">
-                Все тренеры проходят личную стажировку у Алины Шаталовой. Только лучшие попадают в команду.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
