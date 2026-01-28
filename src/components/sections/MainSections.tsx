@@ -106,6 +106,18 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
 
       <section className="py-20 bg-primary relative overflow-hidden">
+        {/* Декоративные элементы */}
+        <img 
+          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/e8780b81-1e84-4992-887a-48b25588c354.jpg"
+          alt="Рыбка"
+          className="absolute top-20 right-10 w-16 h-auto object-contain opacity-30 animate-bounce hidden lg:block"
+          style={{animationDuration: '3s'}}
+        />
+        <img 
+          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/7a03b72e-7beb-4d57-a10c-fb1f8bea5910.jpg"
+          alt="Осьминожек"
+          className="absolute bottom-32 left-10 w-12 h-auto object-contain opacity-40 animate-pulse hidden lg:block"
+        />
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             ПОЧЕМУ ВЫБИРАЮТ НАС?
