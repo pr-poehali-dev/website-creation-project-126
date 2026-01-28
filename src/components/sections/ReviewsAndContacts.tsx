@@ -5,20 +5,8 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   return (
     <>
-      <section id="team" className="py-20 bg-primary relative overflow-hidden">
-        {/* Декоративные морские элементы */}
-        <img 
-          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/e8780b81-1e84-4992-887a-48b25588c354.jpg"
-          alt="Рыбка"
-          className="absolute top-10 left-10 w-14 h-auto object-contain opacity-20 animate-bounce hidden lg:block"
-          style={{animationDuration: '2.5s'}}
-        />
-        <img 
-          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/7a03b72e-7beb-4d57-a10c-fb1f8bea5910.jpg"
-          alt="Осьминожек"
-          className="absolute bottom-20 right-20 w-16 h-auto object-contain opacity-25 animate-pulse hidden lg:block"
-        />
-        <div className="container mx-auto px-4 relative z-10">
+      <section id="team" className="py-20 bg-primary">
+        <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black text-center mb-12 uppercase text-white tracking-tight" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             ТРЕНЕРСКИЙ СОСТАВ
           </h2>
