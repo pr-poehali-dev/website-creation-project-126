@@ -93,10 +93,10 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
 
 
-      <section className="py-20 bg-black relative overflow-hidden">
+      <section className="py-20 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
-            НАШИ ТРЕНЕРЫ
+            ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
           
           <p className="text-center text-xl mb-4 text-white font-medium">Посмотрите видео о нашем бассейне</p>
