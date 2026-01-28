@@ -18,13 +18,13 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 text-center -mt-48">
+        <div className="relative z-20 container mx-auto px-4 text-center -mt-64">
           <div className="max-w-5xl mx-auto">
-            <span className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
+            <span className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-3">
               Бассейн детский
             </span>
             
-            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-4 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.4, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
+            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-3 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.4, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
               Запишите ребенка на плавание и получите{' '}
               <span className="text-primary">-60%</span> на первое занятие
             </h1>
