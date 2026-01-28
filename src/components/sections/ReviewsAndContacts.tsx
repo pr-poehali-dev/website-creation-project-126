@@ -89,6 +89,30 @@ const ReviewsAndContacts = () => {
         </div>
       </section>
 
+      <section id="map" className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+            КАК НАС НАЙТИ
+          </h2>
+          <p className="text-center text-white text-lg mb-8">
+            г. Екатеринбург,<br />ул. Барвинка 12
+          </p>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+              <iframe 
+                src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExNTM2NBJy0KDQvtGB0YHQuNGPLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINGD0LvQuNGG0LAg0JHQsNGA0LLQuNC90LrQsCwgMTIiCg21dEJCFQMoW0I%2C&z=16"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{position: 'relative'}}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Наши контакты</h2>

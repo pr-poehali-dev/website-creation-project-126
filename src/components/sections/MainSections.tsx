@@ -21,7 +21,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
           <div className="text-center mb-8">
-            <p className="text-white text-sm mb-1">детский бассейн «ПЛЮХбург»</p>
+            <p className="text-white text-sm mb-1">Детский бассейн «ПЛЮХбург»</p>
             <a href="tel:+79826322152" className="text-white text-sm hover:text-primary transition-colors block mb-1">
               +7 (982) 63 22 152
             </a>
@@ -40,7 +40,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
             <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
-              <span className="text-primary font-black">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+              <span className="inline-block bg-primary text-white font-black px-3 py-1 rounded-lg">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
             <a 
@@ -93,13 +93,13 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
 
 
-      <section className="py-20 bg-muted relative overflow-hidden">
+      <section className="py-20 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight">
-            Почему выбирают нас?
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+            ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
           
-          <p className="text-center text-xl mb-12 text-muted-foreground">Посмотрите видео о нашем бассейне</p>
+          <p className="text-center text-xl mb-4 text-white font-medium">Посмотрите видео о нашей школе</p>
           
           <div className="max-w-5xl mx-auto mb-20">
             <div className="relative aspect-video bg-card rounded-3xl overflow-hidden shadow-2xl border border-border">
