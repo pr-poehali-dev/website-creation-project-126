@@ -32,10 +32,10 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto relative">
             {/* Осьминог в кепке с анимацией */}
             <img 
-              src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
+              src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
               alt="Осьминог ПЛЮХбург"
-              className="absolute -right-8 sm:-right-12 top-1/4 w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce opacity-95"
-              style={{animationDuration: '3s'}}
+              className="absolute -right-8 sm:-right-12 top-1/4 w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce"
+              style={{animationDuration: '3s', mixBlendMode: 'multiply'}}
             />
 
             <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>

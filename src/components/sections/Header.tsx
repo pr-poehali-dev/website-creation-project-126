@@ -28,9 +28,9 @@ const Header = ({ scrollToSection }: HeaderProps) => {
               <button onClick={() => scrollToSection('programm')} className="text-white hover:text-primary transition-colors duration-200 text-[18px] font-medium">
                 Программы
               </button>
-              <button onClick={() => scrollToSection('team')} className="text-white hover:text-primary transition-colors duration-200 text-[18px] font-medium">
+              <span className="text-white/50 text-[18px] font-medium cursor-not-allowed">
                 Тренеры
-              </button>
+              </span>
               <button onClick={() => scrollToSection('contacts')} className="text-white hover:text-primary transition-colors duration-200 text-[18px] font-medium">
                 Контакты
               </button>
