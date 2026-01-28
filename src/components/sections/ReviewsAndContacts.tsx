@@ -183,7 +183,7 @@ const ReviewsAndContacts = () => {
 
               <div className="bg-card rounded-3xl overflow-hidden shadow-lg border-2 border-border h-[400px]">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&z=17&l=map&pt=60.597465,56.838011,pm2rdm"
+                  src="https://2gis.ru/ekaterinburg/firm/141265770716947/center/60.602184,56.839155/zoom/16.5?m=60.602184%2C56.839155%2F16.5"
                   width="100%"
                   height="100%"
                   frameBorder="0"
