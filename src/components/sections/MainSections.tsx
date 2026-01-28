@@ -9,13 +9,14 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
   return (
     <>
       <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[112px]">
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/60 z-10" />
+        <div className="absolute inset-0 bg-black" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=2000)'
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/f98a9c4a-bfc5-40ea-80f9-31e0532efb59.jpg)'
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85 z-10" />
         
         <div className="relative z-20 container mx-auto px-4 text-center">
           <div className="max-w-5xl mx-auto">
