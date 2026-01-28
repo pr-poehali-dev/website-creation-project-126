@@ -37,19 +37,19 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              {/* Осьминог справа от кнопки с указательной рукой */}
+              {/* Осьминог слева от кнопки с указательной рукой */}
               <img 
                 src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
                 alt="Осьминог ПЛЮХбург"
-                className="absolute -right-24 -bottom-8 w-32 h-32 object-contain animate-bounce hidden lg:block"
+                className="absolute -left-24 -bottom-8 w-32 h-32 object-contain animate-bounce hidden lg:block"
                 style={{animationDuration: '2s'}}
               />
               
-              {/* Анимированная стрелка-указатель */}
-              <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden lg:block">
+              {/* Анимированная стрелка-указатель слева */}
+              <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:block">
                 <div className="animate-bounce" style={{animationDuration: '1.5s'}}>
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <path d="M5 20 L30 20 M30 20 L22 12 M30 20 L22 28" stroke="#E8491D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M35 20 L10 20 M10 20 L18 12 M10 20 L18 28" stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </div>
