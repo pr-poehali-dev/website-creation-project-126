@@ -18,36 +18,44 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-80px)]">
-          {/* Верхний блок с контактами */}
-          <div className="text-center mb-8">
-            <p className="text-white text-sm mb-1">детский бассейн «ПЛЮХбург»</p>
-            <a href="tel:+79826322152" className="text-white text-sm hover:text-primary transition-colors block mb-1">
-              +7 (982) 63 22 152
-            </a>
-            <p className="text-white text-sm">г. Екатеринбург, ул. Кольцевая 46</p>
-          </div>
-
+        <div className="relative z-20 container mx-auto px-4 pt-12 pb-12 flex flex-col min-h-[calc(100vh-80px)]">
           {/* Центральный блок с заголовком и кнопкой */}
           <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
             <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-white mb-6 uppercase leading-tight" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, textShadow: '0px 3px 12px rgba(0,0,0,0.9)'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
-              <span className="text-primary">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+              <span className="text-primary animate-pulse inline-block">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
-            <a 
-              href="https://t.me/your_chat_link" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl uppercase mb-8"
+            <div className="relative mb-8">
+              {/* Детские элементы вокруг кнопки */}
+              <div className="absolute -top-8 -left-8 text-4xl animate-bounce" style={{animationDelay: '0s'}}>
+                🐠
+              </div>
+              <div className="absolute -top-8 -right-8 text-4xl animate-bounce" style={{animationDelay: '0.2s'}}>
+                🌊
+              </div>
+              <div className="absolute -bottom-8 -left-8 text-4xl animate-bounce" style={{animationDelay: '0.4s'}}>
+                🏊
+              </div>
+              <div className="absolute -bottom-8 -right-8 text-4xl animate-bounce" style={{animationDelay: '0.6s'}}>
+                ⭐
+              </div>
+
+              <a 
+                href="https://t.me/your_chat_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block relative group"
               >
-                Записаться на занятие
-              </Button>
-            </a>
+                <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl group-hover:blur-2xl transition-all animate-pulse" />
+                <Button 
+                  size="lg" 
+                  className="relative bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl uppercase hover:scale-105 transition-transform"
+                >
+                  Записаться на занятие 🎉
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Нижний блок с преимуществами */}
