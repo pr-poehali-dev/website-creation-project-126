@@ -18,7 +18,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 text-center -mt-96">
+        <div className="relative z-20 container mx-auto px-4 text-center" style={{marginTop: '-28rem'}}>
           <div className="max-w-5xl mx-auto">
             <span className="inline-block bg-primary text-white px-5 py-1.5 rounded-full text-sm font-bold mb-2">
               Бассейн детский
