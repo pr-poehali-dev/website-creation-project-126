@@ -8,7 +8,7 @@ interface MainSectionsProps {
 const MainSections = ({ scrollToSection }: MainSectionsProps) => {
   return (
     <>
-      <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[112px]">
+      <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[120px]">
         <div className="absolute inset-0 bg-black" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
