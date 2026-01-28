@@ -184,14 +184,9 @@ const ReviewsAndContacts = () => {
               </div>
             </div>
 
-            <nav className="flex flex-col gap-4 mb-8">
-              <button className="text-white/80 hover:text-primary transition text-lg">
-                Методика обучения
-              </button>
-              <button className="text-white/80 hover:text-primary transition text-lg">
-                Наши контакты
-              </button>
-            </nav>
+            <button onClick={() => window.scrollTo({ top: document.getElementById('contacts')?.offsetTop, behavior: 'smooth' })} className="text-white/80 hover:text-primary transition text-lg mb-8">
+              Наши контакты
+            </button>
 
             <a 
               href="tel:+79826322152" 
@@ -215,7 +210,15 @@ const ReviewsAndContacts = () => {
                 <Icon name="MessageCircle" size={40} />
               </a>
               <a 
-                href="#" 
+                href="https://instagram.com/_shatalova_alina_?igshid=MjkzY2Y1YTY=" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition"
+              >
+                <Icon name="Instagram" size={40} />
+              </a>
+              <a 
+                href="http://www.youtube.com/@Alina_Shatalova" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary transition"
