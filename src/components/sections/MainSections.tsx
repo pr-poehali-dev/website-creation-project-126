@@ -38,9 +38,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               style={{animationDuration: '3s'}}
             />
 
-            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, textShadow: '0px 3px 12px rgba(0,0,0,0.9)'}}>
+            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
-              <span className="text-primary">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
+              <span className="text-primary font-black">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
             <a 
@@ -51,7 +51,8 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             >
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl uppercase mb-8"
+                className="bg-primary hover:bg-primary/90 text-white font-black text-lg px-12 py-6 rounded-full shadow-2xl mb-8"
+                style={{fontFamily: 'Inter, Arial, sans-serif'}}
               >
                 Записаться на занятие
               </Button>
@@ -63,27 +64,27 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
+                <p className="text-white text-sm leading-relaxed font-medium"><span className="text-primary font-bold">-10%</span> На абонемент</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                <p className="text-white text-sm leading-relaxed font-medium">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
+                <p className="text-white text-sm leading-relaxed font-medium">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <p className="text-white text-sm leading-relaxed font-medium">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
+                <p className="text-white text-sm leading-relaxed font-medium">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
+                <p className="text-white text-sm leading-relaxed font-medium">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
               </div>
             </div>
           </div>
