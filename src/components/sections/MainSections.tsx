@@ -18,20 +18,20 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 text-center">
+        <div className="relative z-20 container mx-auto px-4 text-center -mt-12">
           <div className="max-w-5xl mx-auto">
-            <span className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-8">
+            <span className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
               Бассейн детский
             </span>
             
-            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-8 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.4, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
+            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-6 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.4, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
               Запишите ребенка на плавание и получите{' '}
               <span className="text-primary">-60%</span> на первое занятие
             </h1>
 
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 rounded-full shadow-2xl uppercase animate-pulse mt-8"
+              className="bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 rounded-full shadow-2xl uppercase animate-pulse"
               onClick={() => scrollToSection('contacts')}
             >
               Записаться на занятие
