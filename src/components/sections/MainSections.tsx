@@ -18,78 +18,72 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 pt-8 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
-          {/* Верхний блок с логотипом и контактами */}
-          <div className="flex items-start justify-between mb-12 max-w-6xl mx-auto w-full">
-            <div className="flex items-center gap-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/fd86ea5b-86a3-4b8c-8055-33aad73711f5.jpg" 
-                alt="ПЛЮХбург"
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover"
-              />
-            </div>
-            <div className="text-right">
-              <p className="text-white text-xs sm:text-sm mb-1">Футбольная школа Кальчо</p>
-              <a href="tel:+79030796416" className="text-white text-base sm:text-xl font-bold hover:text-primary transition-colors block mb-1">
-                +7 (903) 079-64-16
-              </a>
-              <p className="text-white text-xs sm:text-sm">г. Екатеринбург, ул. Барвинка 12</p>
-            </div>
+        <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
+          {/* Верхний блок с контактами */}
+          <div className="text-center mb-8">
+            <p className="text-white text-sm mb-1">детский бассейн «ПЛЮХбург»</p>
+            <a href="tel:+79826322152" className="text-white text-sm hover:text-primary transition-colors block mb-1">
+              +7 (982) 63 22 152
+            </a>
+            <p className="text-white text-sm">г. Екатеринбург, ул. Кольцевая 46</p>
           </div>
 
-          {/* Центральный блок с заголовком */}
-          <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-white mb-6 uppercase leading-tight" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, textShadow: '0px 3px 12px rgba(0,0,0,0.9)'}}>
-              ЗАПИШИТЕ РЕБЁНКА В ФУТБОЛЬНУЮ ШКОЛУ И ПОЛУЧИТЕ{' '}
-              <span className="inline-block bg-primary text-white px-4 py-1 rounded-lg">-20%</span> НА ПЕРВЫЙ АБОНЕМЕНТ!
+          {/* Центральный блок с заголовком и кнопкой */}
+          <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto relative">
+            {/* Осьминог в кепке с анимацией */}
+            <img 
+              src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
+              alt="Осьминог ПЛЮХбург"
+              className="absolute -right-8 sm:-right-12 top-1/4 w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce opacity-95"
+              style={{animationDuration: '3s'}}
+            />
+
+            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, textShadow: '0px 3px 12px rgba(0,0,0,0.9)'}}>
+              ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
+              <span className="text-primary">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
-            {/* Кнопка с талисманом */}
-            <div className="relative mb-8">
-              <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/bf90a8ec-05ca-4c3d-b7db-1c5603f55070.jpg"
-                alt="Талисман"
-                className="absolute -right-16 -top-12 w-24 h-24 object-contain animate-bounce"
-                style={{animationDuration: '2s'}}
-              />
-              <a 
-                href="https://t.me/your_chat_link" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block"
+            <a 
+              href="https://t.me/your_chat_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block relative z-10"
+            >
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl uppercase mb-8"
               >
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg px-10 sm:px-16 py-6 sm:py-7 rounded-full shadow-2xl"
-                >
-                  Записаться на тренировку
-                </Button>
-              </a>
-            </div>
-
-            {/* Давайте с нами */}
-            <div className="text-center mb-8">
-              <p className="text-white text-xl sm:text-2xl font-bold mb-1">Давайте с нами!</p>
-              <p className="text-white text-base sm:text-lg">Первая неделя бесплатно!</p>
-            </div>
+                Записаться на занятие
+              </Button>
+            </a>
           </div>
 
           {/* Нижний блок с преимуществами */}
-          <div className="max-w-4xl mx-auto w-full">
-            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-white text-sm font-bold">До 15 человек в команде</p>
-                  <p className="text-white text-xs opacity-90">Тренер уделяет время каждому ребенку</p>
-                </div>
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed"><span className="text-primary font-bold">-10%</span> на абонемент</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-white text-sm font-bold">Удобное расписание</p>
-                  <p className="text-white text-xs opacity-90">Удобное и доступное расписание</p>
-                </div>
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
               </div>
             </div>
           </div>
