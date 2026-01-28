@@ -19,15 +19,6 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
         
         <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-80px)]">
-          {/* Верхний блок с контактами */}
-          <div className="text-center mb-8">
-            <p className="text-white text-sm mb-1">детский бассейн «ПЛЮХбург»</p>
-            <a href="tel:+79826322152" className="text-white text-sm hover:text-primary transition-colors block mb-1">
-              +7 (982) 63 22 152
-            </a>
-            <p className="text-white text-sm">г. Екатеринбург, ул. Кольцевая 46а</p>
-          </div>
-
           {/* Центральный блок с заголовком и кнопкой */}
           <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto relative">
             {/* Большой осьминог с анимацией */}
