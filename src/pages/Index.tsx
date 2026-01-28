@@ -95,10 +95,10 @@ const Index = () => {
             </span>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
-              Запишите ребенка на плавание и получите
+              Запишитесь на первую пробную тренировку
               <span className="block mt-4">
                 <span className="bg-white text-foreground px-6 py-3 rounded-3xl inline-block shadow-2xl">
-                  <span className="text-primary font-black animate-pulse">-60%</span> на первое занятие
+                  <span className="text-primary font-black animate-pulse">-60%</span>
                 </span>
               </span>
             </h1>
@@ -217,51 +217,30 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Тарифы</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
-              <h3 className="text-2xl font-bold mb-4 uppercase">Разовое занятие</h3>
-              <div className="text-5xl font-black text-primary mb-6">2000₽</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>1 занятие 45 минут</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Профессиональный тренер</span>
-                </li>
-              </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
-                Записаться
-              </Button>
-            </div>
-
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-primary p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
               <div className="absolute top-4 right-4 bg-secondary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
-                Популярный
+                -60%
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white uppercase">Абонемент 8 занятий</h3>
-              <div className="text-5xl font-black text-white mb-6">14400₽</div>
+              <h3 className="text-2xl font-bold mb-4 text-white uppercase">Пробное занятие</h3>
+              <div className="text-5xl font-black text-white mb-2">850₽</div>
+              <p className="text-white/80 text-sm mb-6 line-through">вместо 2200₽</p>
               <ul className="space-y-3 mb-8 text-white">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
-                  <span>8 занятий по 45 минут</span>
+                  <span>Консультация</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
-                  <span>Индивидуальный подход</span>
+                  <span>Диагностика</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
-                  <span>Профессиональный тренер</span>
+                  <span>Занятие</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
-                  <span>Экономия 1600₽</span>
+                  <span>План тренировочного процесса</span>
                 </li>
               </ul>
               <Button className="w-full bg-white hover:bg-white/90 text-primary font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -270,12 +249,16 @@ const Index = () => {
             </div>
 
             <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
-              <h3 className="text-2xl font-bold mb-4 uppercase">Абонемент 12 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6">21000₽</div>
+              <h3 className="text-2xl font-bold mb-4 uppercase">4 занятия</h3>
+              <div className="text-5xl font-black text-primary mb-6">7 600₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>12 занятий по 45 минут</span>
+                  <span>10% скидка многодетным, инвалидам (6840₽)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Персональная работа с тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -283,11 +266,117 @@ const Index = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Профессиональный тренер</span>
+                  <span>Срок действия 30 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+              <h3 className="text-2xl font-bold mb-4 uppercase">8 занятий</h3>
+              <div className="text-5xl font-black text-primary mb-6">13 590₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Скидка 10% в день покупки пробного</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Экономия 3000₽</span>
+                  <span>Персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Регулярные тренировки 2 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+              <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
+              <div className="text-5xl font-black text-primary mb-6">37 200₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Скидка 10% в день покупки пробного</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 90 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+              <div className="mb-4">
+                <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 uppercase">16 занятий</h3>
+              <div className="text-5xl font-black text-primary mb-6">25 650₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Каждый ребенок со своим тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>2 ребенка плавают одновременно</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+              <div className="mb-4">
+                <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
+              <div className="text-5xl font-black text-primary mb-6">36 000₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Для семей с 2 и более детьми</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Каждый ребенок со своим тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>2 ребенка плавают одновременно</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 60 дней</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -473,6 +562,90 @@ const Index = () => {
                 Наша методика основана на <strong>уважении к личности ребенка</strong>. 
                 Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут, 
                 получая удовольствие от процесса и одновременно развивая важные навыки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Отзывы</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Marinella555</h3>
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="leading-relaxed">
+                Это одно из самых лучших мест, где одновременно занимаются физическим и умственным развитием ребенка! У меня двое деток, с Плюхом мы уже три года вместе! Индивидуальный подход, методика "осознанное погружение" покорило моё сердце! Всем мамочки, кто в поисках, от души рекомендую! На Кольцевой, 46 очень комфортно малышам и мамочкам! Фен, кофе, стульчики для кормления - мой рай!
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Sofya Kondraeva</h3>
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="leading-relaxed">
+                Мы с детками уже 6 месяцев точно ходим в этот замечательный центр раннего плавания. Тренера работают очень радуют своим подходом, знаниями, любовью к деткам. Методика осознанного погружения. Плавный подход, никто не заставляет ребёнка через силу. В бассейне вода чистая, запаха хлора нет. Всем рекомендую!
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Vera Antsiferova</h3>
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="leading-relaxed">
+                Плюхбург - это то место куда мой сын бежит с радостью. С Плюхбургом мы уже три года. Сын занимается с тренером Евгением, про таких людей говорят "человек на своём месте"! Подход к каждому ребенку индивидуальный. Раньше был страх воды, сейчас уже свободно плавает. Девочки администраторы - самые лучшие! В Плюхбург приходим как домой, все уютно, комфортно и очень душевно. За чистотой воды тщательно следят!
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <Icon name="User" size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg">Дарья</h3>
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="leading-relaxed">
+                Это любовь! Ребенка спасли от страха воды, который появился в другом бассейне. Индивидуальный подход к каждому ребенку. Тренер подстраивает занятие, исходя из настроения малыша. Интересно и увлекательно проходит каждая тренировка. Искренне любим это место. Отдельная любовь к тренеру Владу! Да все крутые!
               </p>
             </div>
           </div>
