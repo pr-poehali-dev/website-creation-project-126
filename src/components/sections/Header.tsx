@@ -6,14 +6,14 @@ interface HeaderProps {
 }
 
 const Header = ({ scrollToSection }: HeaderProps) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isTopBarHidden, setIsTopBarHidden] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250) {
-        setIsVisible(true);
+      if (window.scrollY > 100) {
+        setIsTopBarHidden(true);
       } else {
-        setIsVisible(false);
+        setIsTopBarHidden(false);
       }
     };
 
@@ -23,9 +23,31 @@ const Header = ({ scrollToSection }: HeaderProps) => {
 
   return (
     <>
+      <div className={`fixed left-0 right-0 z-50 bg-secondary/90 backdrop-blur-sm transition-all duration-300 ${
+        isTopBarHidden ? '-top-[42px]' : 'top-0'
+      }`}>
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex items-center justify-between text-white/80 text-xs">
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <Icon name="MapPin" size={14} className="text-primary" />
+                <span>г. Екатеринбург, ул. Кольцевая 46</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="Clock" size={14} className="text-primary" />
+                <span>Ежедневно с 9:00 до 21:00</span>
+              </div>
+            </div>
+            <a href="tel:+79826322152" className="hover:text-primary transition text-sm font-semibold">
+              +7 (982) 63 22 152
+            </a>
+          </div>
+        </div>
+      </div>
 
-
-      <header className="fixed left-0 right-0 top-0 z-[990] backdrop-blur-[29px] bg-black/65 shadow-[0px_10px_30px_0px_rgba(0,0,0,1)] transition-all duration-150">
+      <header className={`fixed left-0 right-0 z-[990] backdrop-blur-[29px] bg-black/65 shadow-[0px_10px_30px_0px_rgba(0,0,0,1)] transition-all duration-300 ${
+        isTopBarHidden ? 'top-0' : 'top-[42px]'
+      }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-[70px]">
             <div className="flex items-center gap-3">

@@ -8,7 +8,7 @@ interface MainSectionsProps {
 const MainSections = ({ scrollToSection }: MainSectionsProps) => {
   return (
     <>
-      <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[70px]">
+      <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[112px]">
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/60 z-10" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -23,13 +23,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               Детский бассейн
             </span>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
-              Запишите ребенка на плавание и получите
-              <span className="block mt-4">
-                <span className="bg-white text-foreground px-6 py-3 rounded-3xl inline-block shadow-2xl">
-                  <span className="text-primary font-black animate-pulse">-60%</span> на первое занятие
-                </span>
-              </span>
+            <h1 className="text-[21px] md:text-[25px] lg:text-[38px] font-bold text-white mb-8 uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.3, textShadow: '0px 2px 4px rgba(0,0,0,0.5)'}}>
+              Запишите ребенка на плавание и получите{' '}
+              <span className="text-primary">-60%</span> на первое занятие
             </h1>
 
             <Button 
