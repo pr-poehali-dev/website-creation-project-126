@@ -10,7 +10,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
     <>
       <section id="price" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Тарифы</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-primary p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">

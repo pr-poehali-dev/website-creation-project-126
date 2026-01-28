@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   return (
     <>
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Отзывы</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Что о нас говорят</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-8 rounded-3xl shadow-lg">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon name="User" size={24} className="text-white" />
@@ -29,7 +29,7 @@ const ReviewsAndContacts = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-8 rounded-3xl shadow-lg">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon name="User" size={24} className="text-white" />
@@ -48,7 +48,7 @@ const ReviewsAndContacts = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-8 rounded-3xl shadow-lg">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon name="User" size={24} className="text-white" />
@@ -67,7 +67,7 @@ const ReviewsAndContacts = () => {
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-8 rounded-3xl shadow-lg">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon name="User" size={24} className="text-white" />
@@ -95,13 +95,13 @@ const ReviewsAndContacts = () => {
             КАК НАС НАЙТИ
           </h2>
           <p className="text-center text-white text-lg mb-8">
-            г. Екатеринбург,<br />ул. Барвинка 12
+            г. Екатеринбург,<br />ул. Кольцевая 46
           </p>
           
           <div className="max-w-5xl mx-auto">
             <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <iframe 
-                src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExNTM2NBJy0KDQvtGB0YHQuNGPLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINGD0LvQuNGG0LAg0JHQsNGA0LLQuNC90LrQsCwgMTIiCg21dEJCFQMoW0I%2C&z=16"
+                src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExNTM2NBJy0KDQvtGB0YHQuNGPLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINGD0LvQuNGG0LAg0JrQvtC70YzRhtC10LLQsNGPLCA0NiIKDQF1QkIVAyhbQg%2C%2C&z=16"
                 width="100%"
                 height="100%"
                 frameBorder="0"
@@ -113,13 +113,13 @@ const ReviewsAndContacts = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 bg-white">
+      <section id="contacts" className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Наши контакты</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Запишитесь на пробное занятие</h2>
           
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
-              <h3 className="text-2xl font-bold mb-6 uppercase">Запишитесь на пробное занятие</h3>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white p-8 rounded-3xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
               
               <form className="space-y-4">
                 <div>
@@ -150,72 +150,6 @@ const ReviewsAndContacts = () => {
                   Номер телефона запрашивается исключительно для обратной связи с вами
                 </p>
               </form>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
-                <h3 className="text-xl font-bold mb-6 uppercase">Контактная информация</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <Icon name="MapPin" size={24} className="text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">Адрес</p>
-                      <p className="text-muted-foreground">г. Екатеринбург, ул. Кольцевая 46</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <Icon name="Phone" size={24} className="text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">Телефон</p>
-                      <a href="tel:+79826322152" className="text-primary hover:underline">
-                        +7 (982) 63 22 152
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <Icon name="Clock" size={24} className="text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold mb-1">Режим работы</p>
-                      <p className="text-muted-foreground">Ежедневно с 9:00 до 20:00</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <h4 className="text-lg font-bold mb-4 uppercase">Мессенджеры</h4>
-                  <div className="flex gap-4">
-                    <a 
-                      href="https://t.me/shatalova_alina" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-14 h-14 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-all"
-                    >
-                      <Icon name="MessageCircle" size={24} className="text-white" />
-                    </a>
-                    <a 
-                      href="tel:+79826322152"
-                      className="w-14 h-14 bg-secondary hover:bg-secondary/90 rounded-full flex items-center justify-center transition-all"
-                    >
-                      <Icon name="Phone" size={24} className="text-white" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-card rounded-3xl overflow-hidden shadow-lg border-2 border-border h-[400px]">
-                <iframe
-                  src="https://yandex.ru/map-widget/v1/?ll=60.529996%2C56.780339&z=16&pt=60.529996,56.780339,pm2rdm"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{ position: 'relative' }}
-                  title="Карта"
-                />
-              </div>
             </div>
           </div>
         </div>
