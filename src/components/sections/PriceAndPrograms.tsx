@@ -18,7 +18,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 -60%
               </div>
               <h3 className="text-2xl font-bold mb-4 text-white uppercase">Пробное занятие</h3>
-              <div className="text-5xl font-black text-white mb-2">850₽</div>
+              <div className="text-5xl font-black text-white mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
               <p className="text-white/80 text-sm mb-6 line-through">вместо 2200₽</p>
               <ul className="space-y-3 mb-8 text-white">
                 <li className="flex items-start gap-2">
@@ -45,7 +45,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
 
             <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
               <h3 className="text-2xl font-bold mb-4 uppercase">4 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6">7 600₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>7 600₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -71,7 +71,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
 
             <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
               <h3 className="text-2xl font-bold mb-4 uppercase">8 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6">13 590₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>13 590₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -97,7 +97,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
 
             <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
               <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6">37 200₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -126,7 +126,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase">16 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6">25 650₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -155,7 +155,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6">36 000₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
