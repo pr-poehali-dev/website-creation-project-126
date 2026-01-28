@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 interface HeaderProps {
@@ -5,9 +6,26 @@ interface HeaderProps {
 }
 
 const Header = ({ scrollToSection }: HeaderProps) => {
+  const [isTopBarHidden, setIsTopBarHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsTopBarHidden(true);
+      } else {
+        setIsTopBarHidden(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-secondary/90 backdrop-blur-sm">
+      <div className={`fixed left-0 right-0 z-50 bg-secondary/90 backdrop-blur-sm transition-all duration-300 ${
+        isTopBarHidden ? '-top-[42px]' : 'top-0'
+      }`}>
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-white/80 text-xs">
             <div className="flex items-center gap-6">
@@ -27,7 +45,9 @@ const Header = ({ scrollToSection }: HeaderProps) => {
         </div>
       </div>
 
-      <header className="fixed top-[42px] left-0 right-0 z-50 backdrop-blur-[29px] bg-secondary/65 shadow-[0px_10px_30px_0px_rgba(0,0,0,1)]">
+      <header className={`fixed left-0 right-0 z-50 backdrop-blur-[29px] bg-secondary/65 shadow-[0px_10px_30px_0px_rgba(0,0,0,1)] transition-all duration-300 ${
+        isTopBarHidden ? 'top-0' : 'top-[42px]'
+      }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-[70px]">
             <div className="flex items-center gap-2">

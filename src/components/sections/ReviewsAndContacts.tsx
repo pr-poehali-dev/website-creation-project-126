@@ -232,6 +232,11 @@ const ReviewsAndContacts = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <button className="hover:text-primary transition">Политика конфиденциальности</button>
+              <span>•</span>
+              <button className="hover:text-primary transition">Пользовательское соглашение</button>
+            </div>
             <p>© 2024 Детский бассейн «ПЛЮХбург». Все права защищены.</p>
           </div>
         </div>
