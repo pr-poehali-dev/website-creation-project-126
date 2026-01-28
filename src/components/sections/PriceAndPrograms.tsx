@@ -8,42 +8,42 @@ interface PriceAndProgramsProps {
 const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
   return (
     <>
-      <section id="price" className="py-20 bg-white">
+      <section id="price" className="py-20 bg-primary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="bg-primary p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-secondary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">
+              <div className="absolute top-4 right-4 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
                 -60%
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white uppercase">Пробное занятие</h3>
-              <div className="text-5xl font-black text-white mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
-              <p className="text-white/80 text-sm mb-6 line-through">вместо 2200₽</p>
-              <ul className="space-y-3 mb-8 text-white">
+              <h3 className="text-2xl font-bold mb-4 text-foreground uppercase">Пробное занятие</h3>
+              <div className="text-5xl font-black text-foreground mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
+              <p className="text-muted-foreground text-sm mb-6 line-through">вместо 2200₽</p>
+              <ul className="space-y-3 mb-8 text-foreground">
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Консультация</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Диагностика</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Занятие</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <Icon name="Check" className="flex-shrink-0 mt-1" size={20} />
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>План тренировочного процесса</span>
                 </li>
               </ul>
-              <Button className="w-full bg-white hover:bg-white/90 text-primary font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
                 Записаться
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <h3 className="text-2xl font-bold mb-4 uppercase">4 занятия</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>7 600₽</div>
               <ul className="space-y-3 mb-8">
@@ -69,7 +69,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <h3 className="text-2xl font-bold mb-4 uppercase">8 занятий</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>13 590₽</div>
               <ul className="space-y-3 mb-8">
@@ -95,7 +95,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
               <ul className="space-y-3 mb-8">
@@ -121,7 +121,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <div className="mb-4">
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
@@ -150,7 +150,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-card p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border-2 border-transparent hover:border-primary">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
               <div className="mb-4">
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
