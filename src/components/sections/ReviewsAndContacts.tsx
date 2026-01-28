@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   return (
     <>
-      <section className="py-20 bg-primary">
+      <section id="team" className="py-20 bg-primary">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-6xl font-black text-center mb-12 uppercase text-white tracking-tight" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             ТРЕНЕРСКИЙ СОСТАВ

@@ -35,8 +35,23 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
               alt="Осьминог ПЛЮХбург"
               className="absolute -right-8 sm:-right-12 top-1/4 w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce"
-              style={{animationDuration: '3s', mixBlendMode: 'multiply'}}
+              style={{animationDuration: '3s'}}
             />
+
+            {/* Анимированная стрелка от осьминога к кнопке */}
+            <svg 
+              className="absolute right-0 top-1/2 w-32 h-32 animate-pulse hidden sm:block"
+              viewBox="0 0 100 100"
+              style={{animationDuration: '2s'}}
+            >
+              <path 
+                d="M 80 20 Q 60 40 50 70 L 55 65 M 50 70 L 45 65" 
+                stroke="#E8491D" 
+                strokeWidth="3" 
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
 
             <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}

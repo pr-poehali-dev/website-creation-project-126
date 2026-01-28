@@ -8,22 +8,21 @@ interface PriceAndProgramsProps {
 const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
   return (
     <>
-      <section id="price" className="py-20 bg-primary relative overflow-hidden">
-        <img 
-          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
-          alt="Осьминог ПЛЮХбург"
-          className="absolute bottom-8 right-8 w-48 h-48 object-contain animate-bounce opacity-90 hidden lg:block"
-          style={{animationDuration: '3s'}}
-        />
-        <div className="container mx-auto px-4 relative z-10">
+      <section id="price" className="py-20 bg-primary">
+        <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
               <div className="absolute top-4 right-4 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
                 -60%
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground uppercase">Пробное занятие</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground uppercase relative z-10">Пробное занятие</h3>
               <div className="text-5xl font-black text-foreground mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
               <p className="text-muted-foreground text-sm mb-6 line-through">вместо 2200₽</p>
               <ul className="space-y-3 mb-8 text-foreground">
@@ -49,8 +48,13 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
-              <h3 className="text-2xl font-bold mb-4 uppercase">4 занятия</h3>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">4 занятия</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>7 600₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -75,8 +79,13 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
-              <h3 className="text-2xl font-bold mb-4 uppercase">8 занятий</h3>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">8 занятий</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>13 590₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -101,8 +110,13 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
-              <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -127,11 +141,16 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
-              <div className="mb-4">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <div className="mb-4 relative z-10">
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4 uppercase">16 занятий</h3>
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">16 занятий</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
@@ -156,11 +175,16 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </Button>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all">
-              <div className="mb-4">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <div className="mb-4 relative z-10">
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4 uppercase">24 занятия</h3>
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
               <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
