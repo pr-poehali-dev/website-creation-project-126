@@ -173,47 +173,72 @@ const ReviewsAndContacts = () => {
         </div>
       </section>
 
-      <footer className="bg-secondary py-12 border-t border-white/10">
+      <footer className="bg-black py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Droplets" className="text-primary" size={32} />
-                <div>
-                  <h3 className="text-xl font-black text-white uppercase">ПЛЮХбург</h3>
-                  <p className="text-xs text-white/70">Детский бассейн</p>
-                </div>
-              </div>
-              <p className="text-white/80 text-sm">
-                Детский бассейн в Екатеринбурге
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-bold mb-4 uppercase">Контакты</h4>
-              <div className="space-y-2 text-white/80 text-sm">
-                <p>г. Екатеринбург, ул. Кольцевая 46</p>
-                <a href="tel:+79826322152" className="hover:text-primary transition block">
-                  +7 (982) 63 22 152
-                </a>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <Icon name="Droplets" className="text-primary" size={48} />
+              <div>
+                <h3 className="text-3xl font-black text-white uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>ПЛЮХбург</h3>
+                <p className="text-sm text-white/70">с 2016 года</p>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-white font-bold mb-4 uppercase">Режим работы</h4>
-              <p className="text-white/80 text-sm">
-                Ежедневно с 9:00 до 20:00
-              </p>
-            </div>
-          </div>
+            <nav className="flex flex-col gap-4 mb-8">
+              <button className="text-white/80 hover:text-primary transition text-lg">
+                Методика обучения
+              </button>
+              <button className="text-white/80 hover:text-primary transition text-lg">
+                Наши контакты
+              </button>
+            </nav>
 
-          <div className="border-t border-white/10 pt-8 text-center text-white/60 text-sm">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <button className="hover:text-primary transition">Политика конфиденциальности</button>
-              <span>•</span>
-              <button className="hover:text-primary transition">Пользовательское соглашение</button>
+            <a 
+              href="tel:+79826322152" 
+              className="text-4xl md:text-5xl font-black text-white hover:text-primary transition block mb-6"
+              style={{fontFamily: 'Oswald, Arial, sans-serif'}}
+            >
+              +7 (982) 63 22 152
+            </a>
+
+            <p className="text-white/70 text-sm mb-8 max-w-2xl mx-auto">
+              Подписывайтесь на наши аккаунты в соцсетях, где много новой информации о тренировках и жизни бассейна
+            </p>
+
+            <div className="flex items-center justify-center gap-8 mb-12">
+              <a 
+                href="https://t.me/shatalova_alina" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition"
+              >
+                <Icon name="MessageCircle" size={40} />
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-primary transition"
+              >
+                <Icon name="Youtube" size={40} />
+              </a>
             </div>
-            <p>© 2024 Детский бассейн «ПЛЮХбург». Все права защищены.</p>
+
+            <div className="mb-8">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
+                alt="ПЛЮХбург"
+                className="w-48 h-48 mx-auto object-contain"
+              />
+            </div>
+
+            <div className="text-5xl md:text-6xl font-black text-white uppercase mb-8" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+              ДЕТСКИЙ БАССЕЙН<br />ПЛЮХБУРГ
+            </div>
+
+            <button className="text-white/60 hover:text-primary transition text-sm underline">
+              Политика конфиденциальности
+            </button>
           </div>
         </div>
       </footer>
