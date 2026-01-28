@@ -389,90 +389,36 @@ const Index = () => {
 
       <section id="programm" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Программы обучения</h2>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-border">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                  <Icon name="Baby" size={32} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 uppercase">Грудничковое плавание</h3>
-                  <p className="text-lg leading-relaxed mb-4">
-                    Для детей от 0 до 3 лет. Раннее развитие в воде, укрепление иммунитета, профилактика заболеваний опорно-двигательного аппарата.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Методика «Осознанное погружение»</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Без стресса и слез</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Комфортная температура воды</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-border">
+              <h3 className="text-4xl font-bold uppercase mb-6 text-center">Дети какого возраста плавают у нас?</h3>
+              <p className="text-xl leading-relaxed text-center">
+                К самым маленьким мы выезжаем на дом. А вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
+              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-border">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                  <Icon name="User" size={32} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 uppercase">Раннее плавание</h3>
-                  <p className="text-lg leading-relaxed mb-4">
-                    Для детей от 3 до 7 лет. Освоение базовых навыков плавания, игровой формат занятий, социализация в группе.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Базовая техника плавания</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Игровые упражнения</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Уверенность в воде</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-border">
+              <h3 className="text-4xl font-bold uppercase mb-6 text-center">Размеры нашего бассейна</h3>
+              <p className="text-xl leading-relaxed text-center">
+                Ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33°C и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
+              </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-border">
-              <div className="flex items-start gap-6">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                  <Icon name="Users" size={32} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3 uppercase">Спортивное плавание</h3>
-                  <p className="text-lg leading-relaxed mb-4">
-                    Для детей от 7 лет. Совершенствование техники, подготовка к соревнованиям, развитие выносливости.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Все стили плавания</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Тренировки на результат</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Icon name="Circle" size={8} className="text-primary flex-shrink-0 mt-2" />
-                      <span>Участие в соревнованиях</span>
-                    </li>
-                  </ul>
-                </div>
+            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-border">
+              <h3 className="text-4xl font-bold uppercase mb-6 text-center">Расписание занятий</h3>
+              <p className="text-xl leading-relaxed text-center mb-8">
+                Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
+              </p>
+              <div className="text-center">
+                <a 
+                  href="https://t.me/shatalova_alina" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-xl">
+                    Получить информацию
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -552,16 +498,6 @@ const Index = () => {
                 <circle cx="200" cy="50" r="8" fill="#e03000" className="animate-pulse" />
                 <circle cx="350" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
                 <circle cx="50" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
-                
-                <text x="200" y="200" textAnchor="middle" className="fill-white text-4xl font-black uppercase" style={{ fontSize: '28px', fontFamily: 'Inter, sans-serif' }}>
-                  Методика
-                </text>
-                <text x="200" y="230" textAnchor="middle" className="fill-white/90 text-base" style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
-                  Осознанное
-                </text>
-                <text x="200" y="250" textAnchor="middle" className="fill-white/90 text-base" style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
-                  погружение
-                </text>
               </svg>
               
               <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-slide-up">
@@ -569,50 +505,16 @@ const Index = () => {
                   <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Техника</h3>
                 </div>
               </div>
-              
-              <div className="absolute bottom-4 left-0 md:left-12 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
-                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Здоровье</h3>
-                </div>
-              </div>
-              
-              <div className="absolute bottom-4 right-0 md:right-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-                <div className="bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-full shadow-2xl shadow-primary/50 hover:scale-110 transition-transform duration-300 border-2 border-white/20">
-                  <h3 className="text-white font-black text-xl uppercase whitespace-nowrap tracking-wide">Характер</h3>
-                </div>
-              </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mt-20">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center rotate-6">
-                  <Icon name="Target" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 uppercase text-white">Техника</h3>
-                <p className="leading-relaxed text-white/80">
-                  Правильная техника плавания с первых занятий. Постановка дыхания и координации движений.
-                </p>
+            <div className="text-center mt-12">
+              <div className="w-20 h-20 bg-primary rounded-2xl mx-auto mb-6 flex items-center justify-center rotate-6">
+                <Icon name="Target" size={40} className="text-white" />
               </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center -rotate-6">
-                  <Icon name="Heart" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 uppercase text-white">Здоровье</h3>
-                <p className="leading-relaxed text-white/80">
-                  Укрепление иммунитета, развитие дыхательной системы, профилактика заболеваний.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center rotate-3">
-                  <Icon name="Users" size={32} className="text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 uppercase text-white">Характер</h3>
-                <p className="leading-relaxed text-white/80">
-                  Воспитание дисциплины, уверенности в себе, преодоление страхов.
-                </p>
-              </div>
+              <h3 className="text-2xl font-bold mb-4 uppercase text-white">Техника</h3>
+              <p className="leading-relaxed text-white/90 text-lg max-w-2xl mx-auto">
+                Правильная техника плавания с первых занятий. Постановка дыхания и координации движений.
+              </p>
             </div>
 
             <div className="bg-primary p-8 rounded-3xl mt-12">
