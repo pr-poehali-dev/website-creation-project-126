@@ -95,10 +95,10 @@ const Index = () => {
             </span>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 leading-tight uppercase">
-              Запишитесь на первую пробную тренировку
+              Запишите ребенка на плавание и получите
               <span className="block mt-4">
                 <span className="bg-white text-foreground px-6 py-3 rounded-3xl inline-block shadow-2xl">
-                  <span className="text-primary font-black animate-pulse">-60%</span>
+                  <span className="text-primary font-black animate-pulse">-60%</span> на первое занятие
                 </span>
               </span>
             </h1>
@@ -520,45 +520,69 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="triangle" className="py-20 bg-muted">
+      <section id="triangle" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase">Методика обучения</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white">Методика обучения</h2>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Heart" size={48} className="text-white" />
+          <div className="max-w-5xl mx-auto">
+            <div className="relative">
+              <svg className="w-full h-auto max-w-2xl mx-auto mb-12" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M200 50 L350 300 L50 300 Z" stroke="#e03000" strokeWidth="3" fill="none" />
+              </svg>
+              
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4">
+                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
+                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Техника</h3>
                 </div>
-                <h3 className="text-xl font-bold mb-3 uppercase">Без стресса</h3>
-                <p className="leading-relaxed">
-                  Авторская методика «Осознанное погружение» без слез и принуждения
+              </div>
+              
+              <div className="absolute bottom-0 left-0 md:left-12 -translate-y-4">
+                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
+                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Здоровье</h3>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-0 right-0 md:right-12 -translate-y-4">
+                <div className="bg-primary px-6 py-3 rounded-full shadow-xl">
+                  <h3 className="text-white font-black text-lg uppercase whitespace-nowrap">Характер</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mt-20">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center rotate-6">
+                  <Icon name="Target" size={32} className="text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 uppercase text-white">Техника</h3>
+                <p className="leading-relaxed text-white/80">
+                  Правильная техника плавания с первых занятий. Постановка дыхания и координации движений.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Target" size={48} className="text-white" />
+                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center -rotate-6">
+                  <Icon name="Heart" size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 uppercase">Результат</h3>
-                <p className="leading-relaxed">
-                  Эффективные упражнения, проверенные на тысячах детей
+                <h3 className="text-xl font-bold mb-3 uppercase text-white">Здоровье</h3>
+                <p className="leading-relaxed text-white/80">
+                  Укрепление иммунитета, развитие дыхательной системы, профилактика заболеваний.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Icon name="Users" size={48} className="text-white" />
+                <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center rotate-3">
+                  <Icon name="Users" size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 uppercase">Команда</h3>
-                <p className="leading-relaxed">
-                  Работа в связке с родителями для достижения лучших результатов
+                <h3 className="text-xl font-bold mb-3 uppercase text-white">Характер</h3>
+                <p className="leading-relaxed text-white/80">
+                  Воспитание дисциплины, уверенности в себе, преодоление страхов.
                 </p>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-border">
-              <p className="text-lg leading-relaxed text-center">
+            <div className="bg-primary p-8 rounded-3xl mt-12">
+              <p className="text-lg leading-relaxed text-center text-white">
                 Наша методика основана на <strong>уважении к личности ребенка</strong>. 
                 Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут, 
                 получая удовольствие от процесса и одновременно развивая важные навыки.
@@ -722,26 +746,38 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="mt-6">
+                  <h4 className="text-lg font-bold mb-4 uppercase">Мессенджеры</h4>
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://t.me/shatalova_alina" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-all"
+                    >
+                      <Icon name="MessageCircle" size={24} className="text-white" />
+                    </a>
+                    <a 
+                      href="tel:+79826322152"
+                      className="w-14 h-14 bg-secondary hover:bg-secondary/90 rounded-full flex items-center justify-center transition-all"
+                    >
+                      <Icon name="Phone" size={24} className="text-white" />
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-card p-8 rounded-3xl shadow-lg border-2 border-border">
-                <h3 className="text-xl font-bold mb-4 uppercase">Мессенджеры</h3>
-                <div className="flex gap-4">
-                  <a 
-                    href="https://t.me/shatalova_alina" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-14 h-14 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-all"
-                  >
-                    <Icon name="MessageCircle" size={24} className="text-white" />
-                  </a>
-                  <a 
-                    href="tel:+79826322152"
-                    className="w-14 h-14 bg-secondary hover:bg-secondary/90 rounded-full flex items-center justify-center transition-all"
-                  >
-                    <Icon name="Phone" size={24} className="text-white" />
-                  </a>
-                </div>
+              <div className="bg-card rounded-3xl overflow-hidden shadow-lg border-2 border-border h-[400px]">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&z=17&l=map&pt=60.597465,56.838011,pm2rdm"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{ position: 'relative' }}
+                  title="Карта"
+                />
               </div>
             </div>
           </div>
