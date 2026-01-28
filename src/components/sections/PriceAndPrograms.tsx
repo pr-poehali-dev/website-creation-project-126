@@ -182,40 +182,6 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
         </div>
       </section>
 
-      <section id="team" className="py-20 bg-primary">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-16 tracking-tight text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
-            НАШИ ТРЕНЕРЫ
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-6 rounded-3xl shadow-lg text-center">
-              <div className="w-24 h-24 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Icon name="User" size={40} className="text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Алина Шаталова</h3>
-              <p className="text-sm text-muted-foreground mb-4">Основатель, главный тренер</p>
-              <p className="text-sm leading-relaxed">Автор методики «Осознанное погружение». Спикер в мире грудничкового плавания.</p>
-            </div>
-            <div className="bg-white p-6 rounded-3xl shadow-lg text-center">
-              <div className="w-24 h-24 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Icon name="User" size={40} className="text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Павел</h3>
-              <p className="text-sm text-muted-foreground mb-4">Тренер</p>
-              <p className="text-sm leading-relaxed">Со-основатель ПЛЮХбурга. Опытный тренер с индивидуальным подходом.</p>
-            </div>
-            <div className="bg-white p-6 rounded-3xl shadow-lg text-center">
-              <div className="w-24 h-24 bg-black rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Icon name="User" size={40} className="text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Евгений</h3>
-              <p className="text-sm text-muted-foreground mb-4">Тренер</p>
-              <p className="text-sm leading-relaxed">Человек на своём месте. Индивидуальный подход к каждому ребенку.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="programm" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-12">
