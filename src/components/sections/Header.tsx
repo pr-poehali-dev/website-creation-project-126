@@ -35,10 +35,10 @@ const Header = ({ scrollToSection }: HeaderProps) => {
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="Clock" size={14} className="text-primary" />
-                <span>Ежедневно с 9:00 до 21:00</span>
+                <span>Ежедневно с 9:00 до 20:00</span>
               </div>
             </div>
-            <a href="tel:+79826322152" className="hover:text-primary transition text-sm font-semibold">
+            <a href="tel:+79826322152" className="hover:text-primary transition text-xs font-semibold whitespace-nowrap">
               +7 (982) 63 22 152
             </a>
           </div>
@@ -77,7 +77,7 @@ const Header = ({ scrollToSection }: HeaderProps) => {
             </nav>
 
             <div className="flex items-center gap-4">
-              <a href="tel:+79826322152" className="hidden lg:block text-white hover:opacity-75 transition text-[20px] font-bold" style={{fontFamily: 'Inter, Arial, sans-serif'}}>
+              <a href="tel:+79826322152" className="hidden lg:block text-white hover:opacity-75 transition text-[16px] font-semibold whitespace-nowrap" style={{fontFamily: 'Inter, Arial, sans-serif'}}>
                 +7 (982) 63 22 152
               </a>
               <button className="lg:hidden text-white">

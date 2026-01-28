@@ -13,14 +13,14 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=2000)'
+            backgroundImage: 'url(https://images.unsplash.com/photo-1519648023493-d82b5f8d7b8a?q=80&w=2000)'
           }}
         />
         
         <div className="relative z-20 container mx-auto px-4 text-center">
           <div className="max-w-5xl mx-auto">
             <span className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold mb-8">
-              Детский бассейн
+              Бассейн детский
             </span>
             
             <h1 className="text-[21px] md:text-[25px] lg:text-[38px] font-bold text-white mb-8 uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.3, textShadow: '0px 2px 4px rgba(0,0,0,0.5)'}}>

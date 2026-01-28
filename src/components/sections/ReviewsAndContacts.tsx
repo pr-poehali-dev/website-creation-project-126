@@ -155,7 +155,7 @@ const ReviewsAndContacts = () => {
                     <Icon name="Clock" size={24} className="text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold mb-1">Режим работы</p>
-                      <p className="text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
+                      <p className="text-muted-foreground">Ежедневно с 9:00 до 20:00</p>
                     </div>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ const ReviewsAndContacts = () => {
             <div>
               <h4 className="text-white font-bold mb-4 uppercase">Режим работы</h4>
               <p className="text-white/80 text-sm">
-                Ежедневно с 9:00 до 21:00
+                Ежедневно с 9:00 до 20:00
               </p>
             </div>
           </div>
