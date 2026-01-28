@@ -16,7 +16,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             backgroundImage: 'url(https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/cf6c3257-ce78-40ee-8bb7-096885779784.jpg)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/85 z-10" />
         
         <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
