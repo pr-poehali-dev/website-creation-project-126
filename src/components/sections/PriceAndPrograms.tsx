@@ -210,7 +210,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-primary hover:bg-primary/90 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-12 py-4 sm:py-6 !rounded-none shadow-xl w-full sm:w-auto">
+                  <Button className="bg-primary hover:bg-primary/90 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-12 py-4 sm:py-6 rounded-full shadow-xl w-full sm:w-auto">
                     Получить информацию
                   </Button>
                 </a>
