@@ -16,7 +16,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             backgroundImage: 'url(https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/cf6c3257-ce78-40ee-8bb7-096885779784.jpg)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80 z-10" />
         
         <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
@@ -30,48 +30,45 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
           {/* Центральный блок с заголовком и кнопкой */}
           <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto relative">
-            {/* Осьминог в кепке с анимацией */}
-            <img 
-              src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
-              alt="Осьминог ПЛЮХбург"
-              className="absolute -right-8 sm:-right-12 top-1/4 w-28 h-28 sm:w-36 sm:h-36 object-contain animate-bounce"
-              style={{animationDuration: '3s'}}
-            />
-
-            {/* Анимированная стрелка от осьминога к кнопке */}
-            <svg 
-              className="absolute right-0 top-1/2 w-32 h-32 animate-pulse hidden sm:block"
-              viewBox="0 0 100 100"
-              style={{animationDuration: '2s'}}
-            >
-              <path 
-                d="M 80 20 Q 60 40 50 70 L 55 65 M 50 70 L 45 65" 
-                stroke="#E8491D" 
-                strokeWidth="3" 
-                fill="none"
-                strokeLinecap="round"
-              />
-            </svg>
 
             <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
               <span className="inline-block bg-primary text-white font-black px-3 py-1 rounded-lg">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
-            <a 
-              href="https://t.me/your_chat_link" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block relative z-10"
-            >
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white font-black text-lg px-12 py-6 rounded-full shadow-2xl mb-8"
-                style={{fontFamily: 'Inter, Arial, sans-serif'}}
+            <div className="relative">
+              {/* Осьминог справа от кнопки с указательной рукой */}
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог ПЛЮХбург"
+                className="absolute -right-24 -bottom-8 w-32 h-32 object-contain animate-bounce hidden lg:block"
+                style={{animationDuration: '2s'}}
+              />
+              
+              {/* Анимированная стрелка-указатель */}
+              <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden lg:block">
+                <div className="animate-bounce" style={{animationDuration: '1.5s'}}>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <path d="M5 20 L30 20 M30 20 L22 12 M30 20 L22 28" stroke="#E8491D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <a 
+                href="https://t.me/your_chat_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block relative z-10"
               >
-                Записаться на занятие
-              </Button>
-            </a>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-lg px-12 py-6 rounded-full shadow-2xl mb-8"
+                  style={{fontFamily: 'Inter, Arial, sans-serif'}}
+                >
+                  Записаться на занятие
+                </Button>
+              </a>
+            </div>
           </div>
 
           {/* Нижний блок с преимуществами */}
