@@ -552,6 +552,16 @@ const Index = () => {
                 <circle cx="200" cy="50" r="8" fill="#e03000" className="animate-pulse" />
                 <circle cx="350" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
                 <circle cx="50" cy="300" r="8" fill="#e03000" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
+                
+                <text x="200" y="200" textAnchor="middle" className="fill-white text-4xl font-black uppercase" style={{ fontSize: '28px', fontFamily: 'Inter, sans-serif' }}>
+                  Методика
+                </text>
+                <text x="200" y="230" textAnchor="middle" className="fill-white/90 text-base" style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
+                  Осознанное
+                </text>
+                <text x="200" y="250" textAnchor="middle" className="fill-white/90 text-base" style={{ fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
+                  погружение
+                </text>
               </svg>
               
               <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-slide-up">
