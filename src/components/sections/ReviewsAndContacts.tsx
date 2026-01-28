@@ -176,14 +176,6 @@ const ReviewsAndContacts = () => {
       <footer className="bg-black py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <Icon name="Droplets" className="text-primary" size={48} />
-              <div>
-                <h3 className="text-3xl font-black text-white uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>ПЛЮХбург</h3>
-                <p className="text-sm text-white/70">с 2016 года</p>
-              </div>
-            </div>
-
             <button onClick={() => window.scrollTo({ top: document.getElementById('contacts')?.offsetTop, behavior: 'smooth' })} className="text-white/80 hover:text-primary transition text-lg mb-8">
               Наши контакты
             </button>
