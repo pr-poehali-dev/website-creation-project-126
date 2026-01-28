@@ -199,9 +199,9 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-lg shadow-lg border-2 border-border">
-              <h3 className="text-4xl font-bold uppercase mb-6 text-center">Расписание занятий</h3>
-              <p className="text-xl leading-relaxed text-center mb-8">
+            <div className="bg-white p-6 sm:p-10 rounded-lg shadow-lg border-2 border-border">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase mb-4 sm:mb-6 text-center">Расписание занятий</h3>
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-center mb-6 sm:mb-8">
                 Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
               </p>
               <div className="text-left">
@@ -210,7 +210,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <Button className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-sm shadow-xl">
+                  <Button className="bg-primary hover:bg-primary/90 text-white font-bold text-sm sm:text-base md:text-lg px-6 sm:px-12 py-4 sm:py-6 rounded-none shadow-xl w-full sm:w-auto">
                     Получить информацию
                   </Button>
                 </a>
