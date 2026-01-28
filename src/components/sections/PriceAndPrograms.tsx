@@ -8,8 +8,14 @@ interface PriceAndProgramsProps {
 const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
   return (
     <>
-      <section id="price" className="py-20 bg-primary">
-        <div className="container mx-auto px-4">
+      <section id="price" className="py-20 bg-primary relative overflow-hidden">
+        <img 
+          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
+          alt="Осьминог ПЛЮХбург"
+          className="absolute bottom-8 right-8 w-48 h-48 object-contain animate-bounce opacity-90 hidden lg:block"
+          style={{animationDuration: '3s'}}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
