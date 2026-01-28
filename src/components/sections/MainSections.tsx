@@ -24,14 +24,14 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               Бассейн детский
             </span>
             
-            <h1 className="text-[21px] md:text-[25px] lg:text-[38px] font-bold text-white mb-8 uppercase" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.3, textShadow: '0px 2px 4px rgba(0,0,0,0.5)'}}>
+            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-8 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.4, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
               Запишите ребенка на плавание и получите{' '}
               <span className="text-primary">-60%</span> на первое занятие
             </h1>
 
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold text-xl px-12 py-8 rounded-full shadow-2xl uppercase animate-pulse mt-8"
+              className="bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 rounded-full shadow-2xl uppercase animate-pulse mt-8"
               onClick={() => scrollToSection('contacts')}
             >
               Записаться на занятие
