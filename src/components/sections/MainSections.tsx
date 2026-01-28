@@ -41,7 +41,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               <img 
                 src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
                 alt="Осьминог ПЛЮХбург"
-                className="absolute -left-40 -bottom-8 w-24 h-24 object-contain animate-bounce hidden lg:block"
+                className="absolute -left-40 -bottom-8 w-24 h-auto object-contain animate-bounce hidden lg:block"
                 style={{animationDuration: '2s'}}
               />
               
