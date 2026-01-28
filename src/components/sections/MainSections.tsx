@@ -8,7 +8,7 @@ interface MainSectionsProps {
 const MainSections = ({ scrollToSection }: MainSectionsProps) => {
   return (
     <>
-      <section className="relative h-[890px] flex items-center justify-center overflow-hidden mt-[120px]">
+      <section className="relative min-h-screen flex flex-col overflow-hidden mt-[80px]">
         <div className="absolute inset-0 bg-black" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -16,66 +16,73 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             backgroundImage: 'url(https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/cf6c3257-ce78-40ee-8bb7-096885779784.jpg)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-transparent to-black/85 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 text-center" style={{marginTop: '-28rem'}}>
-          <div className="max-w-5xl mx-auto">
-            <span className="inline-block bg-primary text-white px-5 py-1.5 rounded-full text-sm font-bold mb-2">
-              Бассейн детский
-            </span>
-            
-            <h1 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[38px] font-bold text-white mb-2 uppercase px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, lineHeight: 1.3, textShadow: '0px 3px 8px rgba(0,0,0,0.8)'}}>
-              Запишите ребенка на плавание и получите{' '}
-              <span className="text-primary">-60%</span> на первое занятие
+        <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-80px)]">
+          {/* Верхний блок с контактами */}
+          <div className="text-center mb-8">
+            <p className="text-white text-sm mb-1">детский бассейн «ПЛЮХбург»</p>
+            <a href="tel:+79826322152" className="text-white text-sm hover:text-primary transition-colors block mb-1">
+              +7 (982) 63 22 152
+            </a>
+            <p className="text-white text-sm">г. Екатеринбург, ул. Кольцевая 46</p>
+          </div>
+
+          {/* Центральный блок с заголовком и кнопкой */}
+          <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-bold text-white mb-6 uppercase leading-tight" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 700, textShadow: '0px 3px 12px rgba(0,0,0,0.9)'}}>
+              ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
+              <span className="text-primary">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
 
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-5 sm:py-7 rounded-full shadow-2xl uppercase animate-pulse"
-              onClick={() => scrollToSection('contacts')}
+            <a 
+              href="https://t.me/your_chat_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              Записаться на занятие
-            </Button>
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-full shadow-2xl uppercase mb-8"
+              >
+                Записаться на занятие
+              </Button>
+            </a>
           </div>
-        </div>
-      </section>
 
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+          {/* Нижний блок с преимуществами */}
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg"><span className="text-primary font-bold text-2xl">-10%</span> На абонемент</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
-                </div>
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed"><span className="text-primary font-bold">-10%</span> на абонемент</p>
               </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-foreground text-lg">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
-                </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">персональные тренировки один на один с тренером. занятия выстраиваются исходя из потребностей вашего ребенка</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">исправляем асимметрию: кривошея, привычный поворот. научим переворачиваться и ползти</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">используем только физиологичные и эффективные упражнения. мы не притапливаем и не вертим детей в воде. они ныряют сами и плывут.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                <p className="text-white text-sm leading-relaxed">опытные тренеры. в команду «ПЛЮХбурга» не попадают просто так. только лучшие из лучших</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+
 
       <section className="py-20 bg-muted relative overflow-hidden">
         <div className="container mx-auto px-4">
