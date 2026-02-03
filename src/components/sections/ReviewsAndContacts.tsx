@@ -10,7 +10,10 @@ const ReviewsAndContacts = () => {
     { src: "https://cdn.poehali.dev/files/eba23ff6-51a6-4fc7-8f85-c77cf7b3d9b6.JPG", alt: "Ребенок плавает" },
     { src: "https://cdn.poehali.dev/files/a7f0641f-0bc2-4d27-b60d-46e5cc676739.JPG", alt: "Ребенок в бассейне" },
     { src: "https://cdn.poehali.dev/files/54058c6e-de1c-4741-b9e2-3b05bc17edc5.JPG", alt: "Занятие в бассейне" },
-    { src: "https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG", alt: "Детское плавание" }
+    { src: "https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG", alt: "Детское плавание" },
+    { src: "https://cdn.poehali.dev/files/6fcfd906-be8e-408d-8a9a-c3053846ee54.JPG", alt: "Ребенок с тренером" },
+    { src: "https://cdn.poehali.dev/files/e6dcb0a9-f0ee-4aec-8ec4-653ead4a897d.JPG", alt: "Малыш под водой" },
+    { src: "https://cdn.poehali.dev/files/8a1e5a47-e895-4194-8df2-e3aac6f143f6.JPG", alt: "Мама с малышом" }
   ];
 
   const nextImage = () => {
@@ -166,18 +169,6 @@ const ReviewsAndContacts = () => {
                 >
                   <Icon name="ChevronRight" size={24} className="text-black" />
                 </button>
-
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImage(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentImage ? 'bg-white w-8' : 'bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
               </div>
 
               <div className="bg-white p-8 rounded-3xl shadow-lg">
