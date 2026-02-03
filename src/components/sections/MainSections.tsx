@@ -36,7 +36,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           {/* Центральный блок с заголовком и кнопкой */}
           <div className="flex-1 flex flex-col items-center justify-start text-center max-w-4xl mx-auto relative">
 
-            <h1 className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
+            <h1 className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[48px] font-black text-white mb-10 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
               <span className="inline-block bg-primary text-white font-black px-3 py-1 rounded-lg">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
@@ -50,7 +50,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-6 w-full"
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-12 w-full"
                   style={{fontFamily: 'Inter, Arial, sans-serif'}}
                 >
                   Записаться на занятие
@@ -61,7 +61,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
           {/* Нижний блок с преимуществами */}
           <div className="max-w-2xl mx-auto w-full">
-            <div className="space-y-3 text-left">
+            <div className="space-y-5 text-left">
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
                 <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером</span><br/><span className="text-sm opacity-90">Занятия выстраиваются исходя из потребностей вашего ребенка</span></p>
