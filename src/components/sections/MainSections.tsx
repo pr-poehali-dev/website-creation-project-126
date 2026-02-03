@@ -94,13 +94,13 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
 
 
-      <section className="py-20 bg-primary relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+          <h2 className="text-4xl md:text-6xl font-black uppercase text-center mb-8 tracking-tight text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             ПОЧЕМУ ВЫБИРАЮТ НАС?
           </h2>
           
-          <p className="text-center text-xl mb-4 text-white font-medium">Посмотрите видео о нашем бассейне</p>
+          <p className="text-center text-xl mb-4 text-black font-medium">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
             <div className="relative aspect-video bg-card rounded-3xl overflow-hidden shadow-2xl border border-border">
@@ -113,7 +113,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl border-2 border-transparent hover:border-primary transition-all shadow-lg">
+            <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-6 shadow-lg">
                 <Icon name="Users" className="text-white" size={32} />
               </div>
@@ -123,18 +123,8 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-transparent hover:border-primary transition-all shadow-lg">
+            <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
-                <Icon name="Award" className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold uppercase mb-4">Тренерский состав</h3>
-              <p className="text-foreground leading-relaxed">
-                Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение».
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl border-2 border-transparent hover:border-primary transition-all shadow-lg">
-              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
                 <Icon name="Heart" className="text-white" size={32} />
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4">Комфортная атмосфера</h3>
@@ -143,7 +133,17 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border-2 border-transparent hover:border-primary transition-all shadow-lg">
+            <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
+                <Icon name="Shield" className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold uppercase mb-4">Безопасность превыше всего</h3>
+              <p className="text-foreground leading-relaxed">
+                Современное оборудование для очистки воды, постоянный контроль качества. Все наши тренеры имеют медицинское образование.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
                 <Icon name="Baby" className="text-white" size={32} />
               </div>
@@ -152,6 +152,24 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
                 У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="py-20 bg-primary">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-black text-center mb-12 uppercase text-white tracking-tight" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+            ТРЕНЕРСКИЙ СОСТАВ
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-6 text-white">
+            <p className="text-lg leading-relaxed">
+              Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы. Алина лично стажирует каждого тренера в команду, чтобы маленькие половцы получали самое лучшее от занятий в бассейне.
+            </p>
+            
+            <p className="text-lg leading-relaxed font-medium">
+              Наши тренеры - это тренеры с которыми ваш ребенок будет сравнивать всех последующих, потому что мы задаем высокую планку. Наши тренеры - наставники, любящие и уважающие детей.
+            </p>
           </div>
         </div>
       </section>

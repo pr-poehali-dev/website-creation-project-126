@@ -5,27 +5,9 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   return (
     <>
-      <section id="team" className="py-20 bg-primary">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-black text-center mb-12 uppercase text-white tracking-tight" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
-            ТРЕНЕРСКИЙ СОСТАВ
-          </h2>
-          
-          <div className="max-w-4xl mx-auto space-y-6 text-white">
-            <p className="text-lg leading-relaxed">
-              Шаталова Алина вместе со своим мужем Павлом, в далеком 2016 году открыли первый филиал «ПЛЮХбурга». Сейчас Алина является одним из самых востребованных спикеров в мире грудничкового и раннего плавания и автором методики «осознанное погружение» которая перевернула мир раннего плавания и заставила всех тренеров задуматься об устаревших методах работы. Алина лично стажирует каждого тренера в команду, чтобы маленькие половцы получали самое лучшее от занятий в бассейне.
-            </p>
-            
-            <p className="text-lg leading-relaxed font-medium">
-              Наши тренеры - это тренеры с которыми ваш ребенок будет сравнивать всех последующих, потому что мы задаем высокую планку. Наши тренеры - наставники, любящие и уважающие детей.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Что о нас говорят</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Что о нас говорят</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg">
@@ -109,10 +91,10 @@ const ReviewsAndContacts = () => {
 
       <section id="map" className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             КАК НАС НАЙТИ
           </h2>
-          <p className="text-center text-white text-lg mb-8">
+          <p className="text-center text-black text-lg mb-8">
             г. Екатеринбург,<br />ул. Кольцевая 46
           </p>
           
@@ -131,9 +113,9 @@ const ReviewsAndContacts = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-20 bg-black">
+      <section id="contacts" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Запишитесь на пробное занятие</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Запишитесь на пробное занятие</h2>
           
           <div className="max-w-2xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg">

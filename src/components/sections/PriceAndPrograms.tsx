@@ -8,9 +8,9 @@ interface PriceAndProgramsProps {
 const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
   return (
     <>
-      <section id="price" className="py-20 bg-primary">
+      <section id="price" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">
@@ -212,24 +212,24 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
         </div>
       </section>
 
-      <section id="programm" className="py-20 bg-muted">
+      <section id="programm" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto space-y-12">
-            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-black">
               <h3 className="text-4xl font-bold uppercase mb-6 text-center">Дети какого возраста плавают у нас?</h3>
               <p className="text-xl leading-relaxed text-center">
                 К самым маленьким мы выезжаем на дом. А вот с 2 месяцев до 10 лет уже можно плавать в нашем теплом и чистом бассейне.
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-border">
+            <div className="bg-white p-10 rounded-3xl shadow-lg border-2 border-black">
               <h3 className="text-4xl font-bold uppercase mb-6 text-center">Размеры нашего бассейна</h3>
               <p className="text-xl leading-relaxed text-center">
                 Ширина нашего бассейна 3 метра, длина 6 м. Теплая вода - 33°C и небольшие размеры позволяют нам эффективно заниматься с детьми раннего грудного и дошкольного, школьного возраста. Так как дети чувствуют себя комфортно и уютно для изучения базовых навыков.
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-10 rounded-lg shadow-lg border-2 border-border">
+            <div className="bg-white p-6 sm:p-10 rounded-lg shadow-lg border-2 border-black">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase mb-4 sm:mb-6 text-center">Расписание занятий</h3>
               <p className="text-base sm:text-lg md:text-xl leading-relaxed text-center mb-6 sm:mb-8">
                 Мы работаем с 9:00 до 20:00 каждый день. Узнать о наличии свободных окон и закреплении за вами постоянного времени нужно уточнять у администратора.
