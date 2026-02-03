@@ -1,8 +1,26 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
 
 const ReviewsAndContacts = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const images = [
+    { src: "https://cdn.poehali.dev/files/eba23ff6-51a6-4fc7-8f85-c77cf7b3d9b6.JPG", alt: "Ребенок плавает" },
+    { src: "https://cdn.poehali.dev/files/a7f0641f-0bc2-4d27-b60d-46e5cc676739.JPG", alt: "Ребенок в бассейне" },
+    { src: "https://cdn.poehali.dev/files/54058c6e-de1c-4741-b9e2-3b05bc17edc5.JPG", alt: "Занятие в бассейне" },
+    { src: "https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG", alt: "Детское плавание" }
+  ];
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <>
       <section className="py-20 bg-white">
@@ -128,27 +146,38 @@ const ReviewsAndContacts = () => {
           
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://cdn.poehali.dev/files/eba23ff6-51a6-4fc7-8f85-c77cf7b3d9b6.JPG"
-                  alt="Ребенок плавает"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  src={images[currentImage].src}
+                  alt={images[currentImage].alt}
+                  className="w-full h-full object-cover"
                 />
-                <img 
-                  src="https://cdn.poehali.dev/files/a7f0641f-0bc2-4d27-b60d-46e5cc676739.JPG"
-                  alt="Ребенок в бассейне"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/54058c6e-de1c-4741-b9e2-3b05bc17edc5.JPG"
-                  alt="Занятие в бассейне"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG"
-                  alt="Детское плавание"
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                />
+                
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all z-10"
+                >
+                  <Icon name="ChevronLeft" size={24} className="text-black" />
+                </button>
+                
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all z-10"
+                >
+                  <Icon name="ChevronRight" size={24} className="text-black" />
+                </button>
+
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImage(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentImage ? 'bg-white w-8' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="bg-white p-8 rounded-3xl shadow-lg">
