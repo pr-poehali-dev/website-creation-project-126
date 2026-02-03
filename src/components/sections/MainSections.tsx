@@ -3,10 +3,9 @@ import Icon from "@/components/ui/icon";
 
 interface MainSectionsProps {
   scrollToSection: (id: string) => void;
-  onOpenForm: () => void;
 }
 
-const MainSections = ({ scrollToSection, onOpenForm }: MainSectionsProps) => {
+const MainSections = ({ scrollToSection }: MainSectionsProps) => {
   return (
     <>
       <section className="relative min-h-screen flex flex-col overflow-hidden mt-[70px]">
@@ -44,14 +43,20 @@ const MainSections = ({ scrollToSection, onOpenForm }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              <Button 
-                onClick={onOpenForm}
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-28 w-full max-w-md relative z-10"
-                style={{fontFamily: 'Inter, Arial, sans-serif'}}
+              <a 
+                href="https://t.me/your_chat_link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block relative z-10 w-full max-w-md px-4"
               >
-                Записаться на занятие
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-28 w-full"
+                  style={{fontFamily: 'Inter, Arial, sans-serif'}}
+                >
+                  Записаться на занятие
+                </Button>
+              </a>
             </div>
           </div>
 
