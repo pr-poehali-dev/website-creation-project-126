@@ -24,9 +24,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/85 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 pt-4 pb-8 flex flex-col min-h-[calc(100vh-70px)]">
+        <div className="relative z-20 container mx-auto px-4 pt-6 pb-8 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-12">
             <a href="tel:+79826322152" className="text-white text-lg md:text-xl font-bold hover:text-primary transition-colors block mb-1">
               +7 (982) 63 22 152
             </a>
@@ -42,22 +42,6 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              {/* Осьминог слева от кнопки с указательной рукой */}
-              <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/7b50e754-7351-449b-991e-1712e2b78524.jpg"
-                alt="Осьминог ПЛЮХбург в кепке"
-                className="absolute -left-44 top-1/2 -translate-y-1/2 w-20 h-auto object-contain hidden lg:block"
-              />
-              
-              {/* Анимированная стрелка-указатель слева */}
-              <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden lg:block">
-                <div>
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <path d="M5 20 L30 20 M30 20 L22 12 M30 20 L22 28" stroke="#FFFFFF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
               <a 
                 href="https://t.me/your_chat_link" 
                 target="_blank" 
