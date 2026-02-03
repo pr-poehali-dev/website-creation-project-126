@@ -126,9 +126,33 @@ const ReviewsAndContacts = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Запишитесь на пробное занятие</h2>
           
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-8 rounded-3xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/eba23ff6-51a6-4fc7-8f85-c77cf7b3d9b6.JPG"
+                  alt="Ребенок плавает"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/a7f0641f-0bc2-4d27-b60d-46e5cc676739.JPG"
+                  alt="Ребенок в бассейне"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/54058c6e-de1c-4741-b9e2-3b05bc17edc5.JPG"
+                  alt="Занятие в бассейне"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <img 
+                  src="https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG"
+                  alt="Детское плавание"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+              </div>
+
+              <div className="bg-white p-8 rounded-3xl shadow-lg">
+                <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
               
               <form className="space-y-4">
                 <div>
@@ -159,6 +183,7 @@ const ReviewsAndContacts = () => {
                   Номер телефона запрашивается исключительно для обратной связи с вами
                 </p>
               </form>
+              </div>
             </div>
           </div>
         </div>
