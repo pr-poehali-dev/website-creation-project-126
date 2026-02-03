@@ -163,20 +163,6 @@ const ReviewsAndContacts = () => {
                   alt={images[currentImage].alt}
                   className="w-full h-full object-cover"
                 />
-                
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all z-10"
-                >
-                  <Icon name="ChevronLeft" size={24} className="text-black" />
-                </button>
-                
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all z-10"
-                >
-                  <Icon name="ChevronRight" size={24} className="text-black" />
-                </button>
               </div>
 
               <div className="bg-white p-8 rounded-3xl shadow-lg order-1 lg:order-2">
