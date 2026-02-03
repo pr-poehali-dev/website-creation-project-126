@@ -40,7 +40,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>План тренировочного процесса</span>
+                  <span>Построение плана дальнейшего тренировочного процесса</span>
                 </li>
               </ul>
               <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -59,7 +59,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">10% скидка</span> многодетным, инвалидам (6840₽)</span>
+                  <span><span className="font-semibold text-primary">10% скидка</span> многодетным, инвалидам. Цена со скидкой 6840₽</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -90,7 +90,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">10% скидка</span> в день покупки пробного</span>
+                  <span>Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -98,11 +98,15 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Регулярные тренировки 2 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия 35 дней</span>
+                  <span>Срок действия абонемента 35 дней</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -117,11 +121,11 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽*</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">10% скидка</span> в день покупки пробного</span>
+                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -129,11 +133,15 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Регулярные тренировки 2-3 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия 90 дней</span>
+                  <span>Срок действия абонемента 90 дней</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -151,23 +159,31 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">16 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽*</div>
               <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Каждый ребенок со своим тренером</span>
+                  <span>Каждый ребенок плавает со своим тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>2 ребенка плавают одновременно</span>
+                  <span>Экономия времени. 2 ребенка плавают одновременно. Мама отдыхает</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия 35 дней</span>
+                  <span>Регулярные тренировки 2 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия абонемента 35 дней</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
@@ -185,23 +201,31 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽*</div>
               <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Каждый ребенок со своим тренером</span>
+                  <span>Каждый ребенок плавает со своим тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>2 ребенка плавают одновременно</span>
+                  <span>Экономия времени. 2 ребенка плавают одновременно. Мама отдыхает</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия 60 дней</span>
+                  <span>Регулярные тренировки 2-3 раза в неделю</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия абонемента 60 дней</span>
                 </li>
               </ul>
               <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
