@@ -27,6 +27,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div className="relative z-20 container mx-auto px-4 pt-8 pb-8 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
           <div className="text-center mb-16">
+            <p className="text-white text-sm mb-1">Детский бассейн «ПЛЮХбург»</p>
             <a href="tel:+79826322152" className="text-white text-lg md:text-xl font-bold hover:text-primary transition-colors block mb-1">
               +7 (982) 63 22 152
             </a>
@@ -50,7 +51,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-12 w-full"
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-20 w-full"
                   style={{fontFamily: 'Inter, Arial, sans-serif'}}
                 >
                   Записаться на занятие
