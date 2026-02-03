@@ -91,10 +91,10 @@ const ReviewsAndContacts = () => {
 
       <section id="map" className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-white" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>
             КАК НАС НАЙТИ
           </h2>
-          <p className="text-center text-black text-lg mb-8">
+          <p className="text-center text-white text-lg mb-8">
             г. Екатеринбург,<br />ул. Кольцевая 46
           </p>
           
