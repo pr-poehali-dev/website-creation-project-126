@@ -35,9 +35,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           </div>
 
           {/* Центральный блок с заголовком и кнопкой */}
-          <div className="flex-1 flex flex-col items-center justify-start text-center max-w-4xl mx-auto relative">
+          <div className="flex-1 flex flex-col items-center justify-start max-w-4xl mx-auto relative">
 
-            <h1 className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[48px] font-black text-white mb-20 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
+            <h1 className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[48px] font-black text-white mb-20 uppercase leading-tight relative z-10 text-left md:text-center w-full px-4" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
               <span className="inline-block bg-primary text-white font-black px-3 py-1 rounded-lg">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
