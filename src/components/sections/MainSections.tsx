@@ -64,23 +64,27 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             <div className="space-y-5 text-left">
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером</span><br/><span className="text-sm opacity-90">Занятия выстраиваются исходя из потребностей вашего ребенка</span></p>
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Исправляем асимметрию</span><br/><span className="text-sm opacity-90">Кривошея, привычный поворот. Научим переворачиваться и ползти</span></p>
+                <p className="text-white text-sm md:text-base leading-relaxed">Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение»</span><br/><span className="text-sm opacity-90">Без слез и стресса, в игровой форме</span></p>
+                <p className="text-white text-sm md:text-base leading-relaxed">Исправляем асимметрию: кривошея, привычный поворот. Научим переворачиваться и ползти</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Только физиологичные упражнения</span><br/><span className="text-sm opacity-90">Не притапливаем и не вертим детей. Они плывут сами</span></p>
+                <p className="text-white text-sm md:text-base leading-relaxed">Авторская методика «Осознанное погружение». Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Опытные тренеры</span><br/><span className="text-sm opacity-90">В команду попадают только лучшие из лучших</span></p>
+                <p className="text-white text-sm md:text-base leading-relaxed">Используем только физиологичные и эффективные упражнения. Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed">Опытные тренеры. В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
               </div>
             </div>
           </div>
