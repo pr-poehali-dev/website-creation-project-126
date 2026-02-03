@@ -149,7 +149,7 @@ const ReviewsAndContacts = () => {
           
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1">
                 <img 
                   src={images[currentImage].src}
                   alt={images[currentImage].alt}
@@ -171,7 +171,7 @@ const ReviewsAndContacts = () => {
                 </button>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-lg">
+              <div className="bg-white p-8 rounded-3xl shadow-lg order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
               
               <form className="space-y-4">
