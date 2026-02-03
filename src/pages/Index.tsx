@@ -3,15 +3,18 @@ import Header from "@/components/sections/Header";
 import MainSections from "@/components/sections/MainSections";
 import PriceAndPrograms from "@/components/sections/PriceAndPrograms";
 import ReviewsAndContacts from "@/components/sections/ReviewsAndContacts";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / totalHeight) * 100;
       setScrollProgress(progress);
+      setShowScrollTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -28,6 +31,10 @@ const Index = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div 
@@ -39,6 +46,16 @@ const Index = () => {
       <MainSections scrollToSection={scrollToSection} />
       <PriceAndPrograms scrollToSection={scrollToSection} />
       <ReviewsAndContacts />
+      
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center shadow-2xl transition-all z-50 hover:scale-110"
+          aria-label="Наверх"
+        >
+          <Icon name="ArrowUp" size={24} />
+        </button>
+      )}
     </div>
   );
 };
