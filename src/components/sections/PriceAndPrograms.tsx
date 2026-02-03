@@ -22,7 +22,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <div className="absolute top-4 right-4 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase">
                 -60%
               </div>
-              <h3 className="text-2xl font-bold mb-6 text-foreground uppercase relative z-10">Пробное занятие</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground uppercase relative z-10">Пробное занятие</h3>
               <div className="text-5xl font-black text-foreground mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
               <p className="text-muted-foreground text-base mb-6 line-through font-medium">вместо 2200₽</p>
               <ul className="space-y-3 mb-8 text-foreground">
