@@ -67,7 +67,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Индивидуальный подход</span>
+                  <span>У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
