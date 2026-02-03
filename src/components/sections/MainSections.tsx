@@ -19,7 +19,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <div 
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/files/a31dd3e3-fc12-4fea-899a-f534035ebe21.JPG)',
+            backgroundImage: 'url(https://cdn.poehali.dev/files/181fff69-9c36-46f2-b700-8c2b6106a3ca.JPG)',
             backgroundPosition: '60% center'
           }}
         />
