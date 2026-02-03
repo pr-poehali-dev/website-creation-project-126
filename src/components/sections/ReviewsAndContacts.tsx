@@ -100,7 +100,7 @@ const ReviewsAndContacts = () => {
           
           <div className="max-w-5xl mx-auto">
             <a 
-              href="https://yandex.ru/maps/org/plyukhburg/53115364/?ll=60.597465%2C56.838011&z=16"
+              href="https://yandex.ru/maps/org/plyukhburg/109039810472/"
               target="_blank"
               rel="noopener noreferrer"
               className="block relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer group"
