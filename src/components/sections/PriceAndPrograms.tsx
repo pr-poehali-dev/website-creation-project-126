@@ -22,7 +22,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <div className="absolute top-4 right-4 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase">
                 -60%
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground uppercase relative z-10">Пробное занятие</h3>
+              <h3 className="text-2xl font-bold mb-6 text-foreground uppercase relative z-10">Пробное занятие</h3>
               <div className="text-5xl font-black text-foreground mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
               <p className="text-muted-foreground text-base mb-6 line-through font-medium">вместо 2200₽</p>
               <ul className="space-y-3 mb-8 text-foreground">
@@ -67,7 +67,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</span>
+                  <span>Индивидуальный подход</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -90,7 +90,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -121,11 +121,11 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽*</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -159,11 +159,11 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">16 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽*</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -201,11 +201,11 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽*</div>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>*Стоимость со скидкой 10%. Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
