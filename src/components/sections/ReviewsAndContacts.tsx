@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
@@ -263,9 +264,15 @@ const ReviewsAndContacts = () => {
               ДЕТСКИЙ БАССЕЙН<br />ПЛЮХБУРГ
             </div>
 
-            <button className="text-white/60 hover:text-primary transition text-sm underline">
-              Политика конфиденциальности
-            </button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+              <Link to="/privacy-policy" className="text-white/60 hover:text-primary transition underline">
+                Политика конфиденциальности
+              </Link>
+              <span className="hidden sm:inline text-white/40">•</span>
+              <Link to="/personal-data-agreement" className="text-white/60 hover:text-primary transition underline">
+                Согласие на обработку персональных данных
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
