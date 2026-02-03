@@ -51,7 +51,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-20 w-full"
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-28 w-full"
                   style={{fontFamily: 'Inter, Arial, sans-serif'}}
                 >
                   Записаться на занятие
