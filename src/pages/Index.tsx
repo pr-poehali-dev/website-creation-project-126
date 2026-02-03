@@ -50,7 +50,7 @@ const Index = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center shadow-2xl transition-all z-50 hover:scale-110"
+          className="fixed bottom-8 left-8 w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center shadow-2xl transition-all z-50 hover:scale-110"
           aria-label="Наверх"
         >
           <Icon name="ArrowUp" size={24} />
