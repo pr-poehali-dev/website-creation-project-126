@@ -64,28 +64,28 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <div className="max-w-2xl mx-auto w-full">
             <div className="space-y-4 text-left">
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером.</span> Занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером.</span> Занятия выстраиваются исходя из потребностей вашего ребенка</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Исправляем асимметрию:</span> кривошея, привычный поворот. Научим переворачиваться и ползти</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Исправляем асимметрию:</span> кривошея, привычный поворот. Научим переворачиваться и ползти</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Используем только физиологичные и эффективные упражнения.</span> Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Используем только физиологичные и эффективные упражнения.</span> Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Опытные тренеры.</span> В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
+                <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Опытные тренеры.</span> В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
               </div>
             </div>
           </div>
