@@ -51,7 +51,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-lg md:text-2xl px-10 md:px-20 py-6 md:py-8 rounded-full shadow-2xl mb-28 w-full"
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-28 w-full"
                   style={{fontFamily: 'Inter, Arial, sans-serif'}}
                 >
                   Записаться на занятие
@@ -77,7 +77,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <p className="text-white text-base leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
