@@ -69,7 +69,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером.</span> Занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Индивидуальный подход.</span> У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
