@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Input } from "@/components/ui/input";
@@ -15,6 +15,14 @@ const ReviewsAndContacts = () => {
     { src: "https://cdn.poehali.dev/files/e6dcb0a9-f0ee-4aec-8ec4-653ead4a897d.JPG", alt: "Малыш под водой" },
     { src: "https://cdn.poehali.dev/files/8a1e5a47-e895-4194-8df2-e3aac6f143f6.JPG", alt: "Мама с малышом" }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
