@@ -149,7 +149,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </div>
               <h3 className="text-2xl font-bold uppercase mb-4">Индивидуальный подход</h3>
               <p className="text-foreground leading-relaxed">
-                Персональные тренировки один на один с тренером. Занятия выстраиваются исходя из потребностей вашего ребенка.
+                У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему.
               </p>
             </div>
           </div>
