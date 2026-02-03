@@ -25,20 +25,19 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/85 z-10" />
         
-        <div className="relative z-20 container mx-auto px-4 pt-6 pb-12 flex flex-col min-h-[calc(100vh-70px)]">
+        <div className="relative z-20 container mx-auto px-4 pt-4 pb-8 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
-          <div className="text-center mb-8">
-            <p className="text-white text-sm mb-1">Детский бассейн «ПЛЮХбург»</p>
-            <a href="tel:+79826322152" className="text-white text-base font-bold hover:text-primary transition-colors block mb-1">
+          <div className="text-center mb-6">
+            <a href="tel:+79826322152" className="text-white text-lg md:text-xl font-bold hover:text-primary transition-colors block mb-1">
               +7 (982) 63 22 152
             </a>
-            <p className="text-white text-sm">г. Екатеринбург, ул. Кольцевая 46</p>
+            <p className="text-white text-xs md:text-sm opacity-90">г. Екатеринбург, ул. Кольцевая 46</p>
           </div>
 
           {/* Центральный блок с заголовком и кнопкой */}
-          <div className="flex-1 flex flex-col items-center justify-center text-center max-w-4xl mx-auto relative">
+          <div className="flex-1 flex flex-col items-center justify-start text-center max-w-4xl mx-auto relative">
 
-            <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
+            <h1 className="text-[26px] sm:text-[32px] md:text-[42px] lg:text-[48px] font-black text-white mb-6 uppercase leading-tight relative z-10" style={{fontFamily: 'Oswald, Arial, sans-serif', fontWeight: 900, textShadow: '0px 3px 12px rgba(0,0,0,0.9)', letterSpacing: '0.02em'}}>
               ЗАПИШИТЕ РЕБЕНКА НА ПЛАВАНИЕ И ПОЛУЧИТЕ{' '}
               <span className="inline-block bg-primary text-white font-black px-3 py-1 rounded-lg">-60%</span> НА ПЕРВОЕ ЗАНЯТИЕ
             </h1>
@@ -65,11 +64,11 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
                 href="https://t.me/your_chat_link" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block relative z-10"
+                className="inline-block relative z-10 w-full max-w-md px-4"
               >
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl px-16 py-7 rounded-full shadow-2xl mb-8"
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-base md:text-xl px-8 md:px-16 py-5 md:py-7 rounded-full shadow-2xl mb-6 w-full"
                   style={{fontFamily: 'Inter, Arial, sans-serif'}}
                 >
                   Записаться на занятие
@@ -79,31 +78,27 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           </div>
 
           {/* Нижний блок с преимуществами */}
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+          <div className="max-w-2xl mx-auto w-full">
+            <div className="space-y-3 text-left">
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="text-primary font-bold">-10%</span> На абонемент</p>
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Персональные тренировки один на один с тренером</span><br/><span className="text-sm opacity-90">Занятия выстраиваются исходя из потребностей вашего ребенка</span></p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="font-bold">Персональные тренировки один на один с тренером.</span> Занятия выстраиваются исходя из потребностей вашего ребенка</p>
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Исправляем асимметрию</span><br/><span className="text-sm opacity-90">Кривошея, привычный поворот. Научим переворачиваться и ползти</span></p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="font-bold">Исправляем асимметрию:</span> кривошея, привычный поворот. Научим переворачиваться и ползти</p>
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение»</span><br/><span className="text-sm opacity-90">Без слез и стресса, в игровой форме</span></p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Только физиологичные упражнения</span><br/><span className="text-sm opacity-90">Не притапливаем и не вертим детей. Они плывут сами</span></p>
               </div>
               <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="font-bold">Используем только физиологичные и эффективные упражнения.</span> Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Icon name="Star" size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-white text-sm leading-relaxed font-medium"><span className="font-bold">Опытные тренеры.</span> В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
+                <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
+                <p className="text-white text-sm md:text-base leading-relaxed"><span className="font-bold">Опытные тренеры</span><br/><span className="text-sm opacity-90">В команду попадают только лучшие из лучших</span></p>
               </div>
             </div>
           </div>

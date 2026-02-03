@@ -19,7 +19,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 alt="Осьминог"
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
-              <div className="absolute top-4 right-4 bg-black text-white px-5 py-2 rounded-full text-lg font-black uppercase">
+              <div className="absolute top-4 right-4 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase">
                 -60%
               </div>
               <h3 className="text-2xl font-bold mb-4 text-foreground uppercase relative z-10">Пробное занятие</h3>
@@ -59,7 +59,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-bold text-primary">Скидка 10%</span> многодетным, инвалидам (6840₽)</span>
+                  <span><span className="font-semibold text-primary">10% скидка</span> многодетным, инвалидам (6840₽)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -90,7 +90,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-bold text-primary">Скидка 10%</span> в день покупки пробного</span>
+                  <span><span className="font-semibold text-primary">10% скидка</span> в день покупки пробного</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -121,7 +121,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-bold text-primary">Скидка 10%</span> в день покупки пробного</span>
+                  <span><span className="font-semibold text-primary">10% скидка</span> в день покупки пробного</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
