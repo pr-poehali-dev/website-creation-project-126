@@ -17,9 +17,10 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           className="absolute top-32 right-10 w-32 h-auto object-contain opacity-40 hidden lg:block z-10"
         />
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/files/a31dd3e3-fc12-4fea-899a-f534035ebe21.JPG)'
+            backgroundImage: 'url(https://cdn.poehali.dev/files/a31dd3e3-fc12-4fea-899a-f534035ebe21.JPG)',
+            backgroundPosition: '60% center'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/85 z-10" />
