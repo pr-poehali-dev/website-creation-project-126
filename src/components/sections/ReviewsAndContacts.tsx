@@ -13,7 +13,8 @@ const ReviewsAndContacts = () => {
     { src: "https://cdn.poehali.dev/files/cd5c5596-71c7-4206-8e33-a0e56fa0ede8.JPG", alt: "Детское плавание" },
     { src: "https://cdn.poehali.dev/files/6fcfd906-be8e-408d-8a9a-c3053846ee54.JPG", alt: "Ребенок с тренером" },
     { src: "https://cdn.poehali.dev/files/e6dcb0a9-f0ee-4aec-8ec4-653ead4a897d.JPG", alt: "Малыш под водой" },
-    { src: "https://cdn.poehali.dev/files/8a1e5a47-e895-4194-8df2-e3aac6f143f6.JPG", alt: "Мама с малышом" }
+    { src: "https://cdn.poehali.dev/files/8a1e5a47-e895-4194-8df2-e3aac6f143f6.JPG", alt: "Мама с малышом" },
+    { src: "https://cdn.poehali.dev/files/48f874e3-9755-49e7-96c6-0519be655929.JPG", alt: "Малыш ныряет" }
   ];
 
   useEffect(() => {
