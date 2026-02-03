@@ -99,16 +99,25 @@ const ReviewsAndContacts = () => {
           </p>
           
           <div className="max-w-5xl mx-auto">
-            <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            <a 
+              href="https://yandex.ru/maps/org/plyukhburg/53115364/?ll=60.597465%2C56.838011&z=16"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer group"
+            >
               <iframe 
                 src="https://yandex.ru/map-widget/v1/?ll=60.597465%2C56.838011&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExNTM2NBJy0KDQvtGB0YHQuNGPLCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINGD0LvQuNGG0LAg0JrQvtC70YzRhtC10LLQsNGPLCA0NiIKDQF1QkIVAyhbQg%2C%2C&z=16"
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                allowFullScreen
-                style={{position: 'relative'}}
+                style={{position: 'relative', pointerEvents: 'none'}}
               />
-            </div>
+              <div className="absolute inset-0 bg-transparent group-hover:bg-primary/10 transition-colors flex items-center justify-center">
+                <div className="bg-primary text-white px-6 py-3 rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-xl">
+                  Открыть в Яндекс.Картах
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
