@@ -3,9 +3,11 @@ import Header from "@/components/sections/Header";
 import MainSections from "@/components/sections/MainSections";
 import PriceAndPrograms from "@/components/sections/PriceAndPrograms";
 import ReviewsAndContacts from "@/components/sections/ReviewsAndContacts";
+import BookingForm from "@/components/sections/BookingForm";
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +38,10 @@ const Index = () => {
       />
 
       <Header scrollToSection={scrollToSection} />
-      <MainSections scrollToSection={scrollToSection} />
+      <MainSections scrollToSection={scrollToSection} onOpenForm={() => setIsFormOpen(true)} />
       <PriceAndPrograms scrollToSection={scrollToSection} />
       <ReviewsAndContacts />
+      <BookingForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </div>
   );
 };
