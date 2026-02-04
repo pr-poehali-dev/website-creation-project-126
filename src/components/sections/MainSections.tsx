@@ -104,16 +104,23 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <p className="text-center text-xl mb-4 text-black font-medium">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
-            <div className="relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
-              <video 
-                controls 
+            <a 
+              href="https://disk.yandex.ru/i/jznAVQlSBcdb3Q" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl group cursor-pointer"
+            >
+              <img 
+                src="https://cdn.poehali.dev/files/291195c1-6f9d-48ef-9438-9a012aea231d.JPG"
+                alt="Видео о бассейне"
                 className="w-full h-full object-cover"
-                poster="https://cdn.poehali.dev/files/291195c1-6f9d-48ef-9438-9a012aea231d.JPG"
-              >
-                <source src="https://streaming.disk.yandex.net/hls/U2FsdGVkX1_BqUZDPlJ2bhbK4s7UkjCzgDKj7enM68PBIgYRa-qBeQO_R98uGI_dI1zSclBwzh2EHBqAwVoUJKb24OXwSNa09YGudfgsQ6421lVjGucNV6qfiJq4LKKj-ci1Ia23AQKK1UyNx6HTWRnP09ymSxy8B16yDjisFmRYCEqIRzrMXOL5IkQeXGdflk90bRHwSMjzRI3Ya0RG3QuLavs0PYqEAdb-KHeqW0XZFWjZ2pmy6sQ4JjpplSPjfKyMCOK-JBn0KvNe2ZjZ-DxLY3DtrHsphMONMTwbJ8mxhi0" type="application/x-mpegURL" />
-                Ваш браузер не поддерживает видео.
-              </video>
-            </div>
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl shadow-primary/40">
+                  <Icon name="Play" size={32} className="text-white ml-1" />
+                </div>
+              </div>
+            </a>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
