@@ -104,23 +104,15 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <p className="text-center text-xl mb-4 text-black font-medium">Посмотрите видео о нашем бассейне</p>
           
           <div className="max-w-5xl mx-auto mb-20">
-            <a 
-              href="https://disk.yandex.ru/i/jznAVQlSBcdb3Q" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl group cursor-pointer"
-            >
-              <img 
-                src="https://cdn.poehali.dev/files/291195c1-6f9d-48ef-9438-9a012aea231d.JPG"
-                alt="Видео о бассейне"
-                className="w-full h-full object-cover"
+            <div className="relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
+              <iframe 
+                src="https://www.youtube.com/embed/8Sw5lidrzfs"
+                title="Видео о бассейне"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl shadow-primary/40">
-                  <Icon name="Play" size={32} className="text-white ml-1" />
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
