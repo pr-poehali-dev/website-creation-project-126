@@ -252,11 +252,12 @@ const ReviewsAndContacts = () => {
               </a>
             </div>
 
-            <div className="mb-8">
+            <div className="mb-8 bg-white rounded-full p-4 w-64 h-64 mx-auto flex items-center justify-center">
               <img 
                 src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/6c2013c4-b78c-423b-8d69-bf6b3feafaa3.jpg"
                 alt="ПЛЮХбург"
-                className="w-64 h-64 mx-auto object-contain"
+                className="w-full h-full object-contain"
+                style={{mixBlendMode: 'multiply'}}
               />
             </div>
 
