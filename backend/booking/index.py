@@ -38,6 +38,8 @@ def handler(event: dict, context) -> dict:
         
         google_sheets_url = os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL')
         
+        print(f"GOOGLE_SHEETS_WEBHOOK_URL: {google_sheets_url}")
+        
         if google_sheets_url:
             sheet_data = json.dumps({
                 'Дата': datetime.now().strftime('%d.%m.%Y %H:%M'),
@@ -47,15 +49,20 @@ def handler(event: dict, context) -> dict:
                 'Телефон': phone
             }).encode()
             
+            print(f"Отправляю данные в Google Sheets: {sheet_data}")
+            
             try:
                 req = request.Request(
                     google_sheets_url,
                     data=sheet_data,
                     headers={'Content-Type': 'application/json'}
                 )
-                request.urlopen(req)
+                response = request.urlopen(req)
+                print(f"Ответ от Google Sheets: {response.read()}")
             except Exception as e:
-                pass
+                print(f"Ошибка отправки в Google Sheets: {str(e)}")
+        else:
+            print("GOOGLE_SHEETS_WEBHOOK_URL не настроен!")
         
         return {
             'statusCode': 200,
