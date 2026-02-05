@@ -45,7 +45,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
 
             <div className="relative">
               <a 
-                href="https://t.me/your_chat_link" 
+                href="https://t.me/pluhburgekb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block relative z-10 w-full max-w-md px-4"
@@ -66,27 +66,27 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             <div className="space-y-4 text-left">
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="text-primary font-bold">-10%</span> На абонемент</p>
+                <p className="text-white leading-relaxed"><span className="text-primary font-bold text-lg">-10%</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>На абонемент</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Индивидуальный подход.</span> У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Индивидуальный подход.</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Исправляем асимметрию:</span> кривошея, привычный поворот. Научим переворачиваться и ползти</p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Исправляем асимметрию:</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>кривошея, привычный поворот. Научим переворачиваться и ползти</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-base leading-relaxed"><span className="font-bold">Авторская методика «Осознанное погружение».</span> Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Авторская методика «Осознанное погружение».</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>Без слез, стресса, в игровой форме научим не только плавать, но и дисциплине, выполнению инструкций с уважением к личности ребенка.</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Используем только физиологичные и эффективные упражнения.</span> Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Используем только физиологичные и эффективные упражнения.</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>Мы не притапливаем и не вертим детей в воде. Они ныряют сами и плывут.</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white text-lg leading-relaxed"><span className="font-bold">Опытные тренеры.</span> В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Опытные тренеры.</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>В команду «ПЛЮХбурга» не попадают просто так. Только лучшие из лучших</span></p>
               </div>
             </div>
           </div>

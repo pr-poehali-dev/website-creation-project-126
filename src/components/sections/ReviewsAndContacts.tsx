@@ -197,7 +197,7 @@ const ReviewsAndContacts = () => {
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center">
-                  Номер телефона запрашивается исключительно для обратной связи с вами
+                  Заполняя данные, вы даете согласие на обработку персональных данных
                 </p>
               </form>
               </div>
