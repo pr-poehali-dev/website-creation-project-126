@@ -46,20 +46,14 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              <a 
-                href="https://t.me/pluhburgekb" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block relative z-10 w-full max-w-md px-4"
+              <Button 
+                size="lg" 
+                onClick={() => scrollToSection('contacts')}
+                className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full max-w-md relative z-10"
+                style={{fontFamily: 'Inter, Arial, sans-serif'}}
               >
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full"
-                  style={{fontFamily: 'Inter, Arial, sans-serif'}}
-                >
-                  Записаться на занятие
-                </Button>
-              </a>
+                Записаться на занятие
+              </Button>
             </div>
           </div>
 

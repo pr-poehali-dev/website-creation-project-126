@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -6,6 +6,14 @@ import { Input } from "@/components/ui/input";
 
 const ReviewsAndContacts = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [formData, setFormData] = useState({
+    parentName: '',
+    childName: '',
+    childAge: '',
+    phone: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
   
   const images = [
     { src: "https://cdn.poehali.dev/files/eba23ff6-51a6-4fc7-8f85-c77cf7b3d9b6.JPG", alt: "Ребенок плавает" },
@@ -171,29 +179,92 @@ const ReviewsAndContacts = () => {
               <div className="bg-white p-8 rounded-3xl shadow-lg order-1 lg:order-2">
                 <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
               
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={async (e: FormEvent) => {
+                e.preventDefault();
+                setIsSubmitting(true);
+                setSubmitMessage('');
+                
+                try {
+                  const response = await fetch('https://functions.poehali.dev/195ad302-fe8a-4f52-87f3-85bb4ccdb924', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                  });
+                  
+                  const result = await response.json();
+                  
+                  if (response.ok) {
+                    setSubmitMessage('✅ ' + result.message);
+                    setFormData({ parentName: '', childName: '', childAge: '', phone: '' });
+                  } else {
+                    setSubmitMessage('❌ ' + (result.error || 'Ошибка отправки'));
+                  }
+                } catch (error) {
+                  setSubmitMessage('❌ Ошибка связи с сервером');
+                } finally {
+                  setIsSubmitting(false);
+                }
+              }}>
                 <div>
                   <label className="block text-sm font-semibold mb-2">Ваше имя</label>
-                  <Input type="text" placeholder="Введите ваше имя" className="w-full" />
+                  <Input 
+                    type="text" 
+                    placeholder="Введите ваше имя" 
+                    className="w-full" 
+                    value={formData.parentName}
+                    onChange={(e) => setFormData({...formData, parentName: e.target.value})}
+                    required
+                  />
                 </div>
                 
                 <div>
                   <label className="block text-sm font-semibold mb-2">Имя ребёнка</label>
-                  <Input type="text" placeholder="Введите имя ребёнка" className="w-full" />
+                  <Input 
+                    type="text" 
+                    placeholder="Введите имя ребёнка" 
+                    className="w-full"
+                    value={formData.childName}
+                    onChange={(e) => setFormData({...formData, childName: e.target.value})}
+                    required
+                  />
                 </div>
                 
                 <div>
                   <label className="block text-sm font-semibold mb-2">Возраст ребёнка</label>
-                  <Input type="text" placeholder="Возраст" className="w-full" />
+                  <Input 
+                    type="text" 
+                    placeholder="Возраст" 
+                    className="w-full"
+                    value={formData.childAge}
+                    onChange={(e) => setFormData({...formData, childAge: e.target.value})}
+                    required
+                  />
                 </div>
                 
                 <div>
                   <label className="block text-sm font-semibold mb-2">Телефон</label>
-                  <Input type="tel" placeholder="+7 (___) ___-__-__" className="w-full" />
+                  <Input 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__" 
+                    className="w-full"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    required
+                  />
                 </div>
                 
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full text-lg">
-                  Отправить заявку
+                {submitMessage && (
+                  <p className={`text-sm text-center font-medium ${submitMessage.startsWith('✅') ? 'text-green-600' : 'text-red-600'}`}>
+                    {submitMessage}
+                  </p>
+                )}
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-full text-lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Отправляем...' : 'Отправить заявку'}
                 </Button>
                 
                 <p className="text-xs text-muted-foreground text-center">

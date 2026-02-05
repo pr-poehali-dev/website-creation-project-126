@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "name": "Test booking submission",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "parentName": "Иван Иванов",
+        "childName": "Петя",
+        "childAge": "5 лет",
+        "phone": "+79991234567"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test empty fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "parentName": "",
+        "childName": "Петя",
+        "childAge": "5 лет",
+        "phone": "+79991234567"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
