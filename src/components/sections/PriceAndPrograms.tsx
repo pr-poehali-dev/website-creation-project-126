@@ -260,7 +260,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               </p>
               <div className="text-left">
                 <a 
-                  href="https://t.me/shatalova_alina" 
+                  href="https://t.me/+79826322152" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
