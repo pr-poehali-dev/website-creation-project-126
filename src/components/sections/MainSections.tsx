@@ -46,14 +46,19 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection('contacts')}
-                className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full max-w-md relative z-10"
-                style={{fontFamily: 'Inter, Arial, sans-serif'}}
+              <a 
+                href="https://t.me/+79826322152"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Записаться на занятие
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full max-w-md relative z-10"
+                  style={{fontFamily: 'Inter, Arial, sans-serif'}}
+                >
+                  Записаться на занятие
+                </Button>
+              </a>
             </div>
           </div>
 
