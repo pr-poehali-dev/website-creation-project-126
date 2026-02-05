@@ -1,6 +1,7 @@
 import json
 import os
 from urllib import request, parse
+from datetime import datetime
 
 def handler(event: dict, context) -> dict:
     '''API для приёма заявок на занятия'''
@@ -35,26 +36,23 @@ def handler(event: dict, context) -> dict:
                 'body': json.dumps({'error': 'Заполните все поля'})
             }
         
-        telegram_token = os.environ.get('TELEGRAM_BOT_TOKEN')
-        telegram_chat_id = os.environ.get('TELEGRAM_ADMIN_CHAT_ID')
+        google_sheets_url = os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL')
         
-        if telegram_token and telegram_chat_id:
-            message = f"""🏊 Новая заявка с сайта ПЛЮХбург!
-
-👤 Родитель: {parent_name}
-👶 Ребёнок: {child_name}
-🎂 Возраст: {child_age}
-📱 Телефон: {phone}"""
-            
-            telegram_url = f'https://api.telegram.org/bot{telegram_token}/sendMessage'
-            telegram_data = parse.urlencode({
-                'chat_id': telegram_chat_id,
-                'text': message,
-                'parse_mode': 'HTML'
+        if google_sheets_url:
+            sheet_data = json.dumps({
+                'Дата': datetime.now().strftime('%d.%m.%Y %H:%M'),
+                'Родитель': parent_name,
+                'Ребёнок': child_name,
+                'Возраст': child_age,
+                'Телефон': phone
             }).encode()
             
             try:
-                req = request.Request(telegram_url, data=telegram_data)
+                req = request.Request(
+                    google_sheets_url,
+                    data=sheet_data,
+                    headers={'Content-Type': 'application/json'}
+                )
                 request.urlopen(req)
             except Exception as e:
                 pass
