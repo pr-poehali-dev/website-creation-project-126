@@ -10,11 +10,11 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
     <>
       <section className="relative min-h-screen flex flex-col overflow-hidden mt-[70px]">
         <div className="absolute inset-0 bg-black" />
-        {/* Большая декоративная рыбка */}
+        {/* Логотип ПЛЮХбург */}
         <img 
-          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/26a8c8fe-709a-4606-94ee-6dab1a74a830.jpg"
-          alt="Рыбка"
-          className="absolute top-32 right-10 w-32 h-auto object-contain opacity-40 hidden lg:block z-10"
+          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
+          alt="ПЛЮХбург"
+          className="absolute top-32 right-10 w-48 h-48 object-contain hidden lg:block z-10"
         />
         <div 
           className="absolute inset-0 bg-cover"
