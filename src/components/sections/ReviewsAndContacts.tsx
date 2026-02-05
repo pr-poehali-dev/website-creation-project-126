@@ -298,30 +298,34 @@ const ReviewsAndContacts = () => {
 
             <div className="flex items-center justify-center gap-8 mb-12">
               <a 
-                href="https://t.me/shatalova_alina" 
+                href="https://t.me/pluhburgekb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary transition"
               >
-                <Icon name="MessageCircle" size={40} />
+                <Icon name="Send" size={40} />
               </a>
               <a 
-                href="https://instagram.com/_shatalova_alina_?igshid=MjkzY2Y1YTY=" 
+                href="https://vk.com/pluhburg_ekb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary transition"
               >
-                <Icon name="Instagram" size={40} />
-              </a>
-              <a 
-                href="http://www.youtube.com/@Alina_Shatalova" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-primary transition"
-              >
-                <Icon name="Youtube" size={40} />
+                <svg width="40" height="40" viewBox="0 0 48 48" fill="currentColor">
+                  <path d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm9.5 24.5h-2.8c-.9 0-1.2-.7-2.8-2.3-1.4-1.4-2.1-1.6-2.4-1.6-.5 0-.7.2-.7.9v2.1c0 .6-.2.9-1.6.9-2.4 0-5.1-1.5-7-4.2-2.8-4-3.6-7-3.6-7.6 0-.3.2-.6.9-.6h2.8c.6 0 .9.3 1.1.9.9 2.6 2.4 4.9 3 4.9.2 0 .4-.1.4-.8v-3.1c-.1-1.4-.8-1.5-.8-2 0-.2.2-.5.5-.5h4.4c.5 0 .7.3.7.8v4.2c0 .5.2.7.4.7.2 0 .5-.2 1.1-.8 1.8-2 3-5.1 3-5.1.2-.3.4-.6 1-.6h2.8c.8 0 1 .4.8.9-.3 1.4-3.6 6.1-3.6 6.1-.3.4-.3.6 0 1.1.2.3.9.9 1.4 1.5 1 1 1.7 1.8 1.9 2.4.2.6-.1.9-.7.9z"/>
+                </svg>
               </a>
             </div>
+            
+            <a 
+              href="https://t.me/+79826322152"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-full transition mb-8 text-lg"
+            >
+              <Icon name="MessageSquare" size={24} />
+              Написать в Макс
+            </a>
 
             <img 
               src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
@@ -348,12 +352,12 @@ const ReviewsAndContacts = () => {
 
       <div className="fixed bottom-8 right-8 z-50 flex gap-4">
         <a 
-          href="https://t.me/shatalova_alina" 
+          href="https://t.me/pluhburgekb" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-16 h-16 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110"
         >
-          <Icon name="MessageCircle" size={28} className="text-white" />
+          <Icon name="Send" size={28} className="text-white" />
         </a>
         <a 
           href="tel:+79826322152"
