@@ -10,12 +10,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
     <>
       <section className="relative min-h-screen flex flex-col overflow-hidden mt-[70px]">
         <div className="absolute inset-0 bg-black" />
-        {/* Логотип ПЛЮХбург */}
-        <img 
-          src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
-          alt="ПЛЮХбург"
-          className="absolute top-24 right-4 md:top-32 md:right-10 w-32 h-32 md:w-48 md:h-48 object-contain z-[100]"
-        />
+
         <div 
           className="absolute inset-0 bg-cover"
           style={{
@@ -27,12 +22,19 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         
         <div className="relative z-20 container mx-auto px-4 pt-8 pb-8 flex flex-col min-h-[calc(100vh-70px)]">
           {/* Верхний блок с контактами */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 relative">
             <p className="text-white text-sm mb-1">Детский бассейн «ПЛЮХбург»</p>
             <a href="tel:+79826322152" className="text-white text-lg md:text-xl font-bold hover:text-primary transition-colors block mb-1">
               +7 (982) 63 22 152
             </a>
             <p className="text-white text-xs md:text-sm opacity-90">г. Екатеринбург, ул. Кольцевая 46</p>
+            
+            {/* Логотип ПЛЮХбург */}
+            <img 
+              src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
+              alt="ПЛЮХбург"
+              className="absolute left-0 top-0 w-20 h-20 md:w-24 md:h-24 object-contain"
+            />
           </div>
 
           {/* Центральный блок с заголовком и кнопкой */}
