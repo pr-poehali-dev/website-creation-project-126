@@ -11,7 +11,11 @@ const Header = ({ scrollToSection }: HeaderProps) => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-[70px]">
             <div className="flex items-center gap-2 sm:gap-3">
-              <Icon name="Droplets" className="text-primary" size={32} />
+              <img 
+                src="https://cdn.poehali.dev/files/9d0d3547-29f0-4fdc-9719-5502d4f926ee.PNG" 
+                alt="ПЛЮХбург логотип" 
+                className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+              />
               <div>
                 <h1 className="text-[20px] sm:text-[24px] md:text-[28px] font-bold text-white uppercase tracking-tight leading-none" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>ПЛЮХбург</h1>
                 <p className="text-[10px] sm:text-[11px] md:text-[12px] text-white font-bold mt-0.5" style={{fontFamily: 'Inter, Arial, sans-serif'}}>с 2016 года</p>

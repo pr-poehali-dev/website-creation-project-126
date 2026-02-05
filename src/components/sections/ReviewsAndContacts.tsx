@@ -254,9 +254,9 @@ const ReviewsAndContacts = () => {
 
             <div className="mb-8">
               <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/8f19f8f9-f5fd-484f-87a5-120520576aaa.jpg"
+                src="https://cdn.poehali.dev/files/9d0d3547-29f0-4fdc-9719-5502d4f926ee.PNG"
                 alt="ПЛЮХбург"
-                className="w-48 h-48 mx-auto object-contain"
+                className="w-64 h-64 mx-auto object-contain"
               />
             </div>
 
