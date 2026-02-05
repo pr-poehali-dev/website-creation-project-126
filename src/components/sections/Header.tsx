@@ -11,7 +11,6 @@ const Header = ({ scrollToSection }: HeaderProps) => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-[70px]">
             <div className="flex items-center gap-2 sm:gap-3">
-              <Icon name="Droplets" className="text-primary" size={32} />
               <div>
                 <h1 className="text-[20px] sm:text-[24px] md:text-[28px] font-bold text-white uppercase tracking-tight leading-none" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>ПЛЮХбург</h1>
                 <p className="text-[10px] sm:text-[11px] md:text-[12px] text-white font-bold mt-0.5" style={{fontFamily: 'Inter, Arial, sans-serif'}}>с 2016 года</p>
