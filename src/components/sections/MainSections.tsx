@@ -33,7 +33,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             <img 
               src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
               alt="ПЛЮХбург"
-              className="absolute -left-4 sm:left-15 md:left-8 lg:left-12 top-0 w-16 h-16 sm:w-24 sm:h-24 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain"
+              className="absolute -left-4 sm:left-15 md:left-8 lg:left-12 top-0 md:-top-4 w-16 h-16 sm:w-24 sm:h-24 md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain"
             />
           </div>
 
