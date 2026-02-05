@@ -14,7 +14,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
         <img 
           src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/bucket/7296364e-6f2a-40a7-a557-cbd06cbd21af.PNG"
           alt="ПЛЮХбург"
-          className="absolute top-32 right-10 w-48 h-48 object-contain hidden lg:block z-10"
+          className="absolute top-24 right-4 md:top-32 md:right-10 w-32 h-32 md:w-48 md:h-48 object-contain z-10 opacity-90"
         />
         <div 
           className="absolute inset-0 bg-cover"
