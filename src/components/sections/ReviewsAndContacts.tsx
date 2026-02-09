@@ -177,7 +177,7 @@ const ReviewsAndContacts = () => {
               </div>
 
               <div className="bg-white p-8 rounded-3xl shadow-lg order-1 lg:order-2">
-                <h3 className="text-2xl font-bold mb-6 uppercase text-center">Связаться с нами</h3>
+                <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
               
               <form className="space-y-4" onSubmit={async (e: FormEvent) => {
                 e.preventDefault();
@@ -188,7 +188,12 @@ const ReviewsAndContacts = () => {
                   const response = await fetch('https://functions.poehali.dev/d8142347-1562-42b2-aad1-b697495e3294', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify({
+                      name: formData.name,
+                      phone: formData.phone,
+                      email: formData.email,
+                      message: `Имя ребёнка: ${formData.message}`
+                    })
                   });
                   
                   const result = await response.json();
@@ -206,9 +211,10 @@ const ReviewsAndContacts = () => {
                 }
               }}>
                 <div>
+                  <label className="block text-sm font-semibold mb-2">Ваше имя</label>
                   <Input 
                     type="text" 
-                    placeholder="Ваше имя" 
+                    placeholder="Введите ваше имя" 
                     className="w-full" 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -217,33 +223,38 @@ const ReviewsAndContacts = () => {
                 </div>
                 
                 <div>
+                  <label className="block text-sm font-semibold mb-2">Имя ребёнка</label>
                   <Input 
-                    type="tel" 
-                    placeholder="Телефон" 
+                    type="text" 
+                    placeholder="Введите имя ребёнка" 
                     className="w-full"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                     required
                   />
                 </div>
                 
                 <div>
+                  <label className="block text-sm font-semibold mb-2">Возраст ребёнка</label>
                   <Input 
-                    type="email" 
-                    placeholder="Email" 
+                    type="text" 
+                    placeholder="Возраст" 
                     className="w-full"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    required
                   />
                 </div>
                 
                 <div>
+                  <label className="block text-sm font-semibold mb-2">Телефон</label>
                   <Input 
-                    type="text" 
-                    placeholder="Сообщение" 
+                    type="tel" 
+                    placeholder="+7 (___) ___-__-__" 
                     className="w-full"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    required
                   />
                 </div>
                 
