@@ -7,10 +7,11 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [formData, setFormData] = useState({
-    name: '',
+    parentName: '',
+    childName: '',
+    childAge: '',
     phone: '',
-    email: '',
-    message: ''
+    email: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -189,10 +190,10 @@ const ReviewsAndContacts = () => {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                      name: formData.name,
+                      name: formData.parentName,
                       phone: formData.phone,
                       email: formData.email,
-                      message: `Имя ребёнка: ${formData.message}`
+                      message: `Имя ребёнка: ${formData.childName}, Возраст: ${formData.childAge}`
                     })
                   });
                   
@@ -200,7 +201,7 @@ const ReviewsAndContacts = () => {
                   
                   if (response.ok) {
                     setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-                    setFormData({ name: '', phone: '', email: '', message: '' });
+                    setFormData({ parentName: '', childName: '', childAge: '', phone: '', email: '' });
                   } else {
                     setSubmitMessage('❌ ' + (result.message || result.error || 'Ошибка отправки'));
                   }
@@ -211,49 +212,61 @@ const ReviewsAndContacts = () => {
                 }
               }}>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Ваше имя</label>
+                  <label className="block text-sm font-semibold mb-2">Имя родителя *</label>
                   <Input 
                     type="text" 
                     placeholder="Введите ваше имя" 
                     className="w-full" 
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    value={formData.parentName}
+                    onChange={(e) => setFormData({...formData, parentName: e.target.value})}
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Имя ребёнка</label>
+                  <label className="block text-sm font-semibold mb-2">Имя ребёнка *</label>
                   <Input 
                     type="text" 
                     placeholder="Введите имя ребёнка" 
                     className="w-full"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    value={formData.childName}
+                    onChange={(e) => setFormData({...formData, childName: e.target.value})}
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Возраст ребёнка</label>
+                  <label className="block text-sm font-semibold mb-2">Возраст ребёнка *</label>
                   <Input 
                     type="text" 
-                    placeholder="Возраст" 
+                    placeholder="Например: 3 года" 
                     className="w-full"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    value={formData.childAge}
+                    onChange={(e) => setFormData({...formData, childAge: e.target.value})}
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Телефон</label>
+                  <label className="block text-sm font-semibold mb-2">Номер телефона *</label>
                   <Input 
                     type="tel" 
                     placeholder="+7 (___) ___-__-__" 
                     className="w-full"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Email *</label>
+                  <Input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="w-full"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                     required
                   />
                 </div>
