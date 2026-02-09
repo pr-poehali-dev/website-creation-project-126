@@ -16,7 +16,8 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
     parentName: '',
     childName: '',
     childAge: '',
-    phone: ''
+    phone: '',
+    email: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -38,8 +39,8 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
         body: JSON.stringify({
           name: formData.parentName,
           phone: formData.phone,
-          email: formData.childName,
-          message: `Запись на "${selectedPackage}". Возраст ребёнка: ${formData.childAge}`
+          email: formData.email,
+          message: `Запись на "${selectedPackage}"\n\nИмя ребёнка: ${formData.childName}\nВозраст ребёнка: ${formData.childAge}`
         })
       });
 
@@ -47,7 +48,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
 
       if (response.ok) {
         setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-        setFormData({ parentName: '', childName: '', childAge: '', phone: '' });
+        setFormData({ parentName: '', childName: '', childAge: '', phone: '', email: '' });
         setTimeout(() => {
           setIsDialogOpen(false);
           setSubmitMessage('');
@@ -295,13 +296,14 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[500px]">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold uppercase text-center">Оставьте заявку</DialogTitle>
-            <p className="text-center text-muted-foreground">{selectedPackage}</p>
+            <DialogTitle className="text-2xl font-bold">Запись на занятие</DialogTitle>
+            <p className="text-muted-foreground">{selectedPackage}</p>
           </DialogHeader>
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
             <div>
-              <label className="block text-sm font-semibold mb-2">Ваше имя</label>
+              <Label htmlFor="parentName">Имя родителя *</Label>
               <Input
+                id="parentName"
                 required
                 value={formData.parentName}
                 onChange={(e) => setFormData({...formData, parentName: e.target.value})}
@@ -309,8 +311,9 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">Имя ребёнка</label>
+              <Label htmlFor="childName">Имя ребёнка *</Label>
               <Input
+                id="childName"
                 required
                 value={formData.childName}
                 onChange={(e) => setFormData({...formData, childName: e.target.value})}
@@ -318,22 +321,35 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">Возраст ребёнка</label>
+              <Label htmlFor="childAge">Возраст ребёнка *</Label>
               <Input
+                id="childAge"
                 required
                 value={formData.childAge}
                 onChange={(e) => setFormData({...formData, childAge: e.target.value})}
-                placeholder="Возраст"
+                placeholder="Например: 3 года"
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">Телефон</label>
+              <Label htmlFor="phone">Номер телефона *</Label>
               <Input
+                id="phone"
                 type="tel"
                 required
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 placeholder="+7 (___) ___-__-__"
+              />
+            </div>
+            <div>
+              <Label htmlFor="email">Email *</Label>
+              <Input
+                id="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                placeholder="your@email.com"
               />
             </div>
             {submitMessage && (
@@ -346,7 +362,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               disabled={isSubmitting}
               className="w-full bg-primary hover:bg-primary/90 text-white font-bold rounded-full py-6"
             >
-              {isSubmitting ? 'Отправка...' : 'Отправить'}
+              {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
             </Button>
           </form>
         </DialogContent>
