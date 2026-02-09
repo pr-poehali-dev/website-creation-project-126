@@ -3,6 +3,7 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import psycopg2
 
 
 def handler(event: dict, context) -> dict:
@@ -37,6 +38,30 @@ def handler(event: dict, context) -> dict:
         phone = body.get('phone', '')
         email = body.get('email', '')
         message = body.get('message', '')
+        
+        # Извлекаем имя и возраст ребёнка из message
+        child_name = ''
+        child_age = ''
+        if message:
+            parts = message.split('\n')
+            for part in parts:
+                if 'Имя ребёнка:' in part:
+                    child_name = part.split('Имя ребёнка:')[1].split(',')[0].strip()
+                if 'Возраст:' in part:
+                    child_age = part.split('Возраст:')[1].strip()
+        
+        # Сохраняем заявку в базу данных
+        db_url = os.environ.get('DATABASE_URL', '')
+        if db_url:
+            conn = psycopg2.connect(db_url)
+            cur = conn.cursor()
+            cur.execute(
+                "INSERT INTO applications (parent_name, child_name, child_age, phone, email, message) VALUES (%s, %s, %s, %s, %s, %s)",
+                (name, child_name, child_age, phone, email, message)
+            )
+            conn.commit()
+            cur.close()
+            conn.close()
 
         # Получаем настройки SMTP для Gmail
         smtp_server = 'smtp.gmail.com'
