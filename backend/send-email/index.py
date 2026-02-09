@@ -38,12 +38,12 @@ def handler(event: dict, context) -> dict:
         email = body.get('email', '')
         message = body.get('message', '')
 
-        # Получаем настройки SMTP
-        smtp_server = os.environ.get('SMTP_SERVER', 'smtp.mail.ru')
-        smtp_port = int(os.environ.get('SMTP_PORT', '465'))
-        smtp_username = os.environ.get('SMTP_USERNAME', '')
-        smtp_password = os.environ.get('SMTP_PASSWORD', '')
-        email_to = os.environ.get('EMAIL_TO', 'pluhburg_2016@mail.ru')
+        # Получаем настройки SMTP для Gmail
+        smtp_server = 'smtp.gmail.com'
+        smtp_port = 587
+        smtp_username = 'shatalova.alina91@gmail.com'
+        smtp_password = os.environ.get('GMAIL_APP_PASSWORD', '')
+        email_to = 'shatalova.alina91@gmail.com'
 
         if not smtp_password:
             return {
@@ -53,8 +53,8 @@ def handler(event: dict, context) -> dict:
                     'Access-Control-Allow-Origin': '*'
                 },
                 'body': json.dumps({
-                    'error': 'SMTP_PASSWORD not configured',
-                    'message': 'Добавьте пароль Mail.ru в настройках проекта'
+                    'error': 'GMAIL_APP_PASSWORD not configured',
+                    'message': 'Добавьте пароль приложения Gmail в настройках проекта'
                 })
             }
 
@@ -76,8 +76,9 @@ Email: {email}
 '''
         msg.attach(MIMEText(email_body, 'plain', 'utf-8'))
 
-        # Отправляем через SMTP
-        with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
+        # Отправляем через Gmail SMTP
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
             server.login(smtp_username, smtp_password)
             server.send_message(msg)
 
