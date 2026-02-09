@@ -4,6 +4,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import psycopg2
+import urllib.request
+from datetime import datetime
 
 
 def handler(event: dict, context) -> dict:
@@ -106,6 +108,28 @@ Email: {email}
             server.starttls()
             server.login(smtp_username, smtp_password)
             server.send_message(msg)
+        
+        # Отправляем в Google Таблицы
+        google_webhook = os.environ.get('GOOGLE_SHEETS_WEBHOOK_URL', '')
+        if google_webhook:
+            try:
+                google_data = {
+                    'Дата': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'Имя родителя': name,
+                    'Имя ребёнка': child_name,
+                    'Возраст ребёнка': child_age,
+                    'Телефон': phone,
+                    'Email': email,
+                    'Сообщение': message
+                }
+                req = urllib.request.Request(
+                    google_webhook,
+                    data=json.dumps(google_data).encode('utf-8'),
+                    headers={'Content-Type': 'application/json'}
+                )
+                urllib.request.urlopen(req)
+            except Exception as e:
+                pass
 
         return {
             'statusCode': 200,
