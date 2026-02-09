@@ -177,7 +177,7 @@ const ReviewsAndContacts = () => {
               </div>
 
               <div className="bg-white p-8 rounded-3xl shadow-lg order-1 lg:order-2">
-                <h3 className="text-2xl font-bold mb-6 uppercase text-center">Оставьте заявку</h3>
+                <h3 className="text-2xl font-bold mb-6 uppercase text-center">Связаться с нами</h3>
               
               <form className="space-y-4" onSubmit={async (e: FormEvent) => {
                 e.preventDefault();
@@ -206,10 +206,9 @@ const ReviewsAndContacts = () => {
                 }
               }}>
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Ваше имя</label>
                   <Input 
                     type="text" 
-                    placeholder="Введите ваше имя" 
+                    placeholder="Ваше имя" 
                     className="w-full" 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -218,10 +217,9 @@ const ReviewsAndContacts = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Телефон</label>
                   <Input 
                     type="tel" 
-                    placeholder="+7 (___) ___-__-__" 
+                    placeholder="Телефон" 
                     className="w-full"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -230,10 +228,9 @@ const ReviewsAndContacts = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Email (необязательно)</label>
                   <Input 
                     type="email" 
-                    placeholder="your@email.com" 
+                    placeholder="Email" 
                     className="w-full"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -241,10 +238,9 @@ const ReviewsAndContacts = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Сообщение (необязательно)</label>
                   <Input 
                     type="text" 
-                    placeholder="Например: Имя и возраст ребёнка" 
+                    placeholder="Сообщение" 
                     className="w-full"
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
