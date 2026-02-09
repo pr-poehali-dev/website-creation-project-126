@@ -1,11 +1,68 @@
+import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 interface PriceAndProgramsProps {
   scrollToSection: (id: string) => void;
 }
 
 const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState('');
+  const [formData, setFormData] = useState({
+    parentName: '',
+    childName: '',
+    childAge: '',
+    phone: '',
+    email: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const openBookingDialog = (packageName: string) => {
+    setSelectedPackage(packageName);
+    setIsDialogOpen(true);
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/d8142347-1562-42b2-aad1-b697495e3294', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.parentName,
+          phone: formData.phone,
+          email: formData.email,
+          message: `Запись на "${selectedPackage}"\n\nИмя ребёнка: ${formData.childName}\nВозраст ребёнка: ${formData.childAge}`
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+        setFormData({ parentName: '', childName: '', childAge: '', phone: '', email: '' });
+        setTimeout(() => {
+          setIsDialogOpen(false);
+          setSubmitMessage('');
+        }, 3000);
+      } else {
+        setSubmitMessage('❌ ' + (data.message || 'Ошибка отправки'));
+      }
+    } catch (error) {
+      setSubmitMessage('❌ Ошибка отправки. Попробуйте позже.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <section id="price" className="py-20 bg-white">
@@ -43,7 +100,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Построение плана дальнейшего тренировочного процесса</span>
                 </li>
               </ul>
-              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Пробное занятие')}>
                 Записаться
               </Button>
             </div>
@@ -74,7 +131,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия 30 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('4 занятия')}>
                 Записаться
               </Button>
             </div>
@@ -109,7 +166,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия абонемента 35 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий')}>
                 Записаться
               </Button>
             </div>
@@ -144,7 +201,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия абонемента 90 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('24 занятия')}>
                 Записаться
               </Button>
             </div>
@@ -186,7 +243,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия абонемента 35 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('16 занятий (Семейный)')}>
                 Записаться
               </Button>
             </div>
@@ -228,13 +285,88 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия абонемента 60 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => scrollToSection('contacts')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('24 занятия (Семейный)')}>
                 Записаться
               </Button>
             </div>
           </div>
         </div>
       </section>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold">Запись на занятие</DialogTitle>
+            <p className="text-muted-foreground">{selectedPackage}</p>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <div>
+              <Label htmlFor="parentName">Имя родителя *</Label>
+              <Input
+                id="parentName"
+                required
+                value={formData.parentName}
+                onChange={(e) => setFormData({...formData, parentName: e.target.value})}
+                placeholder="Введите ваше имя"
+              />
+            </div>
+            <div>
+              <Label htmlFor="childName">Имя ребёнка *</Label>
+              <Input
+                id="childName"
+                required
+                value={formData.childName}
+                onChange={(e) => setFormData({...formData, childName: e.target.value})}
+                placeholder="Введите имя ребёнка"
+              />
+            </div>
+            <div>
+              <Label htmlFor="childAge">Возраст ребёнка *</Label>
+              <Input
+                id="childAge"
+                required
+                value={formData.childAge}
+                onChange={(e) => setFormData({...formData, childAge: e.target.value})}
+                placeholder="Например: 3 года"
+              />
+            </div>
+            <div>
+              <Label htmlFor="phone">Номер телефона *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                required
+                value={formData.phone}
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                placeholder="+7 (___) ___-__-__"
+              />
+            </div>
+            <div>
+              <Label htmlFor="email">Email *</Label>
+              <Input
+                id="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                placeholder="your@email.com"
+              />
+            </div>
+            {submitMessage && (
+              <p className={`text-sm ${submitMessage.includes('✅') ? 'text-green-600' : 'text-red-600'}`}>
+                {submitMessage}
+              </p>
+            )}
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-primary hover:bg-primary/90 text-white font-bold rounded-full py-6"
+            >
+              {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
 
       <section id="programm" className="py-20 bg-white">
         <div className="container mx-auto px-4">
