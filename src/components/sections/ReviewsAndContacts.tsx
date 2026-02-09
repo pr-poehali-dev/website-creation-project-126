@@ -7,10 +7,10 @@ import { Input } from "@/components/ui/input";
 const ReviewsAndContacts = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [formData, setFormData] = useState({
-    parentName: '',
-    childName: '',
-    childAge: '',
-    phone: ''
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -185,7 +185,7 @@ const ReviewsAndContacts = () => {
                 setSubmitMessage('');
                 
                 try {
-                  const response = await fetch('https://functions.poehali.dev/195ad302-fe8a-4f52-87f3-85bb4ccdb924', {
+                  const response = await fetch('https://functions.poehali.dev/d8142347-1562-42b2-aad1-b697495e3294', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -194,10 +194,10 @@ const ReviewsAndContacts = () => {
                   const result = await response.json();
                   
                   if (response.ok) {
-                    setSubmitMessage('✅ ' + result.message);
-                    setFormData({ parentName: '', childName: '', childAge: '', phone: '' });
+                    setSubmitMessage('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+                    setFormData({ name: '', phone: '', email: '', message: '' });
                   } else {
-                    setSubmitMessage('❌ ' + (result.error || 'Ошибка отправки'));
+                    setSubmitMessage('❌ ' + (result.message || result.error || 'Ошибка отправки'));
                   }
                 } catch (error) {
                   setSubmitMessage('❌ Ошибка связи с сервером');
@@ -211,32 +211,8 @@ const ReviewsAndContacts = () => {
                     type="text" 
                     placeholder="Введите ваше имя" 
                     className="w-full" 
-                    value={formData.parentName}
-                    onChange={(e) => setFormData({...formData, parentName: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Имя ребёнка</label>
-                  <Input 
-                    type="text" 
-                    placeholder="Введите имя ребёнка" 
-                    className="w-full"
-                    value={formData.childName}
-                    onChange={(e) => setFormData({...formData, childName: e.target.value})}
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Возраст ребёнка</label>
-                  <Input 
-                    type="text" 
-                    placeholder="Возраст" 
-                    className="w-full"
-                    value={formData.childAge}
-                    onChange={(e) => setFormData({...formData, childAge: e.target.value})}
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                     required
                   />
                 </div>
@@ -250,6 +226,28 @@ const ReviewsAndContacts = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Email (необязательно)</label>
+                  <Input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="w-full"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-semibold mb-2">Сообщение (необязательно)</label>
+                  <Input 
+                    type="text" 
+                    placeholder="Например: Имя и возраст ребёнка" 
+                    className="w-full"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                   />
                 </div>
                 
