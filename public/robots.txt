@@ -4,6 +4,9 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Yandex
+Allow: /
+
 User-agent: Twitterbot
 Allow: /
 
@@ -12,3 +15,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin
+
+Sitemap: https://плюхбург.рф/sitemap.xml
+Sitemap: https://xn--90aewphrm5e.xn--p1ai/sitemap.xml
+
+Host: https://плюхбург.рф
