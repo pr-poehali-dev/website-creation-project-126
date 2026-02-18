@@ -67,7 +67,8 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
     <>
       <section id="price" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-16 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
+          <p className="text-center text-lg md:text-xl mb-16 text-foreground">Запишитесь на первую пробную тренировку <span className="text-primary font-bold">-60%</span></p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">

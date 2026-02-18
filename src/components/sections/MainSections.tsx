@@ -46,14 +46,15 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
             </h1>
 
             <div className="relative">
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection('contacts')}
-                className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full max-w-md relative z-10"
-                style={{fontFamily: 'Inter, Arial, sans-serif'}}
-              >
-                Записаться на занятие
-              </Button>
+              <a href="https://t.me/+79826322152" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white font-black text-xl md:text-3xl px-12 md:px-24 py-7 md:py-10 rounded-full shadow-2xl mb-16 md:mb-28 w-full max-w-md relative z-10"
+                  style={{fontFamily: 'Inter, Arial, sans-serif'}}
+                >
+                  Записаться на занятие
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -66,7 +67,7 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
-                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Индивидуальный подход.</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему</span></p>
+                <p className="text-white leading-relaxed"><span className="font-bold text-lg">Персональные тренировки один на один с тренером.</span> <span className="text-sm" style={{fontFamily: 'Inter, sans-serif'}}>Занятия выстраиваются исходя из потребностей вашего ребенка</span></p>
               </div>
               <div className="flex items-start gap-3">
                 <Icon name="Star" size={22} className="text-primary flex-shrink-0 mt-1" />
@@ -126,29 +127,29 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-6 shadow-lg">
                 <Icon name="Heart" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4">Комфортная атмосфера</h3>
+              <h3 className="text-2xl font-bold uppercase mb-4">Атмосфера</h3>
               <p className="text-foreground leading-relaxed">
-                Мы создали пространство, где дети чувствуют себя в безопасности. Каждое занятие проходит в игровой форме, без стресса и слез.
+                Смех, улыбки и радость - каждое занятие. Наши половцы ходят к нам годами.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 rotate-3 shadow-lg">
-                <Icon name="Shield" className="text-white" size={32} />
+                <Icon name="Target" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4">Безопасность превыше всего</h3>
+              <h3 className="text-2xl font-bold uppercase mb-4">Тренировочный процесс</h3>
               <p className="text-foreground leading-relaxed">
-                Современное оборудование для очистки воды, постоянный контроль качества. Все наши тренеры имеют медицинское образование.
+                Тренеры уделяют внимание каждой детали, поэтому наши дети с легкостью поступают в спортивные школы и получают навык плавания на всю жизнь
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-3xl border-2 border-black hover:border-primary transition-all shadow-lg">
               <div className="w-16 h-16 bg-primary rounded-3xl flex items-center justify-center mb-4 -rotate-3 shadow-lg">
-                <Icon name="Baby" className="text-white" size={32} />
+                <Icon name="GraduationCap" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl font-bold uppercase mb-4">Индивидуальный подход</h3>
+              <h3 className="text-2xl font-bold uppercase mb-4">Тренерский состав</h3>
               <p className="text-foreground leading-relaxed">
-                У нас нет шаблонов и планов занятий. Каждый ребёнок получает именно те задания, которые необходимы ему.
+                Наши тренеры - это тренеры с которыми ваш ребенок будет сравнивать всех последующих, потому что мы задаем высокую планку. Наши тренеры - наставники, любящие и уважающие детей.
               </p>
             </div>
           </div>
