@@ -103,9 +103,9 @@ const MainSections = ({ scrollToSection }: MainSectionsProps) => {
           <div className="max-w-5xl mx-auto mb-20">
             <div className="relative aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
               <iframe 
-                src="https://www.youtube.com/embed/8Sw5lidrzfs"
+                src="https://vk.com/video_ext.php?oid=-112188130&id=456239072&hd=2"
                 title="Видео о бассейне"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               />
