@@ -68,21 +68,19 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
       <section id="price" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-black text-center mb-4 uppercase text-black" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Стоимость занятий</h2>
-          <p className="text-center text-lg md:text-xl mb-16 text-foreground">Запишитесь на первую пробную тренировку <span className="text-primary font-bold">-60%</span></p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <p className="text-center text-lg md:text-xl mb-16 text-foreground">Для детей от 0 до 10 лет</p>
+
+          <h3 className="text-2xl md:text-3xl font-black text-center mb-8 uppercase text-primary" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>Индивидуально с тренером</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
             <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">
               <img 
                 src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
                 alt="Осьминог"
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
-              <div className="absolute top-4 right-4 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase">
-                -60%
-              </div>
               <h3 className="text-2xl font-bold mb-4 mt-4 text-foreground uppercase relative z-10">Пробное занятие</h3>
-              <div className="text-5xl font-black text-foreground mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>850₽</div>
-              <p className="text-muted-foreground text-base mb-6 line-through font-medium">вместо 2200₽</p>
+              <div className="text-5xl font-black text-foreground mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>1 000₽</div>
               <ul className="space-y-3 mb-8 text-foreground">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
@@ -101,7 +99,34 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Построение плана дальнейшего тренировочного процесса</span>
                 </li>
               </ul>
-              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Пробное занятие')}>
+              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Пробное занятие (индивидуально)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">Разовое занятие</h3>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>2 500₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Персональная работа с тренером</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Индивидуальный подход</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Без покупки абонемента</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Разовое занятие (индивидуально)')}>
                 Записаться
               </Button>
             </div>
@@ -113,12 +138,9 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">4 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>7 600₽</div>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>8 000₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 8 900₽</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">10% скидка</span> многодетным, инвалидам. Цена со скидкой 6840₽</span>
-                </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Персональная работа с тренером</span>
@@ -132,7 +154,7 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                   <span>Срок действия 30 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('4 занятия')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('4 занятия (индивидуально)')}>
                 Записаться
               </Button>
             </div>
@@ -144,12 +166,9 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">8 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>13 590₽</div>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>15 120₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 16 800₽</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
-                </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Персональная работа с тренером</span>
@@ -157,17 +176,13 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Регулярные тренировки 2 раза в неделю</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Срок действия абонемента 35 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий (индивидуально)')}>
                 Записаться
               </Button>
             </div>
@@ -178,73 +193,24 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
                 alt="Осьминог"
                 className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
               />
-              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>37 200₽</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Персональная работа с тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Индивидуальный подход</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Регулярные тренировки 2-3 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия абонемента 90 дней</span>
-                </li>
-              </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('24 занятия')}>
-                Записаться
-              </Button>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
-              <img 
-                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
-                alt="Осьминог"
-                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
-              />
-              <div className="mb-4 relative z-10">
-                <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
-              </div>
               <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">16 занятий</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>25 650₽</div>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>28 000₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 31 120₽</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
+                  <span>Срок действия 60 дней</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Для семей с 2 и более детьми</span>
+                  <span>Подходит для 1 ребёнка и для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Каждый ребенок плавает со своим тренером</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Экономия времени. 2 ребенка плавают одновременно. Мама отдыхает</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Регулярные тренировки 2 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия абонемента 35 дней</span>
+                  <span>Персональная работа с тренером</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('16 занятий (Семейный)')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('16 занятий (индивидуально)')}>
                 Записаться
               </Button>
             </div>
@@ -258,39 +224,177 @@ const PriceAndPrograms = ({ scrollToSection }: PriceAndProgramsProps) => {
               <div className="mb-4 relative z-10">
                 <span className="text-sm font-bold text-primary uppercase bg-primary/10 px-3 py-1 rounded-full">Семейный</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">24 занятия</h3>
-              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>36 000₽</div>
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">8 занятий</h3>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>14 400₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 16 000₽</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span><span className="font-semibold text-primary">Стоимость со скидкой 10%.</span> Скидка в день покупки пробного и в день последнего занятия с предыдущего абонемента</span>
-                </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
                   <span>Для семей с 2 и более детьми</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Каждый ребенок плавает со своим тренером</span>
+                  <span>Каждый ребёнок плавает со своим тренером</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Экономия времени. 2 ребенка плавают одновременно. Мама отдыхает</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Регулярные тренировки 2-3 раза в неделю</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <span>Срок действия абонемента 60 дней</span>
+                  <span>Срок действия 30 дней</span>
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('24 занятия (Семейный)')}>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий Семейный')}>
                 Записаться
               </Button>
             </div>
           </div>
+
+          <h3 className="text-2xl md:text-3xl font-black text-center mb-8 uppercase text-primary" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>В группе «Мама и малыш»</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-16">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden border-4 border-black">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 mt-4 uppercase relative z-10">Пробное</h3>
+              <div className="text-5xl font-black text-foreground mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>500₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Знакомство с группой и тренером</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-black hover:bg-black/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Пробное (Мама и малыш)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">Разовое</h3>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>1 700₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Без покупки абонемента</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Разовое (Мама и малыш)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">4 занятия</h3>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>6 000₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 6 700₽</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 30 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('4 занятия (Мама и малыш)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">8 занятий</h3>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>10 400₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 11 600₽</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий (Мама и малыш)')}>
+                Записаться
+              </Button>
+            </div>
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-black text-center mb-8 uppercase text-primary" style={{fontFamily: 'Oswald, Arial, sans-serif'}}>В группе с 4 лет</h3>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">Разовое</h3>
+              <div className="text-5xl font-black text-primary mb-6" style={{fontFamily: 'Inter, Arial, sans-serif'}}>1 700₽</div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Без покупки абонемента</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('Разовое (Группа с 4 лет)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">4 занятия</h3>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>5 200₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 5 800₽</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 30 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('4 занятия (Группа с 4 лет)')}>
+                Записаться
+              </Button>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all relative overflow-hidden">
+              <img 
+                src="https://cdn.poehali.dev/projects/eacdcf2f-19c9-4d20-b040-35bebd611835/files/3ec8b4b6-1916-42ce-9361-90c447e2cac0.jpg"
+                alt="Осьминог"
+                className="absolute -bottom-4 -right-4 w-24 h-24 object-contain opacity-20"
+              />
+              <h3 className="text-2xl font-bold mb-4 uppercase relative z-10">8 занятий</h3>
+              <div className="text-5xl font-black text-primary mb-2" style={{fontFamily: 'Inter, Arial, sans-serif'}}>8 800₽</div>
+              <p className="text-muted-foreground text-base mb-6 line-through font-medium">без скидки 9 800₽</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-2">
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <span>Срок действия 35 дней</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold rounded-full py-6" onClick={() => openBookingDialog('8 занятий (Группа с 4 лет)')}>
+                Записаться
+              </Button>
+            </div>
+          </div>
+
+          <p className="text-center text-sm md:text-base text-muted-foreground max-w-3xl mx-auto">
+            * Скидка 10% действует в день пробного занятия и в день последнего занятия по действующему абонементу
+          </p>
         </div>
       </section>
 
